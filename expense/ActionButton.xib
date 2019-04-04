@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Medium.otf">
+            <string>FiraSans-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="cXc-9M-eMo" id="i6O-zt-j9p"/>
+                <outlet property="leftImageView" destination="6xl-8f-772" id="7sm-ru-dC0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXc-9M-eMo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                    <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="17"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-8f-772">
+                    <rect key="frame" x="14" y="16" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="y2s-6E-FwR"/>
+                        <constraint firstAttribute="width" secondItem="6xl-8f-772" secondAttribute="height" multiplier="1:1" id="yBD-og-gKc"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cXc-9M-eMo" secondAttribute="trailing" id="8JK-8X-hbs"/>
+                <constraint firstItem="6xl-8f-772" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Tf5-hf-d6p"/>
+                <constraint firstItem="cXc-9M-eMo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dAu-O1-fV8"/>
+                <constraint firstItem="cXc-9M-eMo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eeh-hN-Atj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cXc-9M-eMo" secondAttribute="bottom" id="hX3-Pk-nOz"/>
+                <constraint firstItem="6xl-8f-772" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="oJc-Nx-RQj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.5" y="-233"/>
+        </view>
+    </objects>
+</document>

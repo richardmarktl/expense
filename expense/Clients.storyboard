@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nfE-Fz-GF0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Clients-->
+        <scene sceneID="jPm-00-bgT">
+            <objects>
+                <viewController id="pSq-FR-dTC" customClass="ClientsViewController" customModule="InVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="95Y-0Q-16c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ijR-Wn-dzc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClientsCell" rowHeight="83" id="S2E-Gb-jDF" customClass="ClientsCell" customModule="InVoice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S2E-Gb-jDF" id="5ca-0y-5Ns">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" insetsLayoutMarginsFromSafeArea="NO" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Wxl-9B-Yve">
+                                                    <rect key="frame" x="352" y="14.5" width="8" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="6h7-uI-2fI"/>
+                                                        <constraint firstAttribute="width" constant="8" id="k6I-0j-dRQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ruf-Uz-Nlj">
+                                                    <rect key="frame" x="15" y="11" width="329" height="60.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="jDj-g0-810">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="57"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Samatha Cole" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhV-gu-MIF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                                                                    <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="ID2017/002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krt-5z-ZSW">
+                                                                    <rect key="frame" x="0.0" y="22.5" width="329" height="18"/>
+                                                                    <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Nov 5., due in 12 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ly-lS-V8T">
+                                                                    <rect key="frame" x="0.0" y="42.5" width="329" height="14.5"/>
+                                                                    <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="12"/>
+                                                                    <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ruf-Uz-Nlj" firstAttribute="top" secondItem="5ca-0y-5Ns" secondAttribute="top" constant="11" id="6MH-cc-II0"/>
+                                                <constraint firstItem="Wxl-9B-Yve" firstAttribute="centerY" secondItem="zhV-gu-MIF" secondAttribute="centerY" id="KdB-Op-5fC"/>
+                                                <constraint firstItem="ruf-Uz-Nlj" firstAttribute="leading" secondItem="5ca-0y-5Ns" secondAttribute="leadingMargin" id="YbJ-2f-bZT"/>
+                                                <constraint firstAttribute="bottom" secondItem="ruf-Uz-Nlj" secondAttribute="bottom" constant="11" id="dHq-5d-Mbp"/>
+                                                <constraint firstItem="Wxl-9B-Yve" firstAttribute="leading" secondItem="ruf-Uz-Nlj" secondAttribute="trailing" constant="8" id="mS1-VO-dJu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Wxl-9B-Yve" secondAttribute="trailing" id="pet-1D-870"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="krt-5z-ZSW" id="oce-DA-Z3s"/>
+                                            <outlet property="customerLabel" destination="zhV-gu-MIF" id="m4P-9U-zzU"/>
+                                            <outlet property="idLabel" destination="3ly-lS-V8T" id="a78-l8-9Ug"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pSq-FR-dTC" id="mj2-mu-8uP"/>
+                                    <outlet property="delegate" destination="pSq-FR-dTC" id="wAq-6J-1rM"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqQ-er-t5u" customClass="HoverButton" customModule="InVoice" customModuleProvider="target">
+                                <rect key="frame" x="309" y="486" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="microphone_add_btn">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0nd-oc-xdi"/>
+                                    <constraint firstAttribute="width" constant="50" id="djV-J3-R5b"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="import_from_address_book"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEW-Er-FaZ" customClass="HoverButton" customModule="InVoice" customModuleProvider="target">
+                                <rect key="frame" x="309" y="552" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="T2y-Zb-zCq"/>
+                                    <constraint firstAttribute="width" constant="50" id="j1U-FI-uU9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="+"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ijR-Wn-dzc" firstAttribute="top" secondItem="OIs-Gv-5fD" secondAttribute="top" id="9KH-JV-Vrb"/>
+                            <constraint firstItem="dEW-Er-FaZ" firstAttribute="height" secondItem="WqQ-er-t5u" secondAttribute="height" id="A9N-Ko-iBy"/>
+                            <constraint firstItem="dEW-Er-FaZ" firstAttribute="width" secondItem="WqQ-er-t5u" secondAttribute="width" id="AU7-4u-k8a"/>
+                            <constraint firstItem="dEW-Er-FaZ" firstAttribute="top" secondItem="WqQ-er-t5u" secondAttribute="bottom" constant="16" id="KMx-2v-L5e"/>
+                            <constraint firstItem="OIs-Gv-5fD" firstAttribute="bottom" secondItem="ijR-Wn-dzc" secondAttribute="bottom" id="Vfx-SY-kB3"/>
+                            <constraint firstItem="dEW-Er-FaZ" firstAttribute="trailing" secondItem="WqQ-er-t5u" secondAttribute="trailing" id="WQb-St-wLn"/>
+                            <constraint firstItem="OIs-Gv-5fD" firstAttribute="bottom" secondItem="dEW-Er-FaZ" secondAttribute="bottom" constant="16" id="YQ0-3g-d2g"/>
+                            <constraint firstItem="ijR-Wn-dzc" firstAttribute="leading" secondItem="OIs-Gv-5fD" secondAttribute="leading" id="ibf-Fa-3n9"/>
+                            <constraint firstItem="OIs-Gv-5fD" firstAttribute="trailing" secondItem="dEW-Er-FaZ" secondAttribute="trailing" constant="16" id="qda-3c-Y0D"/>
+                            <constraint firstItem="OIs-Gv-5fD" firstAttribute="trailing" secondItem="ijR-Wn-dzc" secondAttribute="trailing" id="suI-ab-D1t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OIs-Gv-5fD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Clients" id="1xA-KL-gIo"/>
+                    <connections>
+                        <outlet property="addButton" destination="dEW-Er-FaZ" id="8pT-Hf-y2T"/>
+                        <outlet property="addContactButton" destination="WqQ-er-t5u" id="Jr4-EQ-Hn7"/>
+                        <outlet property="tableView" destination="ijR-Wn-dzc" id="y9C-ym-T59"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuB-Dk-11n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="137"/>
+        </scene>
+        <!--Client View Controller-->
+        <scene sceneID="3Ht-bp-0WH">
+            <objects>
+                <viewController id="cxU-Hq-GNP" customClass="ClientViewController" customModule="InVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmA-mD-dSr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="beH-RR-w6y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="457"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="4Jm-PM-9hF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="cxU-Hq-GNP" id="DNv-8e-4G9"/>
+                                    <outlet property="delegate" destination="cxU-Hq-GNP" id="bjd-3P-ko3"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cnc-47-Zun">
+                                <rect key="frame" x="14" y="535" width="347" height="118"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Loj-Th-fNu" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="347" height="55"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="YZh-qX-d98"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Delete"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.94509803920000002" green="0.2274509804" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.96470588235294119" green="0.61176470588235299" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nub-uz-1pM" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="63" width="347" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="yFL-xw-nl2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Save"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.74901960784313726" green="0.90980392156862744" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1TE-2d-NLV" firstAttribute="bottom" secondItem="Cnc-47-Zun" secondAttribute="bottom" constant="14" id="GY2-F5-v0o"/>
+                            <constraint firstItem="1TE-2d-NLV" firstAttribute="trailing" secondItem="beH-RR-w6y" secondAttribute="trailing" id="O9b-cr-bD9"/>
+                            <constraint firstItem="1TE-2d-NLV" firstAttribute="trailing" secondItem="Cnc-47-Zun" secondAttribute="trailing" constant="14" id="gyU-EK-uNt"/>
+                            <constraint firstItem="Cnc-47-Zun" firstAttribute="leading" secondItem="1TE-2d-NLV" secondAttribute="leading" constant="14" id="jfy-nA-d9k"/>
+                            <constraint firstItem="Cnc-47-Zun" firstAttribute="top" secondItem="beH-RR-w6y" secondAttribute="bottom" constant="14" id="oR8-Sg-XEQ"/>
+                            <constraint firstItem="beH-RR-w6y" firstAttribute="top" secondItem="1TE-2d-NLV" secondAttribute="top" id="qI1-T6-aCX"/>
+                            <constraint firstItem="beH-RR-w6y" firstAttribute="leading" secondItem="1TE-2d-NLV" secondAttribute="leading" id="xXA-CT-ZlJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1TE-2d-NLV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ybJ-Vn-Bf7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eWi-cN-wDB">
+                            <color key="tintColor" red="0.26274509800000001" green="0.60392156860000001" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deleteButton" destination="Loj-Th-fNu" id="EVO-or-jlR"/>
+                        <outlet property="saveButton" destination="nub-uz-1pM" id="B7f-ku-lW4"/>
+                        <outlet property="tableView" destination="beH-RR-w6y" id="O8s-24-Lfj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGm-Pf-qeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="927"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8QA-fO-xrV">
+            <objects>
+                <navigationController storyboardIdentifier="ClientViewRootController" id="QGQ-y4-QVP" customClass="NavigationController" customModule="InVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nhu-vD-VkJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cxU-Hq-GNP" kind="relationship" relationship="rootViewController" id="cww-cw-3OV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnV-Tw-q0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="927"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WdV-6I-Hbi">
+            <objects>
+                <navigationController storyboardIdentifier="AccountViewRootController" id="4kl-nG-ecC" customClass="NavigationController" customModule="InVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="koa-8y-sa3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xMA-LC-cE3" kind="relationship" relationship="rootViewController" id="0i4-Ro-Lct"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6h-qn-phe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="1639"/>
+        </scene>
+        <!--Clients-->
+        <scene sceneID="24m-e6-xlb">
+            <objects>
+                <navigationController id="nfE-Fz-GF0" customClass="NavigationController" customModule="InVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Clients" image="clients" id="N6T-49-GCG"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VHI-rI-VYJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pSq-FR-dTC" kind="relationship" relationship="rootViewController" id="El9-1h-3pw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFC-4e-6au" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="138"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="paR-nW-xTg">
+            <objects>
+                <viewController id="xMA-LC-cE3" customClass="AccountViewController" customModule="InVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5OH-CR-phB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jbb-eW-JJt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="457"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="4gw-zD-9fm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="xMA-LC-cE3" id="yPQ-1R-mxu"/>
+                                    <outlet property="delegate" destination="xMA-LC-cE3" id="auQ-Zh-OVe"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cIR-p5-CzC">
+                                <rect key="frame" x="14" y="535" width="347" height="118"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CV5-1m-03h" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="347" height="55"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="dQ3-Xb-SNH"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Delete"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.94509803920000002" green="0.2274509804" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.96470588239999999" green="0.61176470589999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jch-1I-kiu" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="63" width="347" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="C5G-5Q-4Qx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Save"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.74901960779999999" green="0.90980392160000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f1g-iS-MTN" firstAttribute="trailing" secondItem="cIR-p5-CzC" secondAttribute="trailing" constant="14" id="0DK-zj-2lh"/>
+                            <constraint firstItem="cIR-p5-CzC" firstAttribute="leading" secondItem="f1g-iS-MTN" secondAttribute="leading" constant="14" id="UuV-FY-tje"/>
+                            <constraint firstItem="Jbb-eW-JJt" firstAttribute="leading" secondItem="f1g-iS-MTN" secondAttribute="leading" id="dcQ-gO-UFd"/>
+                            <constraint firstItem="f1g-iS-MTN" firstAttribute="trailing" secondItem="Jbb-eW-JJt" secondAttribute="trailing" id="feC-yT-Zb2"/>
+                            <constraint firstItem="f1g-iS-MTN" firstAttribute="bottom" secondItem="cIR-p5-CzC" secondAttribute="bottom" constant="14" id="htn-oh-JY1"/>
+                            <constraint firstItem="Jbb-eW-JJt" firstAttribute="top" secondItem="f1g-iS-MTN" secondAttribute="top" id="vg7-Pq-A9T"/>
+                            <constraint firstItem="cIR-p5-CzC" firstAttribute="top" secondItem="Jbb-eW-JJt" secondAttribute="bottom" constant="14" id="yRo-Ro-cqo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f1g-iS-MTN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r1G-cc-ucb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Y1T-M0-Whe">
+                            <color key="tintColor" red="0.26274509800000001" green="0.60392156860000001" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deleteButton" destination="CV5-1m-03h" id="wcx-GE-Xyn"/>
+                        <outlet property="saveButton" destination="Jch-1I-kiu" id="mgR-OC-51c"/>
+                        <outlet property="tableView" destination="Jbb-eW-JJt" id="aHA-wn-fWE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AeQ-5L-eZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="1639"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow" width="8" height="14"/>
+        <image name="clients" width="25" height="25"/>
+        <image name="import_from_address_book" width="24" height="17"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

@@ -1,0 +1,18 @@
+{
+    "next": null,
+    "previous": "http://18.194.13.46/clients/?cursor=cD0yMDE4LTAxLTI2KzA4JTNBMjglM0EyOS40NzY0OTIlMkIwMCUzQTAwJnI9MQ%3D%3D",
+    "results": [
+                {
+                "id": 3,
+                "uuid": "92e0ab26-f858-4f29-91e1-898141b76731",
+                "file": "https://s3.eu-central-1.amazonaws.com:443/staging.invoice.at/account/Mw/attachment/44967acbe18b482c93b7baa0292509f9",
+                "created": "2018-01-27T19:01:34.860795Z",
+                "updated": "2018-01-27T19:01:34.860822Z",
+                "mime_type": "image/jpeg",
+                "file_name": "Attachment Jan 27, 2018.jpg",
+                "comment": "",
+                "origin": 0,
+                "job": 2
+            }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "id": 1,
+    "logo": null,
+    "created": "2017-11-01T13:50:51.644000Z",
+    "updated": "2017-11-01T13:50:51.644000Z",
+    "email": "richard.marktl@invoice.io",
+    "address": "Foo\nBar",
+    "tax_id": null,
+    "name": "Foo Company",
+    "phone": null,
+    "website": null,
+    "note": "This field contains additional information used on the invoice.",
+    "payment_details": "This field contains the payment details.",
+    "tax": 20
+}

@@ -1,0 +1,19 @@
+{
+    "next": null,
+    "previous": "http://18.194.13.46/clients/?cursor=cD0yMDE4LTAxLTI2KzA4JTNBMjglM0EyOS40NzY0OTIlMkIwMCUzQTAwJnI9MQ%3D%3D",
+    "results": [
+                {
+                "id": 1,
+                "uuid": "5d9861b3-f80e-4997-970a-03c38a157da4",
+                "website": null,
+                "created": "2018-01-26T08:28:29.476492Z",
+                "updated": "2018-01-26T08:28:29.476521Z",
+                "name": "georg kitz",
+                "email": "georg.kitz@meisterwork.at",
+                "tax_id": null,
+                "address": "Johann Offnerstr 17 Wolfsberg 9400 United States",
+                "phone": "+43 660 3830196",
+                "is_active": true
+                }
+                ]
+}

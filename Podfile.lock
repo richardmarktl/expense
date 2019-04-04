@@ -1,0 +1,241 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Amplitude-iOS (4.6.0)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - Charts (3.2.2):
+    - Charts/Core (= 3.2.2)
+  - Charts/Core (3.2.2)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - DTFoundation/Core (1.7.13)
+  - DTFoundation/DTASN1 (1.7.13):
+    - DTFoundation/Core
+  - EmailValidator (1.0.1)
+  - Fabric (1.9.0)
+  - FacebookCore (0.6.0):
+    - Bolts (~> 1.9)
+    - FBSDKCoreKit (~> 4.43)
+  - FBSDKCoreKit (4.44.0):
+    - Bolts (~> 1.9)
+  - FirebaseABTesting (2.0.0):
+    - FirebaseCore (~> 5.0)
+    - Protobuf (~> 3.5)
+  - FirebaseAnalytics (5.8.0):
+    - FirebaseCore (~> 5.4)
+    - FirebaseInstanceID (~> 3.8)
+    - GoogleAppMeasurement (= 5.8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - FirebaseAnalyticsInterop (1.2.0)
+  - FirebaseCore (5.4.1):
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseInstanceID (3.8.1):
+    - FirebaseCore (~> 5.2)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/UserDefaults (~> 5.2)
+  - FirebaseMessaging (3.5.0):
+    - FirebaseAnalyticsInterop (~> 1.1)
+    - FirebaseCore (~> 5.2)
+    - FirebaseInstanceID (~> 3.6)
+    - GoogleUtilities/Environment (~> 5.3)
+    - GoogleUtilities/Reachability (~> 5.3)
+    - GoogleUtilities/UserDefaults (~> 5.3)
+    - Protobuf (~> 3.1)
+  - FirebaseRemoteConfig (3.1.0):
+    - FirebaseABTesting (~> 2.0)
+    - FirebaseAnalytics (~> 5.3)
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.3)
+    - GoogleUtilities/Environment (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - Protobuf (~> 3.5)
+  - GoogleAppMeasurement (5.8.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.2.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.0)
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
+  - GoogleUtilities/AppDelegateSwizzler (5.5.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.5.0)
+  - GoogleUtilities/Logger (5.5.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.5.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.5.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.5.0)"
+  - GoogleUtilities/Reachability (5.5.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.5.0):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.2.1)
+  - JLRoutes (2.1)
+  - Kvitto (1.0.3):
+    - DTFoundation/DTASN1 (~> 1.7.13)
+    - Kvitto/Core (= 1.0.3)
+  - Kvitto/Core (1.0.3):
+    - DTFoundation/DTASN1 (~> 1.7.13)
+  - Moya/Core (13.0.0-beta.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.0-beta.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
+  - Protobuf (3.7.0)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - Reachability (3.2)
+  - Result (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - SupportEmail (3.0.0)
+  - SwiftLint (0.31.0)
+  - SwiftSignatureView (2.0.2)
+  - SwiftyBeaver (1.7.0)
+
+DEPENDENCIES:
+  - Amplitude-iOS (~> 4.6.0)
+  - Charts (~> 3.2.2)
+  - Crashlytics (~> 3.12.0)
+  - EmailValidator (from `https://github.com/gekitz/EmailValidator.git`, commit `e39cb1f`)
+  - FacebookCore (~> 0.6.0)
+  - FirebaseCore
+  - FirebaseMessaging
+  - FirebaseRemoteConfig
+  - GoogleSignIn
+  - JLRoutes (~> 2.1)
+  - Kvitto (~> 1.0.2)
+  - Moya/RxSwift (~> 13.0.0-beta.1)
+  - R.swift (~> 5.0)
+  - Reachability (~> 3.2)
+  - RxCocoa (~> 4.5.0)
+  - RxSwift (~> 4.5.0)
+  - SupportEmail (~> 3.0.0)
+  - SwiftLint (~> 0.23)
+  - SwiftSignatureView
+  - SwiftyBeaver (~> 1.6)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Amplitude-iOS
+    - Bolts
+    - Charts
+    - Crashlytics
+    - DTFoundation
+    - Fabric
+    - FacebookCore
+    - FBSDKCoreKit
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
+    - FirebaseCore
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - FirebaseRemoteConfig
+    - GoogleAppMeasurement
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - JLRoutes
+    - Kvitto
+    - Moya
+    - nanopb
+    - Protobuf
+    - R.swift
+    - R.swift.Library
+    - Reachability
+    - Result
+    - RxCocoa
+    - RxSwift
+    - SupportEmail
+    - SwiftLint
+    - SwiftSignatureView
+    - SwiftyBeaver
+
+EXTERNAL SOURCES:
+  EmailValidator:
+    :commit: e39cb1f
+    :git: https://github.com/gekitz/EmailValidator.git
+
+CHECKOUT OPTIONS:
+  EmailValidator:
+    :commit: e39cb1f
+    :git: https://github.com/gekitz/EmailValidator.git
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Amplitude-iOS: ac1715ae68104b7a51723209ad574f60ab22ae5f
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
+  EmailValidator: 4c31300ca757c223de7928a2efe039501a0af370
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  FacebookCore: 38cd3a4078738d6f648eb9b6b9d35b02d693e9a1
+  FBSDKCoreKit: 8bcd4503afe43f28823c2175a6142a7f50f1bf28
+  FirebaseABTesting: 1f50b8d50f5e3469eea54e7463a7b7fe221d1f5e
+  FirebaseAnalytics: fd72a26bf8dac84cefba2f0864366f718555a5b0
+  FirebaseAnalyticsInterop: efbe45c8385ec626e29f9525e5ebd38520dfb6c1
+  FirebaseCore: f1a9a8be1aee4bf71a2fc0f4096df6788bdfda61
+  FirebaseInstanceID: a122b0c258720cf250551bb2bedf48c699f80d90
+  FirebaseMessaging: 4235f949ce1c4e827aeb19705ba5c53f9b85aa10
+  FirebaseRemoteConfig: 7e11c65f0769c09bff6947997c209515058c5318
+  GoogleAppMeasurement: 1624046ab1bcc5e170061a56ef5679000b079c8e
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
+  GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
+  Kvitto: d451f893f84ad669850b7cb7d3f8781363e14232
+  Moya: c084dac5ea389eeac7c1059f0553d74197182d39
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SupportEmail: b324c80bf2e58007d8f7edffc9e003039f016829
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
+  SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
+
+PODFILE CHECKSUM: c987cd5e71717c5fbbb73c1e2c994fa85669b46a
+
+COCOAPODS: 1.6.1

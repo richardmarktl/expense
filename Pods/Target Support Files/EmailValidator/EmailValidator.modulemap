@@ -1,0 +1,6 @@
+framework module EmailValidator {
+  umbrella header "EmailValidator-umbrella.h"
+
+  export *
+  module * { export * }
+}

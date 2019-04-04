@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MailKeyboardAccessory" customModule="InVoice" customModuleProvider="target">
+            <connections>
+                <outlet property="hideKeyboardButton" destination="Sc4-Bx-TlO" id="aZA-X2-x6S"/>
+                <outlet property="toolbar" destination="XUM-c4-tVp" id="q0E-ne-L3C"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xcE-ed-FaS">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUM-c4-tVp">
+                    <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3ig-2D-apk"/>
+                        <barButtonItem image="hide_keyboard_icon" id="Sc4-Bx-TlO">
+                            <color key="tintColor" red="0.21176470589999999" green="0.51372549020000002" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XUM-c4-tVp" firstAttribute="leading" secondItem="FxG-us-TIO" secondAttribute="leading" id="4Wn-Bo-EHA"/>
+                <constraint firstItem="XUM-c4-tVp" firstAttribute="bottom" secondItem="FxG-us-TIO" secondAttribute="bottom" id="Ny5-Ip-23r"/>
+                <constraint firstItem="XUM-c4-tVp" firstAttribute="top" secondItem="xcE-ed-FaS" secondAttribute="top" id="kXU-kW-zLi"/>
+                <constraint firstItem="XUM-c4-tVp" firstAttribute="trailing" secondItem="FxG-us-TIO" secondAttribute="trailing" id="qsR-bW-xTA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="FxG-us-TIO"/>
+            <point key="canvasLocation" x="-101.5" y="-270"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hide_keyboard_icon" width="24" height="24"/>
+    </resources>
+</document>

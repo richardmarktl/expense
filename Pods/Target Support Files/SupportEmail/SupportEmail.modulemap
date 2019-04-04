@@ -1,0 +1,6 @@
+framework module SupportEmail {
+  umbrella header "SupportEmail-umbrella.h"
+
+  export *
+  module * { export * }
+}

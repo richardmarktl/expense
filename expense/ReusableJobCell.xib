@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+        <array key="FiraSans-SemiBold.otf">
+            <string>FiraSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JobCell" rowHeight="83" id="cdZ-3k-enq" customClass="JobCell" customModule="InVoice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cdZ-3k-enq" id="9ZU-5X-Vz8">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" insetsLayoutMarginsFromSafeArea="NO" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ytA-p8-hk6">
+                        <rect key="frame" x="351" y="15" width="8" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="EfV-0H-Vjy"/>
+                            <constraint firstAttribute="height" constant="14" id="lSF-MO-ocy"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-r8-ftL">
+                        <rect key="frame" x="16" y="11" width="327" height="60.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4V4-4N-dsI">
+                                <rect key="frame" x="0.0" y="0.0" width="116" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Samatha Cole" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0y-cF-Wbj">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="ID2017/002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBs-5u-HmE">
+                                        <rect key="frame" x="0.0" y="22.5" width="116" height="18"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
+                                        <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Nov 5., due in 12 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lc4-KF-saG">
+                                        <rect key="frame" x="0.0" y="42.5" width="116" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="PSp-2x-JhL">
+                                <rect key="frame" x="120" y="0.0" width="207" height="60.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="€ 1,250.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p09-s3-U6V">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOX-EJ-DYt">
+                                        <rect key="frame" x="0.0" y="22.5" width="207" height="38"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-Sr-fnp" customClass="BadgeView" customModule="InVoice" customModuleProvider="target">
+                                                <rect key="frame" x="146.5" y="0.0" width="62.5" height="38"/>
+                                                <color key="backgroundColor" red="0.21176470589999999" green="0.51372549020000002" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Not Send"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                                        <color key="value" red="0.21176470589999999" green="0.51372549020000002" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="dJS-Sr-fnp" firstAttribute="top" secondItem="KOX-EJ-DYt" secondAttribute="top" id="Itt-dz-Vfh"/>
+                                            <constraint firstAttribute="trailing" secondItem="dJS-Sr-fnp" secondAttribute="trailing" id="aNF-CS-Hmb"/>
+                                            <constraint firstAttribute="bottom" secondItem="dJS-Sr-fnp" secondAttribute="bottom" id="qJt-ZQ-5HR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ytA-p8-hk6" firstAttribute="leading" secondItem="EPZ-r8-ftL" secondAttribute="trailing" constant="8" id="20w-Pd-haB"/>
+                    <constraint firstItem="ytA-p8-hk6" firstAttribute="centerY" secondItem="p09-s3-U6V" secondAttribute="centerY" id="aOA-Ia-42e"/>
+                    <constraint firstItem="EPZ-r8-ftL" firstAttribute="top" secondItem="9ZU-5X-Vz8" secondAttribute="top" constant="11" id="geJ-IN-Ewt"/>
+                    <constraint firstAttribute="bottom" secondItem="EPZ-r8-ftL" secondAttribute="bottom" constant="11" id="mG4-Hb-4BA"/>
+                    <constraint firstItem="EPZ-r8-ftL" firstAttribute="leading" secondItem="9ZU-5X-Vz8" secondAttribute="leadingMargin" id="qdr-nO-Nn3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ytA-p8-hk6" secondAttribute="trailing" id="tQF-1N-Nth"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="badgeView" destination="dJS-Sr-fnp" id="7hr-eH-q8n"/>
+                <outlet property="customerLabel" destination="N0y-cF-Wbj" id="2hU-ta-p3I"/>
+                <outlet property="dueLabel" destination="lc4-KF-saG" id="t9b-Cb-Q6Z"/>
+                <outlet property="invoiceNumberLabel" destination="vBs-5u-HmE" id="CaK-Du-Zid"/>
+                <outlet property="totalLabel" destination="p09-s3-U6V" id="jMp-wL-tkN"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow" width="8" height="14"/>
+    </resources>
+</document>

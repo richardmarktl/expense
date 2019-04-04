@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+        <array key="FiraSans-SemiBold.otf">
+            <string>FiraSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyButtonContainer" customModule="InVoice" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="C6a-8N-i92" id="KuU-gh-Dnt"/>
+                <outlet property="button" destination="orf-cn-keF" id="F6I-8I-PBx"/>
+                <outlet property="leftLabel" destination="0uE-2m-AEV" id="Xln-1T-G4o"/>
+                <outlet property="rightLabel" destination="NHj-iR-mLt" id="BK6-Do-XuE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="uuX-SY-eOu">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orf-cn-keF" customClass="BuyButton" customModule="InVoice" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C6a-8N-i92">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 months" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uE-2m-AEV">
+                            <rect key="frame" x="10" y="16" width="79.5" height="21"/>
+                            <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHj-iR-mLt">
+                            <rect key="frame" x="327.5" y="17.5" width="37.5" height="18"/>
+                            <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="0uE-2m-AEV" firstAttribute="leading" secondItem="orf-cn-keF" secondAttribute="leading" constant="10" id="LcJ-0J-BRE"/>
+                        <constraint firstAttribute="bottom" secondItem="C6a-8N-i92" secondAttribute="bottom" id="MLu-6s-5mJ"/>
+                        <constraint firstItem="NHj-iR-mLt" firstAttribute="centerY" secondItem="orf-cn-keF" secondAttribute="centerY" id="Rrc-p3-JDw"/>
+                        <constraint firstAttribute="trailing" secondItem="C6a-8N-i92" secondAttribute="trailing" id="izR-D8-Cw1"/>
+                        <constraint firstItem="C6a-8N-i92" firstAttribute="top" secondItem="orf-cn-keF" secondAttribute="top" id="j9T-w2-XkG"/>
+                        <constraint firstItem="0uE-2m-AEV" firstAttribute="centerY" secondItem="orf-cn-keF" secondAttribute="centerY" id="ole-Od-dwA"/>
+                        <constraint firstAttribute="trailing" secondItem="NHj-iR-mLt" secondAttribute="trailing" constant="10" id="rvC-lE-HxT"/>
+                        <constraint firstItem="C6a-8N-i92" firstAttribute="leading" secondItem="orf-cn-keF" secondAttribute="leading" id="x8a-5j-Oja"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="orf-cn-keF" firstAttribute="leading" secondItem="Dvw-gn-jtw" secondAttribute="leading" id="2HZ-5E-3uf"/>
+                <constraint firstItem="Dvw-gn-jtw" firstAttribute="trailing" secondItem="orf-cn-keF" secondAttribute="trailing" id="501-Fr-b1c"/>
+                <constraint firstItem="orf-cn-keF" firstAttribute="top" secondItem="uuX-SY-eOu" secondAttribute="top" id="Yuj-2x-GWs"/>
+                <constraint firstAttribute="bottom" secondItem="orf-cn-keF" secondAttribute="bottom" id="z3m-DJ-ywC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Dvw-gn-jtw"/>
+            <point key="canvasLocation" x="34.5" y="-233"/>
+        </view>
+    </objects>
+</document>

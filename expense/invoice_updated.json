@@ -1,0 +1,30 @@
+{
+    "id": 3,
+    "uuid": "a79b2bb0-b58d-4fbf-9b38-d70cf7054f46",
+    "created": "2018-01-19T11:22:45.354025Z",
+    "updated": "2018-01-19T11:22:45.354052Z",
+    "date": "2018-01-19T11:22:41.924000Z",
+    "due": "2018-01-19T11:22:41.924000Z",
+    "paid": "2018-01-19T11:22:41.924000Z",
+    "discount": "20.00",
+    "discount_absolute": true,
+    "number": "EST00004",
+    "total": "100.00",
+    "client_name": "Georg Kitz",
+    "client_email": "georgkitz@gmail.com",
+    "client_tax_id": "abc",
+    "client_address": "Johann Offner Str 17, 9400 Wolfsberg",
+    "client_phone": "06603830196",
+    "client_website": "www.georgkitz.at",
+    "note": "foo",
+    "payment_details": "bar",
+    "client": "2",
+    "state": null,
+    "tracking": {
+        "uuid": "a79b2bb0-b58d-4fbf-9b38-d70cf7054f46",
+        "link": "http://18.194.13.46/invoice/states/confirm/a79b2bb0-b58d-4fbf-9b38-d70cf7054f46.png",
+        "created": "2018-01-22T14:22:19.504789Z",
+        "updated": "2018-01-22T14:22:19.504815Z",
+        "state": 0
+    }
+}

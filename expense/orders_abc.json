@@ -1,0 +1,22 @@
+{
+    "next": null,
+    "previous": "http://18.194.13.46/clients/?cursor=cD0yMDE4LTAxLTI2KzA4JTNBMjglM0EyOS40NzY0OTIlMkIwMCUzQTAwJnI9MQ%3D%3D",
+    "results": [
+                {
+                "id": 1,
+                "uuid": "5d9861b3-f80e-4997-970a-03c38a157da4",
+                "created": "2018-01-22T14:22:19.927800Z",
+                "updated": "2018-01-22T14:27:09.707655Z",
+                "title": "Techniker Stunde",
+                "description": "Techniker Stunde",
+                "price": "120.00",
+                "tax": "20.00",
+                "quantity": 1.0,
+                "discount": "0.00",
+                "discount_absolute": false,
+                "total": "120.00",
+                "template": null,
+                "job": 2
+                }
+            ]
+}

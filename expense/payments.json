@@ -1,0 +1,17 @@
+{
+    "next": null,
+    "previous": "http://18.194.13.46/clients/?cursor=cD0yMDE4LTAxLTI2KzA4JTNBMjglM0EyOS40NzY0OTIlMkIwMCUzQTAwJnI9MQ%3D%3D",
+    "results": [
+                {
+                    "id": 2,
+                    "uuid": "2e62bab1-87af-4245-85c7-8bd4597db100",
+                    "created": "2018-01-26T14:14:59.542680Z",
+                    "updated": "2018-01-26T14:14:59.677283Z",
+                    "amount": "12.00",
+                    "note": null,
+                    "date": "2018-01-26T14:14:32.819000Z",
+                    "type": "cash",
+                    "invoice": 2
+                }
+            ]
+}

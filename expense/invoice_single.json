@@ -1,0 +1,30 @@
+{
+    "id": 4,
+    "uuid": "2507a8b2-d2c6-4c6f-a880-40fc9ab10656",
+    "client_website": "http://www.georgkitz.com",
+    "tracking": {
+        "id": "9d70202d-5b60-4287-9cb7-2b627bc7f871",
+        "link": "http://18.194.13.46/invoice/states/confirm/9d70202d-5b60-4287-9cb7-2b627bc7f871.png",
+        "created": "2018-01-27T19:00:53.565473Z",
+        "updated": "2018-01-27T19:00:53.565511Z",
+        "state": 0
+    },
+    "state": 4,
+    "created": "2018-01-27T19:00:53.568543Z",
+    "updated": "2018-01-27T19:01:25.071539Z",
+    "date": "2018-01-27T19:00:45.156000Z",
+    "discount": "0.00",
+    "discount_absolute": true,
+    "number": "INV00131",
+    "total": "0.00",
+    "client_name": "Georg Pagination Test 15",
+    "client_email": "georgkitz+15@gmail.com",
+    "client_tax_id": null,
+    "client_address": "Paginated Address 15\n 9020 Klagenfurt",
+    "client_phone": null,
+    "note": "",
+    "payment_details": "",
+    "due": "2018-02-03T19:00:45.157000Z",
+    "paid": null,
+    "client": 14
+}

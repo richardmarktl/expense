@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+        <array key="FiraSans-SemiBold.otf">
+            <string>FiraSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrailButtonContainer" customModule="InVoice" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="zA3-5r-Pqz" id="lFS-tx-FHf"/>
+                <outlet property="bottomLabel" destination="G2K-j0-jhV" id="ax3-wM-jYP"/>
+                <outlet property="button" destination="dMV-p9-qdD" id="CzA-ty-ovk"/>
+                <outlet property="topLabel" destination="n5z-K1-mxp" id="4pb-xw-n0O"/>
+            </connections>
+        </placeholder>
+        <view contentMode="scaleToFill" id="Ifr-EH-rdx">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMV-p9-qdD" customClass="BuyButton" customModule="InVoice" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zA3-5r-Pqz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                        </imageView>
+                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Amb-E2-MXT">
+                            <rect key="frame" x="10" y="7.5" width="355" height="38.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Trail Week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="n5z-K1-mxp">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="24"/>
+                                    <fontDescription key="fontDescription" name="FiraSans-SemiBold" family="Fira Sans" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Then €4,99 per month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2K-j0-jhV">
+                                    <rect key="frame" x="0.0" y="24" width="355" height="14.5"/>
+                                    <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Amb-E2-MXT" secondAttribute="trailing" constant="10" id="0ld-wA-e9C"/>
+                        <constraint firstItem="zA3-5r-Pqz" firstAttribute="leading" secondItem="dMV-p9-qdD" secondAttribute="leading" id="E2s-Xm-pro"/>
+                        <constraint firstItem="Amb-E2-MXT" firstAttribute="centerY" secondItem="dMV-p9-qdD" secondAttribute="centerY" id="Vzf-6v-8Ov"/>
+                        <constraint firstAttribute="bottom" secondItem="zA3-5r-Pqz" secondAttribute="bottom" id="Zva-s3-0nA"/>
+                        <constraint firstItem="zA3-5r-Pqz" firstAttribute="top" secondItem="dMV-p9-qdD" secondAttribute="top" id="dMy-5U-r5C"/>
+                        <constraint firstAttribute="trailing" secondItem="zA3-5r-Pqz" secondAttribute="trailing" id="m3Q-a5-p6H"/>
+                        <constraint firstItem="Amb-E2-MXT" firstAttribute="leading" secondItem="dMV-p9-qdD" secondAttribute="leading" constant="10" id="njJ-Xt-Utw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dMV-p9-qdD" firstAttribute="leading" secondItem="N7h-PR-JVk" secondAttribute="leading" id="2sF-8z-bkV"/>
+                <constraint firstAttribute="bottom" secondItem="dMV-p9-qdD" secondAttribute="bottom" id="CmN-Cl-aOe"/>
+                <constraint firstItem="dMV-p9-qdD" firstAttribute="top" secondItem="Ifr-EH-rdx" secondAttribute="top" id="YV2-XD-V54"/>
+                <constraint firstItem="N7h-PR-JVk" firstAttribute="trailing" secondItem="dMV-p9-qdD" secondAttribute="trailing" id="g9s-FM-FaK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="N7h-PR-JVk"/>
+            <point key="canvasLocation" x="34.5" y="-233"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+</document>

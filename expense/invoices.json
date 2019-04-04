@@ -1,0 +1,36 @@
+{
+    "next": null,
+    "previous": "http://18.194.13.46/clients/?cursor=cD0yMDE4LTAxLTI2KzA4JTNBMjglM0EyOS40NzY0OTIlMkIwMCUzQTAwJnI9MQ%3D%3D",
+    "results": [
+                {
+                "id": 2,
+                "uuid": "9f593fff-e9ad-40b9-9f67-af101a470f0a",
+                "client_website": null,
+                "tracking": {
+                    "id": "a79b2bb0-b58d-4fbf-9b38-d70cf7054f46",
+                    "link": "http://18.194.13.46/invoice/states/confirm/a79b2bb0-b58d-4fbf-9b38-d70cf7054f46.png",
+                    "created": "2018-01-22T14:22:19.504789Z",
+                    "updated": "2018-01-22T14:22:19.504815Z",
+                    "state": 0
+                },
+                "state": 0,
+                "created": "2018-01-22T14:22:19.508073Z",
+                "updated": "2018-01-22T14:27:06.303182Z",
+                "date": "2018-01-22T14:21:43.163000Z",
+                "discount": "0.00",
+                "discount_absolute": true,
+                "number": "INV00014",
+                "total": "144.00",
+                "client_name": null,
+                "client_email": null,
+                "client_tax_id": null,
+                "client_address": null,
+                "client_phone": null,
+                "note": "",
+                "payment_details": "",
+                "due": "2018-01-29T14:21:43.163000Z",
+                "paid": null,
+                "client": null
+                }
+            ]
+}

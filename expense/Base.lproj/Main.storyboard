@@ -115,12 +115,24 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="1nn-BX-4Ba">
                         <barButtonItem key="leftBarButtonItem" title="Expense Bot" style="done" id="gtS-8F-8Dk"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="settings" id="xEm-ql-lUS"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="settings" id="xEm-ql-lUS">
+                            <connections>
+                                <segue destination="pkg-35-ZcE" kind="presentation" id="IU3-OT-WYh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="523-G5-86c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="250.72463768115944" y="-210.26785714285714"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="hYy-6I-B2z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="pkg-35-ZcE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MO0-yI-BOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="-488"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="shW-ow-Yoj">

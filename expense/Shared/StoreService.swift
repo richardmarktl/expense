@@ -8,10 +8,10 @@
 
 import Foundation
 import StoreKit
-import RxStoreKit
+// import RxStoreKit
 import RxSwift
 import Kvitto
-import SwiftMoment
+// import SwiftMoment
 
 enum StoreServiceError: String, Error {
     case receiptExpired
@@ -76,17 +76,17 @@ struct Product {
             hasTrail = false
             period = 1
         } else if product.productIdentifier == StoreService.ProductIndentifiers.twoMonths {
-            monthlyPrice = formatter.string(from: product.price / 2) ?? "\(product.price)"
+            monthlyPrice = formatter.string(from: product.price.dividing(by: NSDecimalNumber(value: 2))) ?? "\(product.price)"
             isMonthBasedPeriod = true
             hasTrail = true
             period = 2
         } else if product.productIdentifier == StoreService.ProductIndentifiers.lifetime {
-            monthlyPrice = formatter.string(from: product.price / 36) ?? "\(product.price)"
+            monthlyPrice = formatter.string(from: product.price.dividing(by: NSDecimalNumber(value: 36))) ?? "\(product.price)"
             isMonthBasedPeriod = false
             hasTrail = false
             period = 36
         } else {
-            monthlyPrice = formatter.string(from: product.price / 12) ?? "\(product.price)"
+            monthlyPrice = formatter.string(from: product.price.dividing(by: NSDecimalNumber(value: 12))) ?? "\(product.price)"
             isMonthBasedPeriod = false
             hasTrail = false
             period = 12
@@ -140,8 +140,8 @@ class StoreService: NSObject {
         super.init()
         
         let now = Observable.just(())
-        let background = NotificationCenter.default.rx.notification(NSNotification.Name.UIApplicationDidEnterBackground, object: nil).mapToVoid()
-        let active = NotificationCenter.default.rx.notification(NSNotification.Name.UIApplicationDidBecomeActive, object: nil).mapToVoid()
+        let background = NotificationCenter.default.rx.notification(UIApplication.didEnterBackgroundNotification, object: nil).mapToVoid()
+        let active = NotificationCenter.default.rx.notification(UIApplication.didBecomeActiveNotification, object: nil).mapToVoid()
         
         Observable.of(now, background, active, paymentQueueObserverSubject.asObservable(), overrideSettingSubject.asObservable()).merge()
             .throttle(1, scheduler: MainScheduler.instance)
@@ -155,16 +155,16 @@ class StoreService: NSObject {
     func loadProducts() {
 
         let productIds = Set([ProductIndentifiers.oneMonth, ProductIndentifiers.oneMonthNoTrail, ProductIndentifiers.oneYear, ProductIndentifiers.lifetime])
-        let productRequest = SKProductsRequest(productIdentifiers: productIds)
-        _ = productRequest.rx.productsRequest
-        .do(onError: { (error) in
-            logger.error(error)
-        })
-        .map { (response) -> [Product] in
-            return response.products.map { Product(with: $0) }
-        }.bind(to: productsSubject)
-        
-        productRequest.start()
+        // FIXME: RxStoreKit
+//        let productRequest = SKProductsRequest(productIdentifiers: productIds)
+//        _ = productRequest.rx.productsRequest
+//        .do(onError: { (error) in
+//            logger.error(error)
+//        })
+//        .map { (response) -> [Product] in
+//            return response.products.map { Product(with: $0) }
+//        }.bind(to: productsSubject)
+//        productRequest.start()
     }
     
     func purchaseMonthly() -> Observable<Purchase> {
@@ -208,27 +208,29 @@ class StoreService: NSObject {
     }
     
     func restorePurchase() -> Observable<Void> {
-        return SKPaymentQueue.default().rx.restoreCompletedTransactions()
-        .do(onNext: { (_) in
-            logger.debug("Restored all transactions")
-        }, onError: { (error) in
-            logger.error(error)
-        })
-        .map { _ in
-            
-            guard Bundle.main.appStoreReceiptURL != nil else {
-                throw StoreServiceError.neverHadASubscription
-            }
-            
-            guard StoreService.isReceiptValid() else {
-                if let date = StoreService.expirationDate() {
-                    throw R.string.localizable.receiptExpired(date.asString())
-                }
-                throw StoreServiceError.receiptExpired
-            }
-        }
+        return Observable.just(());
+        // FIXME: RxStoreKit
+//        return SKPaymentQueue.default().rx.restoreCompletedTransactions()
+//        .do(onNext: { (_) in
+//            logger.debug("Restored all transactions")
+//        }, onError: { (error) in
+//            logger.error(error)
+//        })
+//        .map { _ in
+//
+//            guard Bundle.main.appStoreReceiptURL != nil else {
+//                throw StoreServiceError.neverHadASubscription
+//            }
+//
+//            guard StoreService.isReceiptValid() else {
+//                if let date = StoreService.expirationDate() {
+//                    throw R.string.localizable.receiptExpired(date.asString())
+//                }
+//                throw StoreServiceError.receiptExpired
+//            }
+//        }
     }
-    
+
     func overrideValiditidy(to isValid: Bool) {
         Static.shouldOverrideSettings = isValid
         overrideSettingSubject.onNext(())
@@ -239,42 +241,45 @@ class StoreService: NSObject {
     }
     
     private func purchase(product: Product) -> Observable<Bool> {
-        return SKPaymentQueue.default().rx.add(product: product.product, verifyWith: Static.itcSecret)
-            .do(onNext: { (transaction) in
-                logger.debug("Created transcaction: \(transaction) state \(transaction.transactionState.rawValue)")
-            }, onError: { (error) in
-                logger.error(error)
-            })
-            .filter({ (transaction) -> Bool in
-                transaction.transactionState != .purchasing
-            })
-            .map({ (transaction) -> Bool in
-                transaction.transactionState == .purchased
-            }).flatMap({ [unowned self] (success) -> Observable<Bool> in
-                #if DEBUG
-                    logger.debug("checking if we need to refresh the receipt since we are on debug")
-                    if !success || (success && Bundle.main.appStoreReceiptURL != nil) {
-                        logger.debug("no refreshing needed, we found the receipt on the device")
-                        return Observable.just(success)
-                    }
-                    logger.debug("start refreshing receipt")
-                    return self.refreshReceipt().map({ (_) -> Bool in
-                        logger.debug("receipt refresh finished")
-                        return success
-                    })
-                #else
-                logger.debug("no refrehsing needed, just return success \(success)")
-                return Observable.just(success)
-                #endif
-            })
+        return Observable.just(true);
+        // FIXME: RxStoreKit
+//        return SKPaymentQueue.default().rx.add(product: product.product, verifyWith: Static.itcSecret)
+//            .do(onNext: { (transaction) in
+//                logger.debug("Created transcaction: \(transaction) state \(transaction.transactionState.rawValue)")
+//            }, onError: { (error) in
+//                logger.error(error)
+//            })
+//            .filter({ (transaction) -> Bool in
+//                transaction.transactionState != .purchasing
+//            })
+//            .map({ (transaction) -> Bool in
+//                transaction.transactionState == .purchased
+//            }).flatMap({ [unowned self] (success) -> Observable<Bool> in
+//                #if DEBUG
+//                    logger.debug("checking if we need to refresh the receipt since we are on debug")
+//                    if !success || (success && Bundle.main.appStoreReceiptURL != nil) {
+//                        logger.debug("no refreshing needed, we found the receipt on the device")
+//                        return Observable.just(success)
+//                    }
+//                    logger.debug("start refreshing receipt")
+//                    return self.refreshReceipt().map({ (_) -> Bool in
+//                        logger.debug("receipt refresh finished")
+//                        return success
+//                    })
+//                #else
+//                logger.debug("no refrehsing needed, just return success \(success)")
+//                return Observable.just(success)
+//                #endif
+//            })
     }
-    
-    private func refreshReceipt() -> Observable<Void> {
-        let request = SKReceiptRefreshRequest()
-        let obs = request.rx.refresh.mapToVoid()
-        request.start()
-        return obs
-    }
+
+    // FIXME: RxStoreKit
+//    private func refreshReceipt() -> Observable<Void> {
+//        let request = SKReceiptRefreshRequest()
+//        let obs = request.rx.refresh.mapToVoid()
+//        request.start()
+//        return obs
+//    }
     
     private class func isReceiptValid() -> Bool {
         #if arch(i386) || arch(x86_64)
@@ -300,11 +305,13 @@ class StoreService: NSObject {
     }
     
     private class func check(expirationDate: Date) -> Bool {
-        #if DEBUG
-        return moment(expirationDate).add(1, .Minutes).date.timeIntervalSince1970 > Date().timeIntervalSince1970
-        #else
-        return moment(expirationDate).add(2, .Days).date.timeIntervalSince1970 > Date().timeIntervalSince1970
-        #endif
+        // FIXME: moment
+//        #if DEBUG
+//        return moment(expirationDate).add(1, .Minutes).date.timeIntervalSince1970 > Date().timeIntervalSince1970
+//        #else
+//        return moment(expirationDate).add(2, .Days).date.timeIntervalSince1970 > Date().timeIntervalSince1970
+//        #endif
+        return true;
     }
     
     private class func log() {
@@ -351,14 +358,15 @@ class StoreService: NSObject {
         }
         let now = Date().timeIntervalSince1970
         if expirationDate!.timeIntervalSince1970 <  now {
-            
-            if moment(expirationDate!).add(2, .Days).date.timeIntervalSince1970 < now {
-                Analytics.subscriptionIsOutsideGracePeriod.logEvent()
-                logger.debug("Already expired \(expirationDate!.asString())")
-            } else {
-                logger.debug("Already expired but within grace period \(expirationDate!.asString())")
-            }
-            
+
+            // FIXME: moment
+//            if moment(expirationDate!).add(2, .Days).date.timeIntervalSince1970 < now {
+//                // Analytics.subscriptionIsOutsideGracePeriod.logEvent()
+//                logger.debug("Already expired \(expirationDate!.asString())")
+//            } else {
+//                logger.debug("Already expired but within grace period \(expirationDate!.asString())")
+//            }
+//
             return
         }
     }
@@ -423,7 +431,7 @@ extension StoreService: SKPaymentTransactionObserver {
     }
     
     func paymentQueue(_ queue: SKPaymentQueue, shouldAddStorePayment payment: SKPayment, for product: SKProduct) -> Bool {
-        Analytics.upsellPurchaseViaAppStoreDirectly.logEvent(["productIdentifier": product.productIdentifier.asNSString])
+        // Analytics.upsellPurchaseViaAppStoreDirectly.logEvent(["productIdentifier": product.productIdentifier.asNSString])
         return true
     }
 }

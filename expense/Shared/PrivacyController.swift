@@ -12,14 +12,13 @@ import RxSwift
 import RxCocoa
 
 class PrivacyController: UIViewController {
-    
     private let bag = DisposeBag()
     private let webView: WKWebView = {
         
         let contentController = WKUserContentController()
         let configuration = WKWebViewConfiguration()
         
-        configuration.applicationNameForUserAgent = "InvoiceBot"
+        configuration.applicationNameForUserAgent = AppInfo.name
         configuration.userContentController = contentController
         
         let webView = WKWebView(frame: CGRect.zero, configuration: configuration)
@@ -49,7 +48,7 @@ class PrivacyController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         
         if let topItem = navigationController?.navigationBar.topItem {
-            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         }
         
         view.addSubview(webView)
@@ -78,9 +77,7 @@ class PrivacyController: UIViewController {
         }
         
         let url = URL(fileURLWithPath: file)
-        
         if index == 0 {
-            
             StoreService.instance.loadProducts()
             StoreService.instance.productsObservable.subscribe(onNext: { [weak self](products) in
                 let monthlyProduct = products.filter({ $0.isMonthBasedPeriod }).first
@@ -100,11 +97,11 @@ class PrivacyController: UIViewController {
     private func filePath(for index: Int) -> String? {
         switch index {
         case 0:
-            return Bundle.main.path(forResource: "subscription", ofType: "html")
+            return AppInfo.pathToSubscriptionHtml
         case 1:
-            return Bundle.main.path(forResource: "terms", ofType: "html")
+            return AppInfo.pathToTermsOfServiceHtml
         case 2:
-            return Bundle.main.path(forResource: "privacy", ofType: "html")
+            return AppInfo.pathToPrivacyHtml
         default:
             return nil
         }

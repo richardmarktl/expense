@@ -11,6 +11,7 @@ import StoreKit
 import SupportEmail
 import MessageUI
 
+// protocol
 struct RatingDisplayable {
     private static var emailSupport: SupportEmail? = nil
     static func showRatingDialog(openAppStore: Bool = false) {
@@ -23,7 +24,7 @@ struct RatingDisplayable {
         let loveItAction = UIAlertAction(title: R.string.localizable.ratingHelpILoveIt(), style: .default) { (_) in
             
             RatingService.instance.save(ratingResult: .happy)
-            Analytics.ratingHappy.logEvent()
+            // Analytics.ratingHappy.logEvent()
             
             if openAppStore {
                 openInAppStore()
@@ -33,23 +34,23 @@ struct RatingDisplayable {
         }
         let feedbackAction = UIAlertAction(title: R.string.localizable.ratingHelpCouldBeBetter(), style: .cancel) { (_) in
             RatingService.instance.save(ratingResult: .unhappy)
-            Analytics.ratingUnhappy.logEvent()
+            // Analytics.ratingUnhappy.logEvent()
             
             emailSupport = SupportEmail()
             emailSupport?.sendAsTextFile = true
 
             emailSupport?.send(to: ["info@invoicebot.io"], subject: "InvoiceBot - " + UUID().uuidString.lowercased(), from: topCtr, completion: { (state, error) in
                 if state == .failed {
-                    Analytics.ratingFeedbackFailed.logEvent()
+                    // Analytics.ratingFeedbackFailed.logEvent()
                     if let error = error {
                         ErrorPresentable.show(error: error)
                     } else {
                         ErrorPresentable.show(error: R.string.localizable.noMailApp())
                     }
                 } else if state == .cancelled {
-                    Analytics.ratingFeedbackCancelled.logEvent()
+                    // Analytics.ratingFeedbackCancelled.logEvent()
                 } else if state == .sent {
-                    Analytics.ratingFeedbackSuccess.logEvent()
+                    // Analytics.ratingFeedbackSuccess.logEvent()
                 }
             })
         }

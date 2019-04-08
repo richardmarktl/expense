@@ -37,7 +37,7 @@ public extension XibSetupable where Self: UIView {
         
         rootView.frame = bounds
         rootView.tag = 190
-        rootView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        rootView.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
         addSubview(rootView)
     }
     

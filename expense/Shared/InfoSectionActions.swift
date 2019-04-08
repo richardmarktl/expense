@@ -13,6 +13,7 @@ import Moya
 import RxCocoa
 
 class EmailSupportAction: TapActionable {
+    var analytics: (() -> ())?
     
     private var emailSupport: SupportEmail?
     typealias RowActionType = SettingsItem
@@ -20,8 +21,10 @@ class EmailSupportAction: TapActionable {
     func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
         emailSupport = SupportEmail()
         emailSupport?.sendAsTextFile = true
-
-        Analytics.settingsSupport.logEvent()
+        
+        if let analytics = self.analytics {
+            analytics();
+        }
         emailSupport?.send(to: ["info@invoicebot.io"], subject: "InvoiceBot - " + UUID().uuidString.lowercased(), from: ctr, completion: { (state, error) in
             if state == .failed {
                 if let error = error {
@@ -39,6 +42,8 @@ class EmailSupportAction: TapActionable {
 }
 
 class ShareAction: TapActionable {
+    var analytics: (() -> ())?
+    
     
     typealias RowActionType = SettingsItem
     
@@ -52,7 +57,9 @@ class ShareAction: TapActionable {
             activityCtr.popoverPresentationController?.sourceRect = tableView.cellForRow(at: indexPath)?.bounds ?? CGRect.zero
         }
         
-        Analytics.settingsShare.logEvent()
+        if let analytics = self.analytics {
+            analytics();
+        }
         ctr.present(activityCtr, animated: true)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
@@ -65,10 +72,14 @@ class ShareAction: TapActionable {
 }
 
 class RateAction: TapActionable {
+    var analytics: (() -> ())?
+    
     typealias RowActionType = SettingsItem
     
     func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-        Analytics.settingsRate.logEvent()
+        if let analytics = self.analytics {
+            analytics();
+        }
         
         RatingDisplayable.showRatingDialog(openAppStore: true)
         
@@ -82,12 +93,17 @@ class RateAction: TapActionable {
 }
 
 class TermsAndPrivacyAction: TapActionable {
+    var analytics: (() -> ())?
     
     typealias RowActionType = SettingsItem
     
     func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+
+        
         let pCtr = PrivacyController(nibName: nil, bundle: nil)
-        Analytics.settingsTT.logEvent()
+        if let analytics = self.analytics {
+            analytics();
+        }
         ctr.navigationController?.pushViewController(pCtr, animated: true)
     }
     
@@ -96,9 +112,9 @@ class TermsAndPrivacyAction: TapActionable {
 }
 
 class NewsletterAction: TapActionable {
-    typealias RowActionType = SettingsItem
+    var analytics: (() -> ())?
     
-    private let provider = MoyaProvider<Mailchimp>(plugins: [ApiLogger(), MailchimpAuthPlugin()])
+    typealias RowActionType = SettingsItem
     
     func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
         
@@ -111,12 +127,10 @@ class NewsletterAction: TapActionable {
             externalTxt = txt
         }
         
-        let subscribe = UIAlertAction(title: R.string.localizable.subscribe(), style: UIAlertActionStyle.default) { (_) in
+        let subscribe = UIAlertAction(title: R.string.localizable.subscribe(), style: UIAlertAction.Style.default) { (_) in
             
             if let email = externalTxt?.text {
-                _ = self.provider.rx.request(Mailchimp.addMember(email: email)).asObservable().take(1).subscribe(onError: {
-                    logger.error($0)
-                })
+                self.subscribe(emai: email)
             }
             
             tableView.deselectRow(at: indexPath, animated: true)
@@ -127,10 +141,17 @@ class NewsletterAction: TapActionable {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         alert.addAction(cancel)
-        Analytics.settingsNewsletter.logEvent()
+        if let analytics = self.analytics {
+            analytics();
+        }
         ctr.present(alert, animated: true)
     }
     
     func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+        
+    }
+    
+    func subscribe(emai: String) {
+        fatalError("Subclass has not implemented abstract method `subscribe`!")
     }
 }

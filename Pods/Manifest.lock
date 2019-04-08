@@ -123,6 +123,7 @@ PODS:
   - RxSwift (4.5.0)
   - SupportEmail (3.0.0)
   - SwiftLint (0.31.0)
+  - SwiftRichString (3.0.0)
   - SwiftSignatureView (2.0.2)
   - SwiftyBeaver (1.7.0)
 
@@ -145,6 +146,7 @@ DEPENDENCIES:
   - RxSwift (~> 4.5.0)
   - SupportEmail (~> 3.0.0)
   - SwiftLint (~> 0.23)
+  - SwiftRichString (~> 3.0.0)
   - SwiftSignatureView
   - SwiftyBeaver (~> 1.6)
 
@@ -184,6 +186,7 @@ SPEC REPOS:
     - RxSwift
     - SupportEmail
     - SwiftLint
+    - SwiftRichString
     - SwiftSignatureView
     - SwiftyBeaver
 
@@ -233,9 +236,10 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SupportEmail: b324c80bf2e58007d8f7edffc9e003039f016829
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftRichString: 5cb4860df3dc8e4d9087d7b948b210177342c3da
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: c987cd5e71717c5fbbb73c1e2c994fa85669b46a
+PODFILE CHECKSUM: 8ca4f5749eaa0ebc4cc5e0f05b20e76a611eccfc
 
 COCOAPODS: 1.6.1

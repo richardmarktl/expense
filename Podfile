@@ -10,7 +10,7 @@ target 'expense' do
   # Pods for expense
   pod 'SwiftLint', '~>0.23'
   pod 'SwiftyBeaver', '~> 1.6', :inhibit_warnings => true
-
+  
   # Rx
   pod 'RxSwift','~> 4.5.0'
   pod 'RxCocoa', '~> 4.5.0'
@@ -24,15 +24,16 @@ target 'expense' do
   pod 'Kvitto', '~> 1.0.2'
   pod 'Charts', '~> 3.2.2'
   pod 'EmailValidator', :git => "https://github.com/gekitz/EmailValidator.git", :commit => "e39cb1f"
-
+  
   pod 'Moya/RxSwift', '~> 13.0.0-beta.1'
   pod 'Reachability', '~> 3.2'
   pod 'JLRoutes', '~> 2.1'
-
+  pod 'SwiftRichString', '~> 3.0.0'
+  
   #Database
   # pod 'Horreum', :git => 'https://github.com/gekitz/horreum.git', :branch => 'swift4', :commit => '457e84a', :inhibit_warnings => true
   # pod 'CoreDataExtensio', '~> 1.0.9', :inhibit_warnings => true
-  #
+  
   #Firebase (PN) and Fabric (Tracking)
   pod 'GoogleSignIn'
   pod 'FirebaseCore'

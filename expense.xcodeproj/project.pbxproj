@@ -9,6 +9,40 @@
 /* Begin PBXBuildFile section */
 		245F6595BFB660C0DCB88EC1 /* Pods_expense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5390150F0DE85C1237DE9E6 /* Pods_expense.framework */; };
 		5C4EE1D4C3B9C8635E265EA9 /* Pods_expenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */; };
+		79D13FEE225B236600B11435 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FEC225B236500B11435 /* TableRow.swift */; };
+		79D13FEF225B236600B11435 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FED225B236600B11435 /* TableSection.swift */; };
+		79D13FF1225B32A600B11435 /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13FF0225B32A600B11435 /* TableFooterView.xib */; };
+		79D13FF3225B32DD00B11435 /* UIFont+Fira.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FF2225B32DC00B11435 /* UIFont+Fira.swift */; };
+		79D13FF5225B341A00B11435 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13FF4225B341A00B11435 /* UserCell.xib */; };
+		79D13FF7225B347100B11435 /* UserSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FF6225B347100B11435 /* UserSection.swift */; };
+		79D13FF9225B3CC900B11435 /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FF8225B3CC900B11435 /* TapAction.swift */; };
+		79D13FFB225B3D7100B11435 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FFA225B3D7100B11435 /* ConfigurableCell.swift */; };
+		79D13FFD225B547500B11435 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FFC225B547500B11435 /* ReusableCell.swift */; };
+		79D14000225B552600B11435 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FFE225B552600B11435 /* SettingsModel.swift */; };
+		79D14001225B552600B11435 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FFF225B552600B11435 /* SettingsItem.swift */; };
+		79D14003225B554F00B11435 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14002225B554E00B11435 /* UIColor+Extension.swift */; };
+		79D14008225B67B300B11435 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14007225B67B300B11435 /* StoreService.swift */; };
+		79D1400A225B67FF00B11435 /* TableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14009225B67FF00B11435 /* TableFooterView.swift */; };
+		79D1400C225B68B400B11435 /* Observer-Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1400B225B68B400B11435 /* Observer-Void.swift */; };
+		79D1400E225B6AD900B11435 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1400D225B6AD800B11435 /* Logger.swift */; };
+		79D14010225B6B6500B11435 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1400F225B6B6400B11435 /* Date+String.swift */; };
+		79D14012225B6D0700B11435 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14011225B6D0700B11435 /* Styling.swift */; };
+		79D14017225B72ED00B11435 /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14015225B72EC00B11435 /* InfoSection.swift */; };
+		79D14018225B72ED00B11435 /* InfoSectionActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14016225B72EC00B11435 /* InfoSectionActions.swift */; };
+		79D1401B225B735800B11435 /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14019225B735700B11435 /* BusinessSection.swift */; };
+		79D1401C225B735800B11435 /* BusinessSectionActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1401A225B735800B11435 /* BusinessSectionActions.swift */; };
+		79D1401E225B756000B11435 /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1401D225B756000B11435 /* ErrorPresentable.swift */; };
+		79D14021225B764300B11435 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79D1401F225B764200B11435 /* Localizable.strings */; };
+		79D14023225B773200B11435 /* UIViewController+TopMostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14022225B773100B11435 /* UIViewController+TopMostViewController.swift */; };
+		79D14025225B7B3F00B11435 /* RatingAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14024225B7B3F00B11435 /* RatingAlertViewController.swift */; };
+		79D14027225B7B7900B11435 /* PrivacyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14026225B7B7900B11435 /* PrivacyController.swift */; };
+		79D14029225B7DCC00B11435 /* RatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14028225B7DCC00B11435 /* RatingService.swift */; };
+		79D1402B225B7EE100B11435 /* String+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1402A225B7EE100B11435 /* String+Error.swift */; };
+		79D1402D225B7F6400B11435 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1402C225B7F6400B11435 /* AppInfo.swift */; };
+		79D14030225B913500B11435 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D1402F225B913500B11435 /* SettingsCell.xib */; };
+		79D14033225B926700B11435 /* BadgeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D14031225B926700B11435 /* BadgeView.xib */; };
+		79D14034225B926700B11435 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14032225B926700B11435 /* BadgeView.swift */; };
+		79D14036225B92B000B11435 /* XibSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14035225B92B000B11435 /* XibSetupable.swift */; };
 		79F98D752256053E0026C17B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D742256053E0026C17B /* AppDelegate.swift */; };
 		79F98D772256053E0026C17B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D762256053E0026C17B /* ViewController.swift */; };
 		79F98D7A2256053E0026C17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F98D782256053E0026C17B /* Main.storyboard */; };
@@ -50,6 +84,40 @@
 		0F40EFEF708DAC57612BC6E9 /* Pods-expenseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseTests.debug.xcconfig"; path = "Target Support Files/Pods-expenseTests/Pods-expenseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expenseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B47F7E3CEC572915E7D231 /* Pods_expenseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expenseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D13FEC225B236500B11435 /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
+		79D13FED225B236600B11435 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		79D13FF0225B32A600B11435 /* TableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
+		79D13FF2225B32DC00B11435 /* UIFont+Fira.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Fira.swift"; sourceTree = "<group>"; };
+		79D13FF4225B341A00B11435 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		79D13FF6225B347100B11435 /* UserSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSection.swift; sourceTree = "<group>"; };
+		79D13FF8225B3CC900B11435 /* TapAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapAction.swift; sourceTree = "<group>"; };
+		79D13FFA225B3D7100B11435 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		79D13FFC225B547500B11435 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		79D13FFE225B552600B11435 /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		79D13FFF225B552600B11435 /* SettingsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		79D14002225B554E00B11435 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		79D14007225B67B300B11435 /* StoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreService.swift; path = expense/Shared/StoreService.swift; sourceTree = SOURCE_ROOT; };
+		79D14009225B67FF00B11435 /* TableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableFooterView.swift; path = expense/Shared/TableFooterView.swift; sourceTree = SOURCE_ROOT; };
+		79D1400B225B68B400B11435 /* Observer-Void.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observer-Void.swift"; path = "expense/Shared/Observer-Void.swift"; sourceTree = SOURCE_ROOT; };
+		79D1400D225B6AD800B11435 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = expense/Shared/Logger.swift; sourceTree = SOURCE_ROOT; };
+		79D1400F225B6B6400B11435 /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+String.swift"; path = "expense/Shared/Date+String.swift"; sourceTree = SOURCE_ROOT; };
+		79D14011225B6D0700B11435 /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = expense/Shared/Styling.swift; sourceTree = SOURCE_ROOT; };
+		79D14015225B72EC00B11435 /* InfoSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoSection.swift; path = expense/Shared/InfoSection.swift; sourceTree = SOURCE_ROOT; };
+		79D14016225B72EC00B11435 /* InfoSectionActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoSectionActions.swift; path = expense/Shared/InfoSectionActions.swift; sourceTree = SOURCE_ROOT; };
+		79D14019225B735700B11435 /* BusinessSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
+		79D1401A225B735800B11435 /* BusinessSectionActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessSectionActions.swift; sourceTree = "<group>"; };
+		79D1401D225B756000B11435 /* ErrorPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorPresentable.swift; path = expense/Shared/ErrorPresentable.swift; sourceTree = SOURCE_ROOT; };
+		79D14020225B764200B11435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		79D14022225B773100B11435 /* UIViewController+TopMostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+TopMostViewController.swift"; path = "expense/Shared/UIViewController+TopMostViewController.swift"; sourceTree = SOURCE_ROOT; };
+		79D14024225B7B3F00B11435 /* RatingAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingAlertViewController.swift; path = expense/Shared/RatingAlertViewController.swift; sourceTree = SOURCE_ROOT; };
+		79D14026225B7B7900B11435 /* PrivacyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacyController.swift; path = expense/Shared/PrivacyController.swift; sourceTree = SOURCE_ROOT; };
+		79D14028225B7DCC00B11435 /* RatingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingService.swift; path = expense/Shared/RatingService.swift; sourceTree = SOURCE_ROOT; };
+		79D1402A225B7EE100B11435 /* String+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Error.swift"; path = "expense/Shared/String+Error.swift"; sourceTree = SOURCE_ROOT; };
+		79D1402C225B7F6400B11435 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfo.swift; path = expense/Shared/AppInfo.swift; sourceTree = SOURCE_ROOT; };
+		79D1402F225B913500B11435 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		79D14031225B926700B11435 /* BadgeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BadgeView.xib; path = expense/Shared/BadgeView.xib; sourceTree = SOURCE_ROOT; };
+		79D14032225B926700B11435 /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeView.swift; path = expense/Shared/BadgeView.swift; sourceTree = SOURCE_ROOT; };
+		79D14035225B92B000B11435 /* XibSetupable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XibSetupable.swift; path = expense/Shared/XibSetupable.swift; sourceTree = SOURCE_ROOT; };
 		79F98D712256053E0026C17B /* expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F98D742256053E0026C17B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F98D762256053E0026C17B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +198,91 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		79D1402E225B8C2800B11435 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				79D1403F225BA86D00B11435 /* Store */,
+				79D1403C225BA7B200B11435 /* Table */,
+				79D1403B225B9AB100B11435 /* Utils */,
+				79D14039225B9A7B00B11435 /* Xib */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		79D14039225B9A7B00B11435 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				79D14031225B926700B11435 /* BadgeView.xib */,
+				79D13FF0225B32A600B11435 /* TableFooterView.xib */,
+				79D1402F225B913500B11435 /* SettingsCell.xib */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		79D1403B225B9AB100B11435 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79D1402C225B7F6400B11435 /* AppInfo.swift */,
+				79D14022225B773100B11435 /* UIViewController+TopMostViewController.swift */,
+				79D14035225B92B000B11435 /* XibSetupable.swift */,
+				79D1402A225B7EE100B11435 /* String+Error.swift */,
+				79D14011225B6D0700B11435 /* Styling.swift */,
+				79D1401D225B756000B11435 /* ErrorPresentable.swift */,
+				79D1400F225B6B6400B11435 /* Date+String.swift */,
+				79D1400D225B6AD800B11435 /* Logger.swift */,
+				79D1400B225B68B400B11435 /* Observer-Void.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		79D1403C225BA7B200B11435 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				79D1403E225BA83200B11435 /* Actions */,
+				79D1403D225BA80C00B11435 /* Model */,
+				79D13FEC225B236500B11435 /* TableRow.swift */,
+				79D14009225B67FF00B11435 /* TableFooterView.swift */,
+				79F98DB2225647500026C17B /* TableModel.swift */,
+				79D13FFC225B547500B11435 /* ReusableCell.swift */,
+				79D13FFA225B3D7100B11435 /* ConfigurableCell.swift */,
+				79F98DB1225647500026C17B /* TableModelViewController.swift */,
+				79F98DAB2256457A0026C17B /* SettingsCell.swift */,
+				79F98DAF2256470D0026C17B /* UserCell.swift */,
+				79D14032225B926700B11435 /* BadgeView.swift */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		79D1403D225BA80C00B11435 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79D13FED225B236600B11435 /* TableSection.swift */,
+				79D14015225B72EC00B11435 /* InfoSection.swift */,
+				79D13FFF225B552600B11435 /* SettingsItem.swift */,
+				79D14016225B72EC00B11435 /* InfoSectionActions.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		79D1403E225BA83200B11435 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				79D13FF8225B3CC900B11435 /* TapAction.swift */,
+				79D14028225B7DCC00B11435 /* RatingService.swift */,
+				79D14026225B7B7900B11435 /* PrivacyController.swift */,
+				79D14024225B7B3F00B11435 /* RatingAlertViewController.swift */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		79D1403F225BA86D00B11435 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				79D14007225B67B300B11435 /* StoreService.swift */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
 		79F98D682256053E0026C17B = {
 			isa = PBXGroup;
 			children = (
@@ -155,11 +308,16 @@
 		79F98D732256053E0026C17B /* expense */ = {
 			isa = PBXGroup;
 			children = (
-				79F98DB2225647500026C17B /* TableModel.swift */,
-				79F98DB1225647500026C17B /* TableModelViewController.swift */,
-				79F98DAF2256470D0026C17B /* UserCell.swift */,
+				79D1402E225B8C2800B11435 /* Shared */,
+				79D1401F225B764200B11435 /* Localizable.strings */,
+				79D14019225B735700B11435 /* BusinessSection.swift */,
+				79D1401A225B735800B11435 /* BusinessSectionActions.swift */,
+				79D14002225B554E00B11435 /* UIColor+Extension.swift */,
+				79F98DA9225643C00026C17B /* Settings.storyboard */,
+				79D13FFE225B552600B11435 /* SettingsModel.swift */,
+				79D13FF6225B347100B11435 /* UserSection.swift */,
+				79D13FF2225B32DC00B11435 /* UIFont+Fira.swift */,
 				79F98DAD225645A70026C17B /* SettingsController.swift */,
-				79F98DAB2256457A0026C17B /* SettingsCell.swift */,
 				79F98DA522563ADA0026C17B /* R.generated.swift */,
 				79F98D742256053E0026C17B /* AppDelegate.swift */,
 				79F98D762256053E0026C17B /* ViewController.swift */,
@@ -169,7 +327,7 @@
 				79F98D80225605400026C17B /* Info.plist */,
 				79F98DA3225639710026C17B /* WalletViewController.swift */,
 				79F98DA722563D6D0026C17B /* WalletCell.swift */,
-				79F98DA9225643C00026C17B /* Settings.storyboard */,
+				79D13FF4225B341A00B11435 /* UserCell.xib */,
 			);
 			path = expense;
 			sourceTree = "<group>";
@@ -304,7 +462,12 @@
 			files = (
 				79F98D7F225605400026C17B /* LaunchScreen.storyboard in Resources */,
 				79F98D7C225605400026C17B /* Assets.xcassets in Resources */,
+				79D14030225B913500B11435 /* SettingsCell.xib in Resources */,
+				79D13FF5225B341A00B11435 /* UserCell.xib in Resources */,
+				79D14033225B926700B11435 /* BadgeView.xib in Resources */,
+				79D14021225B764300B11435 /* Localizable.strings in Resources */,
 				79F98D7A2256053E0026C17B /* Main.storyboard in Resources */,
+				79D13FF1225B32A600B11435 /* TableFooterView.xib in Resources */,
 				79F98DAA225643C00026C17B /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +627,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SupportEmail/SupportEmail.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSignatureView/SwiftSignatureView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -493,6 +657,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SupportEmail.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSignatureView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -509,16 +674,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D14000225B552600B11435 /* SettingsModel.swift in Sources */,
+				79D14018225B72ED00B11435 /* InfoSectionActions.swift in Sources */,
 				79F98DB02256470D0026C17B /* UserCell.swift in Sources */,
+				79D14023225B773200B11435 /* UIViewController+TopMostViewController.swift in Sources */,
 				79F98D772256053E0026C17B /* ViewController.swift in Sources */,
+				79D13FFB225B3D7100B11435 /* ConfigurableCell.swift in Sources */,
+				79D13FF9225B3CC900B11435 /* TapAction.swift in Sources */,
+				79D14008225B67B300B11435 /* StoreService.swift in Sources */,
+				79D14025225B7B3F00B11435 /* RatingAlertViewController.swift in Sources */,
+				79D13FEF225B236600B11435 /* TableSection.swift in Sources */,
+				79D1400E225B6AD900B11435 /* Logger.swift in Sources */,
 				79F98D752256053E0026C17B /* AppDelegate.swift in Sources */,
+				79D14017225B72ED00B11435 /* InfoSection.swift in Sources */,
+				79D13FF7225B347100B11435 /* UserSection.swift in Sources */,
+				79D14034225B926700B11435 /* BadgeView.swift in Sources */,
+				79D14029225B7DCC00B11435 /* RatingService.swift in Sources */,
 				79F98DB3225647500026C17B /* TableModelViewController.swift in Sources */,
+				79D1400C225B68B400B11435 /* Observer-Void.swift in Sources */,
 				79F98DB4225647500026C17B /* TableModel.swift in Sources */,
+				79D14010225B6B6500B11435 /* Date+String.swift in Sources */,
+				79D14012225B6D0700B11435 /* Styling.swift in Sources */,
+				79D14036225B92B000B11435 /* XibSetupable.swift in Sources */,
+				79D1401B225B735800B11435 /* BusinessSection.swift in Sources */,
 				79F98DAC2256457A0026C17B /* SettingsCell.swift in Sources */,
+				79D1401C225B735800B11435 /* BusinessSectionActions.swift in Sources */,
+				79D13FF3225B32DD00B11435 /* UIFont+Fira.swift in Sources */,
 				79F98DAE225645A70026C17B /* SettingsController.swift in Sources */,
+				79D1402D225B7F6400B11435 /* AppInfo.swift in Sources */,
+				79D1402B225B7EE100B11435 /* String+Error.swift in Sources */,
+				79D1400A225B67FF00B11435 /* TableFooterView.swift in Sources */,
 				79F98DA822563D6D0026C17B /* WalletCell.swift in Sources */,
+				79D13FEE225B236600B11435 /* TableRow.swift in Sources */,
 				79F98DA4225639710026C17B /* WalletViewController.swift in Sources */,
+				79D14001225B552600B11435 /* SettingsItem.swift in Sources */,
 				79F98DA622563ADA0026C17B /* R.generated.swift in Sources */,
+				79D14027225B7B7900B11435 /* PrivacyController.swift in Sources */,
+				79D1401E225B756000B11435 /* ErrorPresentable.swift in Sources */,
+				79D13FFD225B547500B11435 /* ReusableCell.swift in Sources */,
+				79D14003225B554F00B11435 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +748,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		79D1401F225B764200B11435 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79D14020225B764200B11435 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		79F98D782256053E0026C17B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -16,16 +16,21 @@ class TableModelController<Model: TableModel>: UIViewController, UITableViewDele
     @IBOutlet weak var tableView: UITableView!
     
     let bag = DisposeBag()
-    
+    let container = NSPersistentContainer(name: "Settings") // TODO: remove this
     var context: NSManagedObjectContext!
     var lastSelectedItem: ConfigurableRow?
     var manuallyManageDataUpdate: Bool = false
     
-    lazy var model: Model = { return Model(with: context) }()
+    lazy var model: Model = { return Model(with: container.viewContext) }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(R.nib.tableFooterView(), forHeaderFooterViewReuseIdentifier: R.nib.tableFooterView.name)
+        
+        
+        // tableView
+        tableView.register(R.nib.settingsCell)
+        tableView.register(R.nib.userCell)
+        tableView.register(UINib(resource: R.nib.tableFooterView), forHeaderFooterViewReuseIdentifier:R.nib.tableFooterView.name)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,7 +84,7 @@ class TableModelController<Model: TableModel>: UIViewController, UITableViewDele
         guard model.sections[section].footerTitle != nil else {
             return 0
         }
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
@@ -98,16 +103,16 @@ class TableModelController<Model: TableModel>: UIViewController, UITableViewDele
         headerView.textLabel?.font = UIFont.headerFooterFont()
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
-        return UITableViewCellEditingStyle.delete
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return UITableViewCell.EditingStyle.delete
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return model.canEdit(at: indexPath)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
             manuallyManageDataUpdate = true
             model.delete(at: indexPath)
             tableView.deleteRows(at: [indexPath], with: .automatic)

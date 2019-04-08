@@ -30,7 +30,7 @@ class SettingsCell: UITableViewCell, ConfigurableCell {
         super.setSelected(selected, animated: animated)
         badgeView.badgeColor = color
     }
-    
+
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         let color = badgeView.badgeColor
         super.setHighlighted(highlighted, animated: animated)

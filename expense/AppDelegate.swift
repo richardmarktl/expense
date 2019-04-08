@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            RatingService.create(currentAppVersion: AppInfo.version)
+            #if DEBUG
+            RatingService.instance.isDebug = true
+            #endif
+        }
+        
         return true
     }
 

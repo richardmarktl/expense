@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Horreum
 import RxSwift
 import CoreData
 
@@ -17,13 +16,15 @@ struct UserItem {
 }
 
 class UserDetailAction: TapActionable {
+    var analytics: (() -> ())?
+    
     typealias RowActionType = UserItem
     func performTap(with rowItem: UserItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-        guard let aCtr = R.storyboard.settings.accountDetailViewController() else {
-            return
-        }
-        aCtr.context = model.context
-        ctr.navigationController?.pushViewController(aCtr, animated: true)
+//        guard let aCtr = R.storyboard.settings.accountDetailViewController() else {
+//            return
+//        }
+//        aCtr.context = model.context
+//        ctr.navigationController?.pushViewController(aCtr, animated: true)
     }
     
     func rewindAction(with rowItem: UserItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
@@ -32,13 +33,15 @@ class UserDetailAction: TapActionable {
 }
 
 class UserSection: TableSection {
-    
     private let bag = DisposeBag()
     
     init(with context: NSManagedObjectContext) {
         
-        let account = Account.current(context: context)
-        let row1 = UserItem(name: account.name ?? "", email: account.email ?? "")
+        // let account = Account.current(context: context)
+        // let row1 = UserItem(name: account.name ?? "", email: account.email ?? "")
+        
+        // TODO: replace this with the right account.
+        let row1 = UserItem(name: "Test Account", email: "test@email.com")
         
         let rows: [ConfigurableRow] = [
             TableRow<UserCell, UserDetailAction>(item: row1, action: UserDetailAction())

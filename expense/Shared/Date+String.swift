@@ -31,30 +31,30 @@ extension Date {
         return Static.formatter.string(from: self)
     }
     
-    func relativeString(prefixedWith prefix: String) -> String {
-        let calendar = Calendar.current
-        
-        let today = Date()
-        
-        // Replace the hour (time) of both dates with 00:00
-        let date1 = calendar.startOfDay(for: today)
-        let date2 = calendar.startOfDay(for: self)
-        
-        let compontents = calendar.dateComponents([.day], from: date1, to: date2)
-        let dayDifference = compontents.value(for: .day)!
-        
-        if dayDifference == 0 {
-            return prefix + " " + R.string.localizable.today()
-        } else if dayDifference == -1 {
-            return prefix + " " + R.string.localizable.yesterday()
-        } else if dayDifference == 1 {
-            return prefix + " " + R.string.localizable.tomorrow()
-        } else if dayDifference < -1 {
-            return prefix + " " + R.string.localizable.xDaysAgo(abs(dayDifference))
-        } else {
-            return prefix + " " + R.string.localizable.inXDays(dayDifference)
-        }
-    }
+//    func relativeString(prefixedWith prefix: String) -> String {
+//        let calendar = Calendar.current
+//        
+//        let today = Date()
+//        
+//        // Replace the hour (time) of both dates with 00:00
+//        let date1 = calendar.startOfDay(for: today)
+//        let date2 = calendar.startOfDay(for: self)
+//        
+//        let compontents = calendar.dateComponents([.day], from: date1, to: date2)
+//        let dayDifference = compontents.value(for: .day)!
+//        
+//        if dayDifference == 0 {
+//            return prefix + " " + R.string.localizable.today()
+//        } else if dayDifference == -1 {
+//            return prefix + " " + R.string.localizable.yesterday()
+//        } else if dayDifference == 1 {
+//            return prefix + " " + R.string.localizable.tomorrow()
+//        } else if dayDifference < -1 {
+//            return prefix + " " + R.string.localizable.xDaysAgo(abs(dayDifference))
+//        } else {
+//            return prefix + " " + R.string.localizable.inXDays(dayDifference)
+//        }
+//    }
 
     func asString(_ dateStyle: DateFormatter.Style = .short, timeStyle: DateFormatter.Style = .short) -> String {
         Static.plainFormatter.dateStyle = dateStyle

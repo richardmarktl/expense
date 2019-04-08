@@ -25,7 +25,7 @@ class EmailSupportAction: TapActionable {
         if let analytics = self.analytics {
             analytics();
         }
-        emailSupport?.send(to: ["info@invoicebot.io"], subject: "InvoiceBot - " + UUID().uuidString.lowercased(), from: ctr, completion: { (state, error) in
+        emailSupport?.send(to: [AppInfo.feedbackEmail], subject: AppInfo.name + " - " + UUID().uuidString.lowercased(), from: ctr, completion: { (state, error) in
             if state == .failed {
                 if let error = error {
                     ErrorPresentable.show(error: error)

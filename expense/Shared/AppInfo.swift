@@ -16,4 +16,6 @@ struct AppInfo {
     static let pathToSubscriptionHtml = Bundle.main.path(forResource: "subscription", ofType: "html") ?? ""
     static let pathToTermsOfServiceHtml = Bundle.main.path(forResource: "terms", ofType: "html") ?? ""
     static let pathToPrivacyHtml = Bundle.main.path(forResource: "privacy", ofType: "html") ?? ""
+    
+    static let feedbackEmail = Bundle.main.infoDictionary?["AppFeedBackEmail"] as? String ?? "";
 }

@@ -19,7 +19,7 @@ class BadgeView: UIView, XibSetupable {
         }
     }
     
-    @IBInspectable var badgeColor: UIColor = UIColor.main {
+    @IBInspectable var badgeColor: UIColor = UIColor.white {
         didSet {
             setProperties()
         }

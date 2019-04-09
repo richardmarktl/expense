@@ -63,7 +63,7 @@ public class CoreDataContainer: NSObject {
         // let name = storeURL.
         if let model = NSManagedObjectModel(contentsOf: modelURL) {
             container = NSPersistentContainer(name: name, managedObjectModel: model)
-            // container.viewContext.stalenessInterval = 0
+            container.viewContext.stalenessInterval = 0
         } else {
             return nil
         }
@@ -76,23 +76,10 @@ public class CoreDataContainer: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
     
-    /// Creates a background worker context
-    public func newBackgroundContext() -> NSManagedObjectContext {
+    public func workerContext() -> NSManagedObjectContext {
         return container.newBackgroundContext()
     }
     
-    /// Creates a new child context on the main queue
-    ///
-    /// - Returns: child context we just created
-    public func newMainThreadChildContext() -> NSManagedObjectContext {
-        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        context.parent = mainContext
-        return context
-    }
-    
-    /// Destroys the current persistent store
-    ///
-    /// - Throws: if container can't be destroyed or the store can't be removed from the file system
     public func destroy() throws {
         for description in container.persistentStoreDescriptions {
             if let storeURL = description.url {

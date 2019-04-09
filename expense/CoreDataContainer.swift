@@ -62,9 +62,7 @@ public class CoreDataContainer: NSObject {
     }
     
     public func workerContext() -> NSManagedObjectContext {
-        let workerContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        workerContext.parent = mainContext
-        return workerContext
+        return container.newBackgroundContext()
     }
     
     public func destroy() throws {

@@ -24,9 +24,9 @@ platform :ios do
   desc "Generates all profiles we need to work with the app"
   lane :generate_profiles do
     # Main App
-    match(type: 'development', app_identifier: 'at.meisterwork.expense.stg', force: true)
-    match(type: 'development', app_identifier: 'at.meisterwork.expense', force: true)
-    match(type: 'appstore', app_identifier: 'at.meisterwork.expense.stg', force: true)
-    match(type: 'appstore', app_identifier: 'at.meisterwork.expense', force: true)
+    match(type: 'development', app_identifier: 'at.meisterwork.expense.stg')
+    match(type: 'development', app_identifier: 'at.meisterwork.expense')
+    match(type: 'appstore', app_identifier: 'at.meisterwork.expense.stg')
+    match(type: 'appstore', app_identifier: 'at.meisterwork.expense')
   end
 end

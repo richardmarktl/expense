@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,21 +14,112 @@
         <scene sceneID="Jim-6c-5SH">
             <objects>
                 <tableViewController id="eCN-KT-kRk" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JKb-yo-gqf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JKb-yo-gqf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <scrollView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="iat-Ex-pm5">
-                            <rect key="frame" x="0.0" y="72" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </scrollView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RrW-2x-bnl">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletNameCell" rowHeight="97" id="RrW-2x-bnl">
+                                <rect key="frame" x="0.0" y="28" width="414" height="97"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RrW-2x-bnl" id="3UP-6U-kBW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okz-el-SS3">
+                                            <rect key="frame" x="20" y="10" width="374" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="BHg-gs-YjR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the name of the wallet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-Hy-ye6">
+                                            <rect key="frame" x="20" y="46" width="374" height="31"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3KV-Hy-ye6" firstAttribute="leading" secondItem="3UP-6U-kBW" secondAttribute="leading" constant="20" id="9kD-Lw-4tN"/>
+                                        <constraint firstItem="3KV-Hy-ye6" firstAttribute="top" secondItem="okz-el-SS3" secondAttribute="bottom" constant="13" id="FG8-0f-hJY"/>
+                                        <constraint firstItem="okz-el-SS3" firstAttribute="top" secondItem="3UP-6U-kBW" secondAttribute="top" constant="10" id="G0s-VJ-QjY"/>
+                                        <constraint firstAttribute="trailing" secondItem="3KV-Hy-ye6" secondAttribute="trailing" constant="20" id="q5G-CH-Lyp"/>
+                                        <constraint firstAttribute="trailing" secondItem="okz-el-SS3" secondAttribute="trailing" constant="20" id="rMI-oB-fp0"/>
+                                        <constraint firstItem="okz-el-SS3" firstAttribute="leading" secondItem="3UP-6U-kBW" secondAttribute="leading" constant="20" id="yt6-Yx-aGQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="3KV-Hy-ye6" secondAttribute="bottom" constant="20" id="zat-jC-cit"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletCategoryCell" rowHeight="97" id="bQc-H6-WK9">
+                                <rect key="frame" x="0.0" y="125" width="414" height="97"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQc-H6-WK9" id="NmV-ic-YCr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ2-EM-oqY">
+                                            <rect key="frame" x="20" y="10" width="374" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="YfE-j7-CbP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oZe-Ac-DSy">
+                                            <rect key="frame" x="20" y="43" width="374" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="OMz-eE-0VC"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title="Personal"/>
+                                                <segment title="Business"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="oZe-Ac-DSy" secondAttribute="trailing" constant="20" id="9um-lV-jcB"/>
+                                        <constraint firstItem="oZe-Ac-DSy" firstAttribute="top" secondItem="RQ2-EM-oqY" secondAttribute="bottom" constant="10" id="Nan-80-UxU"/>
+                                        <constraint firstAttribute="trailing" secondItem="RQ2-EM-oqY" secondAttribute="trailing" constant="20" id="NbR-Fp-qxR"/>
+                                        <constraint firstItem="oZe-Ac-DSy" firstAttribute="leading" secondItem="NmV-ic-YCr" secondAttribute="leading" constant="20" id="Y2A-R4-NIU"/>
+                                        <constraint firstItem="RQ2-EM-oqY" firstAttribute="leading" secondItem="NmV-ic-YCr" secondAttribute="leading" constant="20" id="awA-j0-Yhh"/>
+                                        <constraint firstAttribute="bottom" secondItem="oZe-Ac-DSy" secondAttribute="bottom" constant="10" id="axh-8f-iNV"/>
+                                        <constraint firstItem="RQ2-EM-oqY" firstAttribute="top" secondItem="NmV-ic-YCr" secondAttribute="top" constant="10" id="tFk-eh-o53"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletSaveCell" rowHeight="83" id="fSY-ke-aVr">
+                                <rect key="frame" x="0.0" y="222" width="414" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fSY-ke-aVr" id="uHJ-QL-cEu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWM-iJ-1El" customClass="ActionButton" customModule="expense" customModuleProvider="target">
+                                            <rect key="frame" x="14" y="14" width="386" height="55"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="dMT-qU-9e2"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" name="greenish"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                    <color key="value" name="greenishHighlighted"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XWM-iJ-1El" firstAttribute="leading" secondItem="uHJ-QL-cEu" secondAttribute="leading" constant="14" id="Thm-t3-tDT"/>
+                                        <constraint firstAttribute="trailing" secondItem="XWM-iJ-1El" secondAttribute="trailing" constant="14" id="UBT-vh-qi9"/>
+                                        <constraint firstItem="XWM-iJ-1El" firstAttribute="top" secondItem="uHJ-QL-cEu" secondAttribute="top" constant="14" id="dxp-Rp-RlG"/>
+                                        <constraint firstAttribute="bottom" secondItem="XWM-iJ-1El" secondAttribute="bottom" constant="14" id="qju-2r-Ik2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -40,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHH-K9-orL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="-227"/>
+            <point key="canvasLocation" x="92.753623188405811" y="-227.00892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wKd-bR-08q">
@@ -59,4 +151,12 @@
             <point key="canvasLocation" x="-826" y="-227"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="greenish">
+            <color red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greenishHighlighted">
+            <color red="0.74901960784313726" green="0.90980392156862744" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

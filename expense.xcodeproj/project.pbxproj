@@ -49,6 +49,8 @@
 		79D1404B225C8E4300B11435 /* UserDefaults+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14049225C8E4300B11435 /* UserDefaults+Token.swift */; };
 		79D1404D225C9F4100B11435 /* NewWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1404C225C9F4100B11435 /* NewWalletViewController.swift */; };
 		79D14051225CA10300B11435 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D14050225CA10200B11435 /* Wallet.storyboard */; };
+		79D14054225CB2D500B11435 /* ActionButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D14052225CB2D500B11435 /* ActionButton.xib */; };
+		79D14055225CB2D500B11435 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14053225CB2D500B11435 /* ActionButton.swift */; };
 		79F98D752256053E0026C17B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D742256053E0026C17B /* AppDelegate.swift */; };
 		79F98D772256053E0026C17B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D762256053E0026C17B /* ViewController.swift */; };
 		79F98D7A2256053E0026C17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F98D782256053E0026C17B /* Main.storyboard */; };
@@ -130,6 +132,8 @@
 		79D14049225C8E4300B11435 /* UserDefaults+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Token.swift"; sourceTree = "<group>"; };
 		79D1404C225C9F4100B11435 /* NewWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWalletViewController.swift; sourceTree = "<group>"; };
 		79D14050225CA10200B11435 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
+		79D14052225CB2D500B11435 /* ActionButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionButton.xib; sourceTree = "<group>"; };
+		79D14053225CB2D500B11435 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		79F98D712256053E0026C17B /* expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F98D742256053E0026C17B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F98D762256053E0026C17B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 		982292CDDC061988462F331C /* Pods-expenseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseUITests.debug.xcconfig"; path = "Target Support Files/Pods-expenseUITests/Pods-expenseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B045DFA250E5B1A342F8C8F7 /* Pods-expense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expense.release.xcconfig"; path = "Target Support Files/Pods-expense/Pods-expense.release.xcconfig"; sourceTree = "<group>"; };
 		BE861D7146213010F838D237 /* Pods-expenseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseTests.release.xcconfig"; path = "Target Support Files/Pods-expenseTests/Pods-expenseTests.release.xcconfig"; sourceTree = "<group>"; };
+		C114864B225CA00A00A87A48 /* expense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = expense.entitlements; sourceTree = "<group>"; };
 		D2BC9C378CDA268C56E00020 /* Pods-expense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expense.debug.xcconfig"; path = "Target Support Files/Pods-expense/Pods-expense.debug.xcconfig"; sourceTree = "<group>"; };
 		F5390150F0DE85C1237DE9E6 /* Pods_expense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -376,6 +381,9 @@
 		79F98D732256053E0026C17B /* expense */ = {
 			isa = PBXGroup;
 			children = (
+				79D14053225CB2D500B11435 /* ActionButton.swift */,
+				79D14052225CB2D500B11435 /* ActionButton.xib */,
+				C114864B225CA00A00A87A48 /* expense.entitlements */,
 				79D1404F225CA0E100B11435 /* Wallet */,
 				79D1404E225CA0C300B11435 /* Storyboards */,
 				79D14045225C8A7700B11435 /* Utils */,
@@ -491,6 +499,11 @@
 				TargetAttributes = {
 					79F98D702256053E0026C17B = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					79F98D84225605400026C17B = {
 						CreatedOnToolsVersion = 10.2;
@@ -536,6 +549,7 @@
 				79D14021225B764300B11435 /* Localizable.strings in Resources */,
 				79F98D7A2256053E0026C17B /* Main.storyboard in Resources */,
 				79D13FF1225B32A600B11435 /* TableFooterView.xib in Resources */,
+				79D14054225CB2D500B11435 /* ActionButton.xib in Resources */,
 				79F98DAA225643C00026C17B /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +770,7 @@
 				79D1400E225B6AD900B11435 /* Logger.swift in Sources */,
 				79F98D752256053E0026C17B /* AppDelegate.swift in Sources */,
 				79D14017225B72ED00B11435 /* InfoSection.swift in Sources */,
+				79D14055225CB2D500B11435 /* ActionButton.swift in Sources */,
 				79D1404D225C9F4100B11435 /* NewWalletViewController.swift in Sources */,
 				79D13FF7225B347100B11435 /* UserSection.swift in Sources */,
 				79D14034225B926700B11435 /* BadgeView.swift in Sources */,
@@ -969,8 +984,9 @@
 			baseConfigurationReference = D2BC9C378CDA268C56E00020 /* Pods-expense.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = expense/expense.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VBNBX6S7TV;
 				INFOPLIST_FILE = expense/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -979,7 +995,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.meisterwork.expense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development at.meisterwork.expense";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -990,8 +1006,9 @@
 			baseConfigurationReference = B045DFA250E5B1A342F8C8F7 /* Pods-expense.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = expense/expense.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VBNBX6S7TV;
 				INFOPLIST_FILE = expense/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1000,7 +1017,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = at.meisterwork.expense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development at.meisterwork.expense";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

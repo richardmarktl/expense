@@ -22,8 +22,8 @@ class NewWalletViewController: UIViewController {
     
     private let bag = DisposeBag()
     
-    private var job: Wallet!
-    private var jobModel: WalletModel!
+    private var wallet: Wallet!
+    private var walletModel: WalletModel!
     
     private var childContext: NSManagedObjectContext = {
         let childContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)

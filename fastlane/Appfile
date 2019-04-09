@@ -1,0 +1,7 @@
+app_identifier "at.meisterwork.expense.stg" # The bundle identifier of your app
+apple_id "georg.kitz@meisterwork.at" # Your Apple email address
+
+team_id "VBNBX6S7TV" # Developer Portal Team ID
+
+# you can even provide different app identifiers, Apple IDs and team names per lane:
+# More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md

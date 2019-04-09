@@ -47,6 +47,8 @@
 		79D14047225C8AB800B11435 /* CoreDataContainer+Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14046225C8AB800B11435 /* CoreDataContainer+Expense.swift */; };
 		79D1404A225C8E4300B11435 /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14048225C8E4300B11435 /* UITestHelper.swift */; };
 		79D1404B225C8E4300B11435 /* UserDefaults+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14049225C8E4300B11435 /* UserDefaults+Token.swift */; };
+		79D1404D225C9F4100B11435 /* NewWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1404C225C9F4100B11435 /* NewWalletViewController.swift */; };
+		79D14051225CA10300B11435 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D14050225CA10200B11435 /* Wallet.storyboard */; };
 		79F98D752256053E0026C17B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D742256053E0026C17B /* AppDelegate.swift */; };
 		79F98D772256053E0026C17B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D762256053E0026C17B /* ViewController.swift */; };
 		79F98D7A2256053E0026C17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F98D782256053E0026C17B /* Main.storyboard */; };
@@ -126,6 +128,8 @@
 		79D14046225C8AB800B11435 /* CoreDataContainer+Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataContainer+Expense.swift"; sourceTree = "<group>"; };
 		79D14048225C8E4300B11435 /* UITestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
 		79D14049225C8E4300B11435 /* UserDefaults+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Token.swift"; sourceTree = "<group>"; };
+		79D1404C225C9F4100B11435 /* NewWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWalletViewController.swift; sourceTree = "<group>"; };
+		79D14050225CA10200B11435 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
 		79F98D712256053E0026C17B /* expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F98D742256053E0026C17B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F98D762256053E0026C17B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				79D1403C225BA7B200B11435 /* Table */,
 				79D1403B225B9AB100B11435 /* Utils */,
 				79D14039225B9A7B00B11435 /* Xib */,
+				79D14044225C7F8400B11435 /* CoreData */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				79D14042225C7F8000B11435 /* CoreDataContainer.swift */,
 			);
 			name = CoreData;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		79D14045225C8A7700B11435 /* Utils */ = {
@@ -323,6 +329,26 @@
 				79D14046225C8AB800B11435 /* CoreDataContainer+Expense.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		79D1404E225CA0C300B11435 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				79F98DA9225643C00026C17B /* Settings.storyboard */,
+				79F98D7D225605400026C17B /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		79D1404F225CA0E100B11435 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				79F98DA3225639710026C17B /* WalletViewController.swift */,
+				79F98DA722563D6D0026C17B /* WalletCell.swift */,
+				79D1404C225C9F4100B11435 /* NewWalletViewController.swift */,
+				79D14050225CA10200B11435 /* Wallet.storyboard */,
+			);
+			path = Wallet;
 			sourceTree = "<group>";
 		};
 		79F98D682256053E0026C17B = {
@@ -350,14 +376,14 @@
 		79F98D732256053E0026C17B /* expense */ = {
 			isa = PBXGroup;
 			children = (
+				79D1404F225CA0E100B11435 /* Wallet */,
+				79D1404E225CA0C300B11435 /* Storyboards */,
 				79D14045225C8A7700B11435 /* Utils */,
-				79D14044225C7F8400B11435 /* CoreData */,
 				79D1402E225B8C2800B11435 /* Shared */,
 				79D1401F225B764200B11435 /* Localizable.strings */,
 				79D14019225B735700B11435 /* BusinessSection.swift */,
 				79D1401A225B735800B11435 /* BusinessSectionActions.swift */,
 				79D14002225B554E00B11435 /* UIColor+Extension.swift */,
-				79F98DA9225643C00026C17B /* Settings.storyboard */,
 				79D13FFE225B552600B11435 /* SettingsModel.swift */,
 				79D13FF6225B347100B11435 /* UserSection.swift */,
 				79D13FF2225B32DC00B11435 /* UIFont+Fira.swift */,
@@ -367,10 +393,7 @@
 				79F98D762256053E0026C17B /* ViewController.swift */,
 				79F98D782256053E0026C17B /* Main.storyboard */,
 				79F98D7B225605400026C17B /* Assets.xcassets */,
-				79F98D7D225605400026C17B /* LaunchScreen.storyboard */,
 				79F98D80225605400026C17B /* Info.plist */,
-				79F98DA3225639710026C17B /* WalletViewController.swift */,
-				79F98DA722563D6D0026C17B /* WalletCell.swift */,
 				79D13FF4225B341A00B11435 /* UserCell.xib */,
 			);
 			path = expense;
@@ -505,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F98D7F225605400026C17B /* LaunchScreen.storyboard in Resources */,
+				79D14051225CA10300B11435 /* Wallet.storyboard in Resources */,
 				79F98D7C225605400026C17B /* Assets.xcassets in Resources */,
 				79D14030225B913500B11435 /* SettingsCell.xib in Resources */,
 				79D13FF5225B341A00B11435 /* UserCell.xib in Resources */,
@@ -732,6 +756,7 @@
 				79D1400E225B6AD900B11435 /* Logger.swift in Sources */,
 				79F98D752256053E0026C17B /* AppDelegate.swift in Sources */,
 				79D14017225B72ED00B11435 /* InfoSection.swift in Sources */,
+				79D1404D225C9F4100B11435 /* NewWalletViewController.swift in Sources */,
 				79D13FF7225B347100B11435 /* UserSection.swift in Sources */,
 				79D14034225B926700B11435 /* BadgeView.swift in Sources */,
 				79D14029225B7DCC00B11435 /* RatingService.swift in Sources */,

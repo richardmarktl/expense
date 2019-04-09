@@ -14,7 +14,9 @@ import CoreData
 /// coredata stack. Implemented as Singleton.
 public class CoreDataContainer: NSObject {
     
-    struct Static {
+    /// Singleton Methods
+    
+    private struct Static {
         static var instance: CoreDataContainer?
     }
     
@@ -31,14 +33,27 @@ public class CoreDataContainer: NSObject {
         instance = CoreDataContainer(modelURL: modelURL, storeURL: storeURL, storeType: storeType, name: name, options: options)
     }
     
-    public class func destory() throws {
+    public class func destroy() throws {
         try instance?.destroy()
         instance = nil
     }
     
-    public var mainContext: NSManagedObjectContext { return container.viewContext }
+    /// Properties
+    
     private let container: NSPersistentContainer
     
+    public var mainContext: NSManagedObjectContext {
+        return container.viewContext
+    }
+    
+    /// Intialises a new CoreDataContainer
+    ///
+    /// - Parameters:
+    ///   - modelURL: path to the model file
+    ///   - storeURL: path to the storage file
+    ///   - storeType: type of storage we want to use
+    ///   - name: filename of the file we want to store the data at
+    ///   - options: different options
     init?(modelURL: URL, storeURL: URL, storeType: String, name: String, options: CoreDataContainerStoreOptions) {
         let description = NSPersistentStoreDescription(url: storeURL)
         description.type = storeType
@@ -48,7 +63,7 @@ public class CoreDataContainer: NSObject {
         // let name = storeURL.
         if let model = NSManagedObjectModel(contentsOf: modelURL) {
             container = NSPersistentContainer(name: name, managedObjectModel: model)
-            container.viewContext.stalenessInterval = 0
+            // container.viewContext.stalenessInterval = 0
         } else {
             return nil
         }
@@ -61,12 +76,23 @@ public class CoreDataContainer: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
     
-    public func workerContext() -> NSManagedObjectContext {
-        let workerContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        workerContext.parent = mainContext
-        return workerContext
+    /// Creates a background worker context
+    public func newBackgroundContext() -> NSManagedObjectContext {
+        return container.newBackgroundContext()
     }
     
+    /// Creates a new child context on the main queue
+    ///
+    /// - Returns: child context we just created
+    public func newMainThreadChildContext() -> NSManagedObjectContext {
+        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.parent = mainContext
+        return context
+    }
+    
+    /// Destroys the current persistent store
+    ///
+    /// - Throws: if container can't be destroyed or the store can't be removed from the file system
     public func destroy() throws {
         for description in container.persistentStoreDescriptions {
             if let storeURL = description.url {
@@ -81,6 +107,9 @@ public class CoreDataContainer: NSObject {
         CoreDataContainer.instance = nil
     }
     
+    /// Merging of the data from child to parent context
+    ///
+    /// - Parameter notification: changes notification
     @objc func saveNotification(notification: NSNotification) {
         let context  = notification.object as! NSManagedObjectContext?
         if let context = context, context != mainContext {

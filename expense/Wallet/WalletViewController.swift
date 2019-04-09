@@ -15,7 +15,7 @@ class WalletViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2;
+        return 5;
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -26,4 +26,9 @@ class WalletViewController: UICollectionViewController {
         return cell!
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nCtr = NewWalletViewController.createWallet()
+        // Analytics.itemNew.logEvent()
+        self.present(nCtr, animated: true)
+    }
 }

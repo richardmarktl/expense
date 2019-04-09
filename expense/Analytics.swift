@@ -244,7 +244,7 @@ enum Analytics: String {
     case pushProvisional
     case pushDenied
     
-    func logEvent(with activity: UIActivityType?) {
+    func logEvent(with activity: UIActivity.ActivityType?) {
         let parameters: [String: NSObject]?
         if let activityType = activity?.rawValue {
             parameters = ["type": activityType.asNSString]

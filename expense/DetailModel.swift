@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import CoreData
+import CoreDataExtensio
 
 class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
     

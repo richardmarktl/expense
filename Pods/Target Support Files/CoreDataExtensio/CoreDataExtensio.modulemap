@@ -1,0 +1,6 @@
+framework module CoreDataExtensio {
+  umbrella header "CoreDataExtensio-umbrella.h"
+
+  export *
+  module * { export * }
+}

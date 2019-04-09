@@ -7,13 +7,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--New Wallet-->
         <scene sceneID="Jim-6c-5SH">
             <objects>
-                <tableViewController id="eCN-KT-kRk" sceneMemberID="viewController">
+                <tableViewController id="eCN-KT-kRk" customClass="NewWalletViewController" customModule="expense" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JKb-yo-gqf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +57,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletCategoryCell" rowHeight="97" id="bQc-H6-WK9">
                                 <rect key="frame" x="0.0" y="125" width="414" height="97"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQc-H6-WK9" id="NmV-ic-YCr">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQc-H6-WK9" id="NmV-ic-YCr">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -70,7 +71,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oZe-Ac-DSy">
-                                            <rect key="frame" x="20" y="43" width="374" height="29"/>
+                                            <rect key="frame" x="20" y="43" width="374" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="27" id="OMz-eE-0VC"/>
                                             </constraints>
@@ -132,18 +133,158 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHH-K9-orL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="-227.00892857142856"/>
+            <point key="canvasLocation" x="788" y="-227"/>
+        </scene>
+        <!--New Wallet View Controller-->
+        <scene sceneID="Qbw-uu-25O">
+            <objects>
+                <viewController id="QPn-Hl-xnr" customClass="NewWalletViewController" customModule="expense" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baN-vi-DdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1tY-nq-hnd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletNameCell" rowHeight="97" id="KVr-3W-PHe">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KVr-3W-PHe" id="Xen-Xl-izv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gig-n6-kMd">
+                                                    <rect key="frame" x="20" y="10" width="374" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="RaZ-ry-dhJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the name of the wallet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfQ-tt-ajP">
+                                                    <rect key="frame" x="20" y="46" width="374" height="31"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Gig-n6-kMd" secondAttribute="trailing" constant="20" id="1hH-EH-4Zq"/>
+                                                <constraint firstItem="Gig-n6-kMd" firstAttribute="leading" secondItem="Xen-Xl-izv" secondAttribute="leading" constant="20" id="498-hS-ZrU"/>
+                                                <constraint firstItem="Gig-n6-kMd" firstAttribute="top" secondItem="Xen-Xl-izv" secondAttribute="top" constant="10" id="Btl-tl-bpk"/>
+                                                <constraint firstItem="IfQ-tt-ajP" firstAttribute="leading" secondItem="Xen-Xl-izv" secondAttribute="leading" constant="20" id="Oer-27-0y0"/>
+                                                <constraint firstItem="IfQ-tt-ajP" firstAttribute="top" secondItem="Gig-n6-kMd" secondAttribute="bottom" constant="13" id="Utb-RA-hh4"/>
+                                                <constraint firstAttribute="bottom" secondItem="IfQ-tt-ajP" secondAttribute="bottom" constant="20" id="XYC-eR-NXt"/>
+                                                <constraint firstAttribute="trailing" secondItem="IfQ-tt-ajP" secondAttribute="trailing" constant="20" id="zsI-bm-UnM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletCategoryCell" rowHeight="97" id="Akq-yK-bLk">
+                                        <rect key="frame" x="0.0" y="125" width="414" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Akq-yK-bLk" id="h47-GV-SYP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHh-mL-ySk">
+                                                    <rect key="frame" x="20" y="10" width="374" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="vZz-rn-DX7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="12u-gP-Vyf">
+                                                    <rect key="frame" x="20" y="43" width="374" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="Bqb-0z-nX9"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="Personal"/>
+                                                        <segment title="Business"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="CHh-mL-ySk" secondAttribute="trailing" constant="20" id="0Pv-92-3AL"/>
+                                                <constraint firstAttribute="trailing" secondItem="12u-gP-Vyf" secondAttribute="trailing" constant="20" id="0yP-8D-ee5"/>
+                                                <constraint firstItem="CHh-mL-ySk" firstAttribute="top" secondItem="h47-GV-SYP" secondAttribute="top" constant="10" id="C3C-ev-NWA"/>
+                                                <constraint firstItem="12u-gP-Vyf" firstAttribute="top" secondItem="CHh-mL-ySk" secondAttribute="bottom" constant="10" id="FiH-k8-Xa4"/>
+                                                <constraint firstAttribute="bottom" secondItem="12u-gP-Vyf" secondAttribute="bottom" constant="10" id="RI3-FD-ekd"/>
+                                                <constraint firstItem="CHh-mL-ySk" firstAttribute="leading" secondItem="h47-GV-SYP" secondAttribute="leading" constant="20" id="o6q-S0-gku"/>
+                                                <constraint firstItem="12u-gP-Vyf" firstAttribute="leading" secondItem="h47-GV-SYP" secondAttribute="leading" constant="20" id="slQ-Q0-oXz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletSaveCell" rowHeight="83" id="DeM-Wg-uA7">
+                                        <rect key="frame" x="0.0" y="222" width="414" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DeM-Wg-uA7" id="lbk-dD-1XR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w99-0W-fKH" customClass="ActionButton" customModule="expense" customModuleProvider="target">
+                                                    <rect key="frame" x="14" y="14" width="386" height="55"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="680-8t-d96"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                            <color key="value" name="greenish"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                            <color key="value" name="greenishHighlighted"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="w99-0W-fKH" firstAttribute="leading" secondItem="lbk-dD-1XR" secondAttribute="leading" constant="14" id="Q3K-zv-9XZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="w99-0W-fKH" secondAttribute="trailing" constant="14" id="m18-Z0-f4C"/>
+                                                <constraint firstItem="w99-0W-fKH" firstAttribute="top" secondItem="lbk-dD-1XR" secondAttribute="top" constant="14" id="n3X-hp-3EU"/>
+                                                <constraint firstAttribute="bottom" secondItem="w99-0W-fKH" secondAttribute="bottom" constant="14" id="x3I-Uq-tEF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QPn-Hl-xnr" id="BMt-yB-Lo4"/>
+                                    <outlet property="delegate" destination="QPn-Hl-xnr" id="pxK-mK-PPp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qe0-BP-Ies" firstAttribute="bottom" secondItem="1tY-nq-hnd" secondAttribute="bottom" id="Ow2-H4-qBf"/>
+                            <constraint firstItem="Qe0-BP-Ies" firstAttribute="trailing" secondItem="1tY-nq-hnd" secondAttribute="trailing" id="Tf9-hc-ecy"/>
+                            <constraint firstItem="1tY-nq-hnd" firstAttribute="leading" secondItem="Qe0-BP-Ies" secondAttribute="leading" id="Yvz-JH-MCU"/>
+                            <constraint firstItem="1tY-nq-hnd" firstAttribute="top" secondItem="Qe0-BP-Ies" secondAttribute="top" constant="-88" id="oal-co-HVH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qe0-BP-Ies"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SDZ-i2-d7d"/>
+                    <connections>
+                        <outlet property="tableView" destination="1tY-nq-hnd" id="Zrb-bL-SPP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6g-sh-6GT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="-227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wKd-bR-08q">
             <objects>
-                <navigationController id="gOi-KV-JbD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NewWalletRootViewController" id="gOi-KV-JbD" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j1i-Z7-khl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="eCN-KT-kRk" kind="relationship" relationship="rootViewController" id="3dr-1J-Lfz"/>
+                        <segue destination="QPn-Hl-xnr" kind="relationship" relationship="rootViewController" id="EVv-g9-zPj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGC-CQ-Cri" userLabel="First Responder" sceneMemberID="firstResponder"/>

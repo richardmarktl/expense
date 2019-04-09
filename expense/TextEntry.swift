@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxOptional
 
 /// Text Input Type
 ///

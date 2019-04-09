@@ -10,6 +10,10 @@ PODS:
   - Charts (3.2.2):
     - Charts/Core (= 3.2.2)
   - Charts/Core (3.2.2)
+  - CoreDataExtensio (2.0.3):
+    - RxCocoa (~> 4.5.0)
+    - RxOptional (~> 3.6.2)
+    - RxSwift (~> 4.5.0)
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
   - DTFoundation/Core (1.7.13)
@@ -120,6 +124,9 @@ PODS:
   - Result (4.1.0)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxOptional (3.6.2):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
   - SupportEmail (3.0.0)
   - SwiftLint (0.31.0)
@@ -130,6 +137,7 @@ PODS:
 DEPENDENCIES:
   - Amplitude-iOS (~> 4.6.0)
   - Charts (~> 3.2.2)
+  - CoreDataExtensio (~> 2.0.3)
   - Crashlytics (~> 3.12.0)
   - EmailValidator (from `https://github.com/gekitz/EmailValidator.git`, commit `e39cb1f`)
   - FacebookCore (~> 0.6.0)
@@ -156,6 +164,7 @@ SPEC REPOS:
     - Amplitude-iOS
     - Bolts
     - Charts
+    - CoreDataExtensio
     - Crashlytics
     - DTFoundation
     - Fabric
@@ -183,6 +192,7 @@ SPEC REPOS:
     - Reachability
     - Result
     - RxCocoa
+    - RxOptional
     - RxSwift
     - SupportEmail
     - SwiftLint
@@ -205,6 +215,7 @@ SPEC CHECKSUMS:
   Amplitude-iOS: ac1715ae68104b7a51723209ad574f60ab22ae5f
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+  CoreDataExtensio: 101772ddc1bd85f3a23d61d05e8ff4f30e162dc1
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
   EmailValidator: 4c31300ca757c223de7928a2efe039501a0af370
@@ -233,6 +244,7 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SupportEmail: b324c80bf2e58007d8f7edffc9e003039f016829
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
@@ -240,6 +252,6 @@ SPEC CHECKSUMS:
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: 8ca4f5749eaa0ebc4cc5e0f05b20e76a611eccfc
+PODFILE CHECKSUM: 1d02ef95f2c3c230e0eb81ba0f972694d98b0d16
 
 COCOAPODS: 1.6.1

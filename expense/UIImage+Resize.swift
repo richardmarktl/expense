@@ -11,7 +11,7 @@ import ImageIO
 
 extension UIImage {
     func resized(to maxValue: CGFloat) -> UIImage? {
-        guard let imageData = UIImageJPEGRepresentation(self, 1.0) as CFData?,
+        guard let imageData = self.jpegData(compressionQuality: 1.0) as CFData?,
             let source = CGImageSourceCreateWithData(imageData, nil) else {
                 return nil
         }

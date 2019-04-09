@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-import Horreum
+import CoreDataExtensio
 import RxSwift
 import RxCocoa
 
@@ -28,26 +28,26 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
     var dismissActionBlock: ((UIViewController) -> Void)?
     var askBeforeDeletion: Bool = true
     
-    override lazy var model: Model = {
+    override public func createModel() -> Model {
         let storeChangesAutomatically = completionBlock == nil
         let deleteAutomatically = removeBlock == nil
         return Model(item: item, storeChangesAutomatically: storeChangesAutomatically, deleteAutomatically: deleteAutomatically, sections: [], in: context)
-    }()
+    }
     
     // members used for the autoscroller implementation
     var scrollViewDefaultInsets: UIEdgeInsets = .zero
     var scrollView: UIScrollView!
     var additionalHeight: CGFloat = 0
     
-    class func createItem() -> UIViewController {
-        let ctx = Horreum.instance!.childContext()
+    class func createWallet() -> UIViewController {
+        let ctx = CoreDataContainer.instance!.newMainThreadChildContext()
         //swiftlint:disable force_cast
         let item = ItemType.create(in: ctx) as! ItemType
         //swiftlint:enable force_cast
         return show(item: item, in: ctx)
     }
     
-    class func show(item: ItemType, in context: NSManagedObjectContext = Horreum.instance!.childContext(),
+    class func show(item: ItemType, in context: NSManagedObjectContext = CoreDataContainer.instance!.newMainThreadChildContext(),
                     completionBlock: ((ItemType) -> Void)? = nil, removeBlock: (() -> Void)? = nil, cancelBlock: (() -> Void)? = nil) -> UIViewController {
         
         let ctrs = controllers(type: self)
@@ -121,9 +121,9 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
         deleteButton.isHidden = model.isDeleteButtonHidden
         deleteButton.tapObservable.subscribe(onNext: { [unowned self] (_) in
             if self.askBeforeDeletion {
-                let alert = UIAlertController(title: nil, message: R.string.localizable.deletionDetected(), preferredStyle: UIAlertControllerStyle.alert)
-                let cancel = UIAlertAction(title: R.string.localizable.cancel(), style: UIAlertActionStyle.cancel, handler: nil)
-                let save = UIAlertAction(title: R.string.localizable.delete(), style: UIAlertActionStyle.default, handler: { [weak self](_) in
+                let alert = UIAlertController(title: nil, message: R.string.localizable.deletionDetected(), preferredStyle: UIAlertController.Style.alert)
+                let cancel = UIAlertAction(title: R.string.localizable.cancel(), style: UIAlertAction.Style.cancel, handler: nil)
+                let save = UIAlertAction(title: R.string.localizable.delete(), style: UIAlertAction.Style.default, handler: { [weak self](_) in
                     self?.delete()
                 })
                 
@@ -190,14 +190,14 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
     private func cancelAlert(for model: Model) -> Observable<Bool> {
         return Observable.create({ [weak self] (observer) -> Disposable in
             
-            let alert = UIAlertController(title: nil, message: R.string.localizable.changesDetected(), preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: R.string.localizable.changesDetected(), preferredStyle: UIAlertController.Style.alert)
             
-            let cancel = UIAlertAction(title: R.string.localizable.discard(), style: UIAlertActionStyle.cancel, handler: { (_) in
+            let cancel = UIAlertAction(title: R.string.localizable.discard(), style: UIAlertAction.Style.cancel, handler: { (_) in
                 observer.onNext(true)
                 observer.onCompleted()
             })
             
-            let save = UIAlertAction(title: R.string.localizable.save(), style: UIAlertActionStyle.default, handler: { [weak self](_) in
+            let save = UIAlertAction(title: R.string.localizable.save(), style: UIAlertAction.Style.default, handler: { [weak self](_) in
                 
                 model.save()
                 try? self?.context.save()

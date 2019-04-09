@@ -12,7 +12,7 @@ import RxCocoa
 protocol AutoScroller: class {
     var scrollViewDefaultInsets: UIEdgeInsets {get set}
     var additionalHeight: CGFloat {get set}
-    weak var scrollView: UIScrollView! {get set}
+    var scrollView: UIScrollView! {get set}
     func registerForKeyboardEvents(_ unregisterSignal: Observable<Void>)
 }
 
@@ -21,14 +21,14 @@ extension AutoScroller where Self: UIViewController {
     func registerForKeyboardEvents(_ unregisterSignal: Observable<Void>) {
         
         let notificationCenter = NotificationCenter.default
-        _ = notificationCenter.rx.notification(NSNotification.Name.UIKeyboardWillShow, object: nil).takeUntil(unregisterSignal).subscribe(onNext: { [unowned self](notification) in
+        _ = notificationCenter.rx.notification(UIResponder.keyboardWillShowNotification, object: nil).takeUntil(unregisterSignal).subscribe(onNext: { [unowned self](notification) in
             self.keyboardAppearedForNotification(notification, unregisterSignal: unregisterSignal)
         })
         
-        _ = notificationCenter.rx.notification(NSNotification.Name.UIKeyboardWillChangeFrame, object: nil).takeUntil(unregisterSignal).subscribe(onNext: {(_) in
+        _ = notificationCenter.rx.notification(UIResponder.keyboardWillChangeFrameNotification, object: nil).takeUntil(unregisterSignal).subscribe(onNext: {(_) in
         })
         
-        _ = notificationCenter.rx.notification(NSNotification.Name.UIKeyboardWillHide, object: nil).takeUntil(unregisterSignal).subscribe(onNext: { [unowned self](notification) in
+        _ = notificationCenter.rx.notification(UIResponder.keyboardWillHideNotification, object: nil).takeUntil(unregisterSignal).subscribe(onNext: { [unowned self](notification) in
             self.keyboardDisAppearedForNotification(notification)
         })
     }
@@ -40,8 +40,8 @@ extension AutoScroller where Self: UIViewController {
         }
         
         guard let userInfo = (notification as NSNotification).userInfo,
-            let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
-            let animationDuration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue else {
+            let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+            let animationDuration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue else {
                 return
         }
         

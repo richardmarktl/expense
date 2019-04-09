@@ -131,7 +131,7 @@ class ActionButton: UIView, XibSetupable {
     }
 }
 
-extension Optional where Optional.Wrapped == String {
+extension Optional where Wrapped == String {
     var asLocalizedString: String? {
         guard let string = self else {
             return nil

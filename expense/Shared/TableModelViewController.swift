@@ -16,16 +16,18 @@ class TableModelController<Model: TableModel>: UIViewController, UITableViewDele
     @IBOutlet weak var tableView: UITableView!
     
     let bag = DisposeBag()
-    let container = NSPersistentContainer(name: "Settings") // TODO: remove this
     var context: NSManagedObjectContext!
     var lastSelectedItem: ConfigurableRow?
     var manuallyManageDataUpdate: Bool = false
     
-    lazy var model: Model = { return Model(with: container.viewContext) }()
+    lazy var model: Model = { return createModel() }()
+    
+    public func createModel() -> Model {
+        return Model(with: context)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // tableView
         tableView.register(R.nib.settingsCell)

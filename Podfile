@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '11.1'
 
 inhibit_all_warnings!
 
@@ -9,7 +9,7 @@ target 'expense' do
   
   # Pods for expense
   pod 'SwiftLint', '~>0.23'
-  pod 'SwiftyBeaver', '~> 1.6', :inhibit_warnings => true
+  pod 'SwiftyBeaver', '~> 1.7', :inhibit_warnings => true
   
   # Rx
   pod 'RxSwift','~> 4.5.0'
@@ -32,7 +32,7 @@ target 'expense' do
   
   #Database
   # pod 'Horreum', :git => 'https://github.com/gekitz/horreum.git', :branch => 'swift4', :commit => '457e84a', :inhibit_warnings => true
-  # pod 'CoreDataExtensio', '~> 1.0.9', :inhibit_warnings => true
+  pod 'CoreDataExtensio', '~> 2.0.3'
   
   #Firebase (PN) and Fabric (Tracking)
   pod 'GoogleSignIn'

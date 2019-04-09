@@ -156,7 +156,7 @@ DEPENDENCIES:
   - SwiftLint (~> 0.23)
   - SwiftRichString (~> 3.0.0)
   - SwiftSignatureView
-  - SwiftyBeaver (~> 1.6)
+  - SwiftyBeaver (~> 1.7)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -252,6 +252,6 @@ SPEC CHECKSUMS:
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: 1d02ef95f2c3c230e0eb81ba0f972694d98b0d16
+PODFILE CHECKSUM: cd525f288acf5574fa0ea5b2e191dda5b6048443
 
 COCOAPODS: 1.6.1

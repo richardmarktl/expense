@@ -143,8 +143,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-ji-Ofm">
+                                <rect key="frame" x="14" y="730" width="386" height="118"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tm-Er-ekx" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="386" height="55"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="JX8-Dw-tcW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Delete"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.94509803920000002" green="0.2274509804" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.96470588239999999" green="0.61176470589999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTa-kc-UQW" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="63" width="386" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="QLD-Uz-Xhw"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Save"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.74901960779999999" green="0.90980392160000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1tY-nq-hnd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletNameCell" rowHeight="97" id="KVr-3W-PHe">
@@ -259,15 +302,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Qe0-BP-Ies" firstAttribute="bottom" secondItem="1tY-nq-hnd" secondAttribute="bottom" id="Ow2-H4-qBf"/>
+                            <constraint firstItem="GXL-ji-Ofm" firstAttribute="leading" secondItem="Qe0-BP-Ies" secondAttribute="leading" constant="14" id="PW8-YG-Bxy"/>
                             <constraint firstItem="Qe0-BP-Ies" firstAttribute="trailing" secondItem="1tY-nq-hnd" secondAttribute="trailing" id="Tf9-hc-ecy"/>
                             <constraint firstItem="1tY-nq-hnd" firstAttribute="leading" secondItem="Qe0-BP-Ies" secondAttribute="leading" id="Yvz-JH-MCU"/>
+                            <constraint firstItem="GXL-ji-Ofm" firstAttribute="top" secondItem="1tY-nq-hnd" secondAttribute="bottom" constant="14" id="byd-0U-RaH"/>
                             <constraint firstItem="1tY-nq-hnd" firstAttribute="top" secondItem="Qe0-BP-Ies" secondAttribute="top" constant="-88" id="oal-co-HVH"/>
+                            <constraint firstItem="Qe0-BP-Ies" firstAttribute="bottom" secondItem="GXL-ji-Ofm" secondAttribute="bottom" constant="14" id="uDr-Ev-VoG"/>
+                            <constraint firstItem="Qe0-BP-Ies" firstAttribute="trailing" secondItem="GXL-ji-Ofm" secondAttribute="trailing" constant="14" id="yZp-6r-8C6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qe0-BP-Ies"/>
                     </view>
                     <navigationItem key="navigationItem" id="SDZ-i2-d7d"/>
                     <connections>
+                        <outlet property="deleteButton" destination="0tm-Er-ekx" id="cxa-Ix-Hza"/>
+                        <outlet property="saveButton" destination="fTa-kc-UQW" id="QvD-c7-a2x"/>
                         <outlet property="tableView" destination="1tY-nq-hnd" id="Zrb-bL-SPP"/>
                     </connections>
                 </viewController>

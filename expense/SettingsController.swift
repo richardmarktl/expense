@@ -10,12 +10,10 @@ import UIKit
 import RxCocoa
 import RxSwift
 import StoreKit
+import CoreDataExtensio
 
 // class SettingsController: TableModelController<SettingsModel>, ShowAccountLoginable {
 class SettingsController: TableModelController<SettingsModel> {
-
-    // override lazy var model: SettingsModel = { return SettingsModel() }()
-    
     @IBOutlet weak var igButton: UIButton!
     @IBOutlet weak var twButton: UIButton!
     @IBOutlet weak var fbButton: UIButton!
@@ -26,6 +24,7 @@ class SettingsController: TableModelController<SettingsModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        context = CoreDataContainer.instance?.mainContext
         
 //        #if DEBUG
 //        tableView.register(R.nib.switchCell)

@@ -16,10 +16,10 @@ target 'expense' do
   pod 'RxCocoa', '~> 4.5.0'
   # pod 'RxStoreKit', '~> 1.2.1'
 
-  #Generator
+  # Generator
   pod 'R.swift', '~> 5.0'
 
-  #Date Helper
+  # Date Helper
   pod 'SupportEmail', '~> 3.0.0'
   pod 'Kvitto', '~> 1.0.2'
   pod 'Charts', '~> 3.2.2'
@@ -30,9 +30,8 @@ target 'expense' do
   pod 'JLRoutes', '~> 2.1'
   pod 'SwiftRichString', '~> 3.0.0'
   
-  #Database
-  # pod 'Horreum', :git => 'https://github.com/gekitz/horreum.git', :branch => 'swift4', :commit => '457e84a', :inhibit_warnings => true
-  pod 'CoreDataExtensio', '~> 2.0.3'
+  # Database
+  pod 'CoreDataExtensio', '~> 2.0.4'
   
   #Firebase (PN) and Fabric (Tracking)
   pod 'GoogleSignIn'
@@ -42,10 +41,10 @@ target 'expense' do
   pod 'Crashlytics', '~> 3.12.0'
   pod 'Amplitude-iOS', '~> 4.6.0', :inhibit_warnings => true
 
-  #ImageViever
+  # ImageViever
   # pod 'ImageViewer', '~> 5.0.0'
 
-  #Facebook
+  # Facebook
   pod 'FacebookCore', '~> 0.6.0', :inhibit_warnings => true
   
   # pod 'SimulatorStatusMagic', :configurations => ['expenseDev', 'expenseStg', 'expenseProd']

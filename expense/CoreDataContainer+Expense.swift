@@ -23,14 +23,24 @@ extension CoreDataContainer {
     }
     
     fileprivate class func createDatabaseWithStoreType(_ storeType: String) {
-        guard let containerStoreUrl = containerStoreURL() else { return }
+        guard let containerStoreUrl = containerStoreURL() else {
+            return
+        }
+        
+        let description = NSPersistentStoreDescription(url: containerStoreUrl)
+        description.shouldMigrateStoreAutomatically = true
+        description.shouldInferMappingModelAutomatically = true
+        description.type = storeType
+        
         CoreDataContainer.create(
-            modelURL: modelURL(),
-            storeURL: containerStoreUrl,
-            storeType: storeType,
             name: CoreDataContainer.fileName,
-            options: CoreDataContainerStoreOptions()
-        )
+            modelURL: modelURL(),
+            description: description,
+            completionHandler: { (desc, error) in 
+            if let error = error {
+                print("failed to load the core data store \(error)")
+            }
+        })
     }
     
     fileprivate class func modelURL() -> URL {
@@ -43,22 +53,6 @@ extension CoreDataContainer {
         }
         return FileManager().containerURL(forSecurityApplicationGroupIdentifier: appGroup)?.appendingPathComponent(CoreDataContainer.fileName)
     }
-    
-    func workerContextFromMasterContext() -> NSManagedObjectContext {
-        let ctx = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        ctx.parent = mainContext
-        return ctx
-    }
-    
-//    fileprivate class func needsMigration() -> Bool {
-//        guard let containerStoreUrl = containerStoreURL() else { return false }
-//        let fileManager = FileManager()
-//
-//        if fileManager.fileExists(atPath: storeURL().path) && !fileManager.fileExists(atPath: containerStoreUrl.path){
-//            return true
-//        }
-//        return false
-//    }
 }
 
 func directory(_ directory: FileManager.SearchPathDirectory = .documentDirectory) -> URL {

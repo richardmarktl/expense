@@ -13,9 +13,9 @@ import Crashlytics
 
 /// The wallet model is used to create and handle wallet objects.
 /// - row type (
-///     - textfield
+///     - text field
 ///         - title, input, *storage item* (text)
-///     - textfield
+///     - text field
 ///         - title, input, *storage item* (text)
 ///    - wallet type
 ///         - title, *storage item* (int)

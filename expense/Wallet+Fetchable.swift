@@ -50,4 +50,15 @@ extension Wallet: Fetchable, Createable {
             type = newValue.rawValue
         }
     }
+
+    var localizedWalletType: String {
+        get {
+            switch (walletType) {
+            case .personal:
+                return "Personal"
+            case .business:
+                return "Business"  // TODO: replace with localized strings
+            }
+        }
+    }
 }

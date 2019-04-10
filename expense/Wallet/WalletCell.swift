@@ -8,6 +8,14 @@
 
 import UIKit
 
-class WalletCell: UICollectionViewCell {
-    
+class WalletCell: ReusableCollectionViewCell, ConfigurableCell {
+    typealias ConfigType = WalletItem
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+
+    func configure(with item: WalletItem) {
+        nameLabel.text = item.name
+        typeLabel.text = item.type
+    }
 }

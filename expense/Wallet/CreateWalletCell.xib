@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UICollectionViewCell" customModule="expense" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CreateWalletCell" id="y2N-GN-GaA">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxB-v9-mXT" customClass="CornerView" customModule="expense" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Add wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJS-Nf-hgx">
+                                <rect key="frame" x="70.5" y="34.5" width="139" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="greenish"/>
+                        <constraints>
+                            <constraint firstItem="bJS-Nf-hgx" firstAttribute="centerX" secondItem="KxB-v9-mXT" secondAttribute="centerX" id="Bcr-gq-AHY"/>
+                            <constraint firstItem="bJS-Nf-hgx" firstAttribute="centerY" secondItem="KxB-v9-mXT" secondAttribute="centerY" id="kXU-Li-8yW"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="KxB-v9-mXT" firstAttribute="top" secondItem="y2N-GN-GaA" secondAttribute="top" id="3fU-AB-HLs"/>
+                <constraint firstAttribute="trailing" secondItem="KxB-v9-mXT" secondAttribute="trailing" id="82J-ic-BFv"/>
+                <constraint firstItem="KxB-v9-mXT" firstAttribute="leading" secondItem="y2N-GN-GaA" secondAttribute="leading" id="X5O-T6-BWn"/>
+                <constraint firstAttribute="bottom" secondItem="KxB-v9-mXT" secondAttribute="bottom" id="uin-ei-7ag"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="peC-NK-dcu"/>
+            <size key="customSize" width="228" height="93"/>
+            <point key="canvasLocation" x="-490" y="-129"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="greenish">
+            <color red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

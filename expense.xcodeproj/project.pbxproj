@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		245F6595BFB660C0DCB88EC1 /* Pods_expense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5390150F0DE85C1237DE9E6 /* Pods_expense.framework */; };
+		475713A3B6CC0682B00DFA29 /* CollectionModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475711F9CC254A7E8A0243CB /* CollectionModelController.swift */; };
+		475714857F94026A1DE8E620 /* DataItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571E390612756C8C846C8E /* DataItems.swift */; };
+		475718D3446FDAF866AFAB20 /* CreateWalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */; };
+		47571AB44A48AFC083AF5070 /* NSDecimalNumber+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571D99667F01BC965EFB23 /* NSDecimalNumber+Additions.swift */; };
+		47571B5562DA231746C1F663 /* WalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475713978ADBDC1396656323 /* WalletItem.swift */; };
 		5C4EE1D4C3B9C8635E265EA9 /* Pods_expenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */; };
 		7967983E225CFDB900C85009 /* KeyboardAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7967983D225CFDB900C85009 /* KeyboardAccessory.xib */; };
+		79679842225E2BB000C85009 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79679841225E2BB000C85009 /* WalletCell.xib */; };
+		79679844225E2BC300C85009 /* CreateWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79679843225E2BC300C85009 /* CreateWalletCell.xib */; };
+		79679846225E2C7400C85009 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79679845225E2C7400C85009 /* CornerView.swift */; };
 		79D13FEE225B236600B11435 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FEC225B236500B11435 /* TableRow.swift */; };
 		79D13FEF225B236600B11435 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FED225B236600B11435 /* TableSection.swift */; };
 		79D13FF1225B32A600B11435 /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13FF0225B32A600B11435 /* TableFooterView.xib */; };
@@ -116,8 +124,16 @@
 		0F0656D62D1BBFEC8F3AD214 /* Pods-expenseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseUITests.release.xcconfig"; path = "Target Support Files/Pods-expenseUITests/Pods-expenseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F40EFEF708DAC57612BC6E9 /* Pods-expenseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseTests.debug.xcconfig"; path = "Target Support Files/Pods-expenseTests/Pods-expenseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expenseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		475711F9CC254A7E8A0243CB /* CollectionModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionModelController.swift; sourceTree = "<group>"; };
+		475713978ADBDC1396656323 /* WalletItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletItem.swift; sourceTree = "<group>"; };
+		47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWalletCell.swift; sourceTree = "<group>"; };
+		47571D99667F01BC965EFB23 /* NSDecimalNumber+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumber+Additions.swift"; sourceTree = "<group>"; };
+		47571E390612756C8C846C8E /* DataItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataItems.swift; sourceTree = "<group>"; };
 		52B47F7E3CEC572915E7D231 /* Pods_expenseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expenseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7967983D225CFDB900C85009 /* KeyboardAccessory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardAccessory.xib; sourceTree = "<group>"; };
+		79679841225E2BB000C85009 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
+		79679843225E2BC300C85009 /* CreateWalletCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateWalletCell.xib; sourceTree = "<group>"; };
+		79679845225E2C7400C85009 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		79D13FEC225B236500B11435 /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
 		79D13FED225B236600B11435 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 		79D13FF0225B32A600B11435 /* TableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
@@ -407,11 +423,15 @@
 		79D1404F225CA0E100B11435 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				79679843225E2BC300C85009 /* CreateWalletCell.xib */,
 				79F98DA3225639710026C17B /* WalletViewController.swift */,
 				79F98DA722563D6D0026C17B /* WalletCell.swift */,
 				79D1404C225C9F4100B11435 /* NewWalletViewController.swift */,
 				79D14050225CA10200B11435 /* Wallet.storyboard */,
 				79D14075225CD47000B11435 /* WalletModel.swift */,
+				79679841225E2BB000C85009 /* WalletCell.xib */,
+				47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */,
+				475713978ADBDC1396656323 /* WalletItem.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -462,6 +482,7 @@
 		79F98D732256053E0026C17B /* expense */ = {
 			isa = PBXGroup;
 			children = (
+				79679845225E2C7400C85009 /* CornerView.swift */,
 				7967983D225CFDB900C85009 /* KeyboardAccessory.xib */,
 				79D14095225CEB7700B11435 /* Optional+ApiValue.swift */,
 				79D14093225CE9D700B11435 /* OrderActions.swift */,
@@ -502,6 +523,9 @@
 				79F98D7B225605400026C17B /* Assets.xcassets */,
 				79F98D80225605400026C17B /* Info.plist */,
 				79D13FF4225B341A00B11435 /* UserCell.xib */,
+				475711F9CC254A7E8A0243CB /* CollectionModelController.swift */,
+				47571E390612756C8C846C8E /* DataItems.swift */,
+				47571D99667F01BC965EFB23 /* NSDecimalNumber+Additions.swift */,
 			);
 			path = expense;
 			sourceTree = "<group>";
@@ -640,10 +664,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F98D7F225605400026C17B /* LaunchScreen.storyboard in Resources */,
+				79679842225E2BB000C85009 /* WalletCell.xib in Resources */,
 				79D14051225CA10300B11435 /* Wallet.storyboard in Resources */,
 				79D14088225CE7EF00B11435 /* TextFieldCell.xib in Resources */,
 				7967983E225CFDB900C85009 /* KeyboardAccessory.xib in Resources */,
 				79F98D7C225605400026C17B /* Assets.xcassets in Resources */,
+				79679844225E2BC300C85009 /* CreateWalletCell.xib in Resources */,
 				79D1405A225CB6C500B11435 /* privacy.html in Resources */,
 				79D14030225B913500B11435 /* SettingsCell.xib in Resources */,
 				79D13FF5225B341A00B11435 /* UserCell.xib in Resources */,
@@ -733,7 +759,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -895,6 +921,7 @@
 				79D1404D225C9F4100B11435 /* NewWalletViewController.swift in Sources */,
 				79D13FF7225B347100B11435 /* UserSection.swift in Sources */,
 				79D14034225B926700B11435 /* BadgeView.swift in Sources */,
+				79679846225E2C7400C85009 /* CornerView.swift in Sources */,
 				79D14029225B7DCC00B11435 /* RatingService.swift in Sources */,
 				79F98DB3225647500026C17B /* TableModelViewController.swift in Sources */,
 				79D1407A225CD5CA00B11435 /* DetailModel.swift in Sources */,
@@ -933,6 +960,11 @@
 				79D13FFD225B547500B11435 /* ReusableCell.swift in Sources */,
 				79D14003225B554F00B11435 /* UIColor+Extension.swift in Sources */,
 				79D14074225CCE7500B11435 /* UIImage+Color.swift in Sources */,
+				475713A3B6CC0682B00DFA29 /* CollectionModelController.swift in Sources */,
+				475718D3446FDAF866AFAB20 /* CreateWalletCell.swift in Sources */,
+				47571B5562DA231746C1F663 /* WalletItem.swift in Sources */,
+				475714857F94026A1DE8E620 /* DataItems.swift in Sources */,
+				47571AB44A48AFC083AF5070 /* NSDecimalNumber+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

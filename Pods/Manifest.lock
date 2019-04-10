@@ -99,16 +99,25 @@ PODS:
   - GoogleUtilities/UserDefaults (5.5.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
+  - ImageStorage (1.0.2):
+    - RxCocoa (~> 4.5.0)
+    - RxSwift (~> 4.5.0)
+  - InvoiceBotSDK (1.0.3):
+    - CoreDataExtensio (~> 2.0.4)
+    - ImageStorage (~> 1.0.2)
+    - Moya/RxSwift (~> 12.0.1)
+    - Reachability (~> 3.2)
+    - SwiftyBeaver (~> 1.7)
   - JLRoutes (2.1)
   - Kvitto (1.0.3):
     - DTFoundation/DTASN1 (~> 1.7.13)
     - Kvitto/Core (= 1.0.3)
   - Kvitto/Core (1.0.3):
     - DTFoundation/DTASN1 (~> 1.7.13)
-  - Moya/Core (13.0.0-beta.1):
+  - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 4.1)
-  - Moya/RxSwift (13.0.0-beta.1):
+    - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
   - nanopb (0.3.901):
@@ -145,9 +154,10 @@ DEPENDENCIES:
   - FirebaseMessaging
   - FirebaseRemoteConfig
   - GoogleSignIn
+  - InvoiceBotSDK (~> 1.0.3)
   - JLRoutes (~> 2.1)
   - Kvitto (~> 1.0.2)
-  - Moya/RxSwift (~> 13.0.0-beta.1)
+  - Moya/RxSwift (~> 12.0.1)
   - R.swift (~> 5.0)
   - Reachability (~> 3.2)
   - RxCocoa (~> 4.5.0)
@@ -159,6 +169,9 @@ DEPENDENCIES:
   - SwiftyBeaver (~> 1.7)
 
 SPEC REPOS:
+  "git@github.com:gekitz/mw-private-pods.git":
+    - ImageStorage
+    - InvoiceBotSDK
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Amplitude-iOS
@@ -234,9 +247,11 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
   GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  ImageStorage: 740dd713b1fa074762d9c4cfd742af452ef72ada
+  InvoiceBotSDK: 0211f0988b06a4a5aaf4e2906eaf3d4c7b4b930c
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   Kvitto: d451f893f84ad669850b7cb7d3f8781363e14232
-  Moya: c084dac5ea389eeac7c1059f0553d74197182d39
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
@@ -252,6 +267,6 @@ SPEC CHECKSUMS:
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: e59a0af530197abc012dc38ffb0a5f5e7ac09526
+PODFILE CHECKSUM: 15a5bbce5b92ccceb7b835c1bee7fca782481d18
 
 COCOAPODS: 1.6.1

@@ -1,0 +1,6 @@
+framework module ImageStorage {
+  umbrella header "ImageStorage-umbrella.h"
+
+  export *
+  module * { export * }
+}

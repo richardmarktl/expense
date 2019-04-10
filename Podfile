@@ -1,6 +1,8 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.1'
+source 'git@github.com:gekitz/mw-private-pods.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
+platform :ios, '11.1'
 inhibit_all_warnings!
 
 target 'expense' do
@@ -15,7 +17,10 @@ target 'expense' do
   pod 'RxSwift','~> 4.5.0'
   pod 'RxCocoa', '~> 4.5.0'
   # pod 'RxStoreKit', '~> 1.2.1'
-
+  
+  # Invoice Bot Private Pods
+  pod 'InvoiceBotSDK', '~> 1.0.3'
+  
   # Generator
   pod 'R.swift', '~> 5.0'
 
@@ -25,7 +30,7 @@ target 'expense' do
   pod 'Charts', '~> 3.2.2'
   pod 'EmailValidator', :git => "https://github.com/gekitz/EmailValidator.git", :commit => "e39cb1f"
   
-  pod 'Moya/RxSwift', '~> 13.0.0-beta.1'
+  pod 'Moya/RxSwift', '~> 12.0.1'
   pod 'Reachability', '~> 3.2'
   pod 'JLRoutes', '~> 2.1'
   pod 'SwiftRichString', '~> 3.0.0'

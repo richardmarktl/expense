@@ -1,0 +1,6 @@
+framework module InvoiceBotSDK {
+  umbrella header "InvoiceBotSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

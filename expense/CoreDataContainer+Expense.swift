@@ -11,42 +11,41 @@ import CoreDataExtensio
 import Crashlytics
 
 extension CoreDataContainer {
-    
+
     private static let fileName = "invoice.sqlite"
-    
+
     class func createDatabaseForApp() {
         createDatabaseWithStoreType(NSSQLiteStoreType)
     }
-    
+
     class func creatDatabaseForTesting() {
         createDatabaseWithStoreType(NSInMemoryStoreType)
     }
-    
+
     fileprivate class func createDatabaseWithStoreType(_ storeType: String) {
         guard let containerStoreUrl = containerStoreURL() else {
             return
         }
-        
+
         let description = NSPersistentStoreDescription(url: containerStoreUrl)
         description.shouldMigrateStoreAutomatically = true
         description.shouldInferMappingModelAutomatically = true
         description.type = storeType
-        
         CoreDataContainer.create(
-            name: CoreDataContainer.fileName,
-            modelURL: modelURL(),
-            description: description,
-            completionHandler: { (desc, error) in 
-            if let error = error {
-                print("failed to load the core data store \(error)")
-            }
-        })
+                name: CoreDataContainer.fileName,
+                modelURL: modelURL(),
+                description: description,
+                completionHandler: { (desc, error) in
+                    if let error = error {
+                        print("failed to load the core data store \(error)")
+                    }
+                })
     }
-    
+
     fileprivate class func modelURL() -> URL {
         return Bundle.main.url(forResource: "invoice", withExtension: "momd")!
     }
-    
+
     fileprivate class func containerStoreURL() -> URL? {
         guard let appGroup = Bundle.main.infoDictionary?["APP_GROUP"] as? String else {
             return nil

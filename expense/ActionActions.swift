@@ -12,7 +12,7 @@ import Crashlytics
 
 class PreviewAction: TapActionable {
     typealias RowActionType = ActionItem
-    func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         guard let model = model as? JobModel,
             let pCtr: GeneratedPreviewController = R.storyboard.preview.instantiateInitialViewController() else {
             return 
@@ -28,13 +28,13 @@ class PreviewAction: TapActionable {
         ctr.navigationController?.pushViewController(pCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }
 
 class SendAction: ProTapAction<ActionItem> {
-    override func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
@@ -53,13 +53,13 @@ class SendAction: ProTapAction<ActionItem> {
         })
     }
     
-    func canPerformTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) -> Bool {
+    func canPerformTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) -> Bool {
         return rowItem.isEnabled
     }
 }
 
 class ShareJobAction: ProTapAction<ActionItem> {
-    override func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
@@ -80,7 +80,7 @@ class ShareJobAction: ProTapAction<ActionItem> {
 }
 
 class DuplicateAction: ProTapAction<ActionItem> {
-    override func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
@@ -119,7 +119,7 @@ class DuplicateAction: ProTapAction<ActionItem> {
 }
 
 class ConvertToInvoiceAction: ProTapAction<ActionItem> {
-    override func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
@@ -153,7 +153,7 @@ class ConvertToInvoiceAction: ProTapAction<ActionItem> {
 
 class PaymentsAction: TapActionable {
     typealias RowActionType = ActionItem
-    func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.showPayments.logEvent()
         
         guard let model = model as? JobModel, let invoice = model.job as? Invoice else {
@@ -170,7 +170,7 @@ class PaymentsAction: TapActionable {
         ctr.navigationController?.pushViewController(pCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }

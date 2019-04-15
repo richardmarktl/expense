@@ -11,7 +11,7 @@ import RxSwift
 import CoreData
 import CoreDataExtensio
 
-class DetailModel<ItemType: NSManagedObject & Createable>: TableModel<UITableView> {
+class DetailModel<ItemType: NSManagedObject & Createable>: Model<UITableView> {
     
     let item: ItemType
     var isDeleteButtonHidden: Bool

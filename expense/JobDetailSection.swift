@@ -58,7 +58,7 @@ class JobDetailItem: BasicItem<String> {
 class JobDetailAction: TapActionable {
     typealias RowActionType = JobDetailItem
     
-    func performTap(with rowItem: JobDetailItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: JobDetailItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         guard let section = model.sections[0] as? JobDetailSection else {
             return
         }
@@ -78,7 +78,7 @@ class JobDetailAction: TapActionable {
         tableView.endUpdates()
     }
     
-    func rewindAction(with rowItem: JobDetailItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: JobDetailItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }
 

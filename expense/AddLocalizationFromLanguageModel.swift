@@ -22,7 +22,7 @@ class AddLocalizationFromLanguageCell: ReusableCell, ConfigurableCell {
 class CreateLocalizationFromLanguageAction: TapActionable {
     typealias RowActionType = Language
     
-    func performTap(with rowItem: Language, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: Language, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.themeCreateLanguageSet.logEvent()
         
         let localization = JobLocalization.create(in: model.context)
@@ -37,7 +37,7 @@ class CreateLocalizationFromLanguageAction: TapActionable {
         ctr.navigationController?.popViewController(animated: true)
     }
     
-    func rewindAction(with rowItem: Language, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: Language, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }
@@ -62,7 +62,7 @@ class AddLocalizationFromLanguageSection: TableSection {
     }
 }
 
-class AddLocalizationFromLanguageModel: TableModel {
+class AddLocalizationFromLanguageModel: Model {
     required init(with context: NSManagedObjectContext) {
         super.init(with: context)
         sections = [AddLocalizationFromLanguageSection(context: context)]

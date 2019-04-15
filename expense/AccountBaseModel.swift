@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class AccountBaseModel: TableModel {
+class AccountBaseModel: Model {
     var name: String
     var validUntil: String
     

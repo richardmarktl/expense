@@ -33,7 +33,7 @@ class SignatureSettingAction: TapActionable {
         doAction = action
     }
     
-    func performTap(with rowItem: SignatureItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SignatureItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         guard let signature: SignatureViewController = R.storyboard.signature.instantiateInitialViewController(), doAction else {
             return
         }
@@ -43,7 +43,7 @@ class SignatureSettingAction: TapActionable {
         ctr.navigationController?.pushViewController(signature, animated: true)
     }
     
-    func rewindAction(with rowItem: SignatureItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SignatureItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }

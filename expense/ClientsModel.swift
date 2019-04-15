@@ -55,7 +55,7 @@ class ClientOverviewItem: ViewItem<Client>, Filterable {
 /// MARK: -
 /// Select Client Action
 fileprivate class SelectClientAction: ProTapAction<ClientOverviewItem> {
-    override func performTap(with rowItem: ClientOverviewItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: ClientOverviewItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
@@ -71,10 +71,10 @@ fileprivate class SelectClientAction: ProTapAction<ClientOverviewItem> {
 
 class NoOperationClientAction: TapActionable {
     typealias RowActionType = ClientOverviewItem
-    func performTap(with rowItem: ClientOverviewItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ClientOverviewItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
     
-    func rewindAction(with rowItem: ClientOverviewItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ClientOverviewItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }
 

@@ -13,13 +13,13 @@ import UIKit
 class OpenSubscriptionAction: TapActionable {
     typealias RowActionType = SettingsItem
     
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         tableView.deselectRow(at: indexPath, animated: true)
         Upsell3Controller.present(in: ctr, mode: .showYearlyOnlyAndSubscriptionButton)
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }
@@ -27,13 +27,13 @@ class OpenSubscriptionAction: TapActionable {
 class SubscribeToProAction: TapActionable {
     typealias RowActionType = SettingsItem
     
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         tableView.deselectRow(at: indexPath, animated: true)
         Upsell2Controller.present(in: ctr)
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }

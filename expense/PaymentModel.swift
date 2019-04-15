@@ -11,7 +11,7 @@ import CoreData
 import RxSwift
 
 /// Client Model
-class PaymentModel: TableModel {
+class PaymentModel: Model {
     
     /// Data model items that hold the values the user edits
     private let amount: NumberEntry

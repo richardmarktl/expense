@@ -13,7 +13,7 @@ import CoreDataExtensio
 import ContactsUI
 import Horreum
 
-class ItemPickerModel: TableModel {
+class ItemPickerModel: Model {
     
     let job: Job
     

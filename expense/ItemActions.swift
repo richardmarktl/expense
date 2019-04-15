@@ -10,7 +10,7 @@ import UIKit
 import Horreum
 
 class AddItemAction: ProTapAction<AddItem> {
-    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
@@ -67,7 +67,7 @@ class AddItemAction: ProTapAction<AddItem> {
 }
 
 class OrderItemAction: ProTapAction<OrderItem> {
-    override func performTap(with rowItem: OrderItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: OrderItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)

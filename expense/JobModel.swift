@@ -38,7 +38,7 @@ import Crashlytics
 
 // MARK: - Row stuff
 
-class JobModel: TableModel {
+class JobModel: Model {
     
     let job: Job
     let renderer: PerformanceInvoiceGenerator

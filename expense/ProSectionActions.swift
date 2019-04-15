@@ -12,16 +12,16 @@ class ProSectionAction: TapActionable {
     
     typealias RowActionType = SettingsItem
     
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         UpsellTrialExpiredController.present(in: ctr)
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }
 
 class BackupAction: ProSectionAction {
-    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.settingsBackup.logEvent()
         
@@ -38,7 +38,7 @@ class BackupAction: ProSectionAction {
 }
 
 class ReadReceiptAction: ProSectionAction {
-    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.settingsReadReceipt.logEvent()
         
@@ -55,7 +55,7 @@ class ReadReceiptAction: ProSectionAction {
 }
 
 class ThemeAction: ProSectionAction {
-    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.settingsThemes.logEvent()
         
@@ -69,7 +69,7 @@ class ThemeAction: ProSectionAction {
 }
 
 class SettingsPaymentProviderAction: ProSectionAction {
-    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.settingsPaymentProvider.logEvent()
         
@@ -85,7 +85,7 @@ class SettingsPaymentProviderAction: ProSectionAction {
 
 
 class SignatureAction: ProSectionAction {
-    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.settingsSignature.logEvent()
         

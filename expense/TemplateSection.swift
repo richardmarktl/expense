@@ -16,7 +16,7 @@ struct SelectItem {
 class SelectTemplateAction: TapActionable {
     typealias RowActionType = SelectItem
     
-    func performTap(with rowItem: SelectItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SelectItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.themeSelection.logEvent()
         
@@ -31,7 +31,7 @@ class SelectTemplateAction: TapActionable {
         tableView.reloadData()
     }
     
-    func rewindAction(with rowItem: SelectItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SelectItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class AddClientAction: ProTapAction<AddItem> {
     
-    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
@@ -34,7 +34,7 @@ class AddClientAction: ProTapAction<AddItem> {
 }
 
 class ClientAction: ProTapAction<ClientItem> {
-    override func performTap(with rowItem: ClientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: ClientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)

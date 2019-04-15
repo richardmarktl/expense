@@ -24,7 +24,7 @@ extension ItemItem: Filterable {
 /// MARK: -
 /// Select Client Action
 class SelectItemAction: ProTapAction<ItemItem> {
-    override func performTap(with rowItem: ItemItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: ItemItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)

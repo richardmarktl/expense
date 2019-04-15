@@ -15,7 +15,7 @@ import SwiftMoment
 class RestoreBackupAction: TapActionable {
     typealias RowActionType = ProgressItem
     
-    func performTap(with rowItem: ProgressItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ProgressItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.backupRestore.logEvent()
         if rowItem.isInProgress {
             tableView.deselectRow(at: indexPath, animated: true)
@@ -32,7 +32,7 @@ class RestoreBackupAction: TapActionable {
         })
     }
     
-    func rewindAction(with rowItem: ProgressItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ProgressItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }
@@ -40,7 +40,7 @@ class RestoreBackupAction: TapActionable {
 class ExportCSVAction: TapActionable {
     typealias RowActionType = ProgressItem
     
-    func performTap(with rowItem: ProgressItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ProgressItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.backupExport.logEvent()
         if rowItem.isInProgress {
             tableView.deselectRow(at: indexPath, animated: true)
@@ -69,7 +69,7 @@ class ExportCSVAction: TapActionable {
         }).disposed(by: ctr.bag)
     }
     
-    func rewindAction(with rowItem: ProgressItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ProgressItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }
@@ -107,7 +107,7 @@ extension Invoice {
     }
 }
 
-class BackupModel: TableModel {
+class BackupModel: Model {
     
     required init(with context: NSManagedObjectContext) {
         super.init(with: context)

@@ -102,7 +102,7 @@
 		79F98DAE225645A70026C17B /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DAD225645A70026C17B /* SettingsController.swift */; };
 		79F98DB02256470D0026C17B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DAF2256470D0026C17B /* UserCell.swift */; };
 		79F98DB3225647500026C17B /* TableModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DB1225647500026C17B /* TableModelViewController.swift */; };
-		79F98DB4225647500026C17B /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DB2225647500026C17B /* TableModel.swift */; };
+		79F98DB4225647500026C17B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DB2225647500026C17B /* Model.swift */; };
 		F4700AB500BC61366E250F21 /* Pods_expenseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47F7E3CEC572915E7D231 /* Pods_expenseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -227,7 +227,7 @@
 		79F98DAD225645A70026C17B /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		79F98DAF2256470D0026C17B /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		79F98DB1225647500026C17B /* TableModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModelViewController.swift; sourceTree = "<group>"; };
-		79F98DB2225647500026C17B /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		79F98DB2225647500026C17B /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		982292CDDC061988462F331C /* Pods-expenseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseUITests.debug.xcconfig"; path = "Target Support Files/Pods-expenseUITests/Pods-expenseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B045DFA250E5B1A342F8C8F7 /* Pods-expense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expense.release.xcconfig"; path = "Target Support Files/Pods-expense/Pods-expense.release.xcconfig"; sourceTree = "<group>"; };
 		BE861D7146213010F838D237 /* Pods-expenseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseTests.release.xcconfig"; path = "Target Support Files/Pods-expenseTests/Pods-expenseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -343,7 +343,7 @@
 				79D13FED225B236600B11435 /* TableSection.swift */,
 				79D14015225B72EC00B11435 /* InfoSection.swift */,
 				79D13FEC225B236500B11435 /* TableRow.swift */,
-				79F98DB2225647500026C17B /* TableModel.swift */,
+				79F98DB2225647500026C17B /* Model.swift */,
 				79D13FFF225B552600B11435 /* SettingsItem.swift */,
 				79D14016225B72EC00B11435 /* InfoSectionActions.swift */,
 			);
@@ -926,7 +926,7 @@
 				79D1407A225CD5CA00B11435 /* DetailModel.swift in Sources */,
 				79D1400C225B68B400B11435 /* Observer-Void.swift in Sources */,
 				79D1408E225CE87900B11435 /* KeyboardAccessoryable.swift in Sources */,
-				79F98DB4225647500026C17B /* TableModel.swift in Sources */,
+				79F98DB4225647500026C17B /* Model.swift in Sources */,
 				79D14010225B6B6500B11435 /* Date+String.swift in Sources */,
 				79D1404A225C8E4300B11435 /* UITestHelper.swift in Sources */,
 				79D14012225B6D0700B11435 /* Styling.swift in Sources */,

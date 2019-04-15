@@ -13,7 +13,7 @@ import CoreDataExtensio
 import ContactsUI
 import Horreum
 
-class ClientPickerModel: TableModel {
+class ClientPickerModel: Model {
     
     init(searchObservable: Observable<String>, context: NSManagedObjectContext) {
         

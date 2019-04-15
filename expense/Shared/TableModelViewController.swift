@@ -11,7 +11,7 @@ import RxSwift
 import CoreData
 import SwiftRichString
 
-class TableModelController<Model: TableModel<UITableView>>: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableModelController<DataProvider: Model<UITableView>>: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,10 +20,10 @@ class TableModelController<Model: TableModel<UITableView>>: UIViewController, UI
     var lastSelectedItem: Row<UITableView>?
     var manuallyManageDataUpdate: Bool = false
     
-    lazy var model: Model = { return createModel() }()
+    lazy var model: DataProvider = { return createModel() }()
     
-    public func createModel() -> Model {
-        return Model(with: context)
+    public func createModel() -> DataProvider {
+        return DataProvider(with: context)
     }
     
     override func viewDidLoad() {

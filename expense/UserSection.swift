@@ -21,7 +21,7 @@ class UserDetailAction: TapActionable {
     typealias RowActionType = UserItem
     typealias SenderType = UITableView
 
-    func performTap(with rowItem: UserItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
+    func performTap(with rowItem: UserItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: Model<UITableView>) {
 //        guard let aCtr = R.storyboard.settings.accountDetailViewController() else {
 //            return
 //        }
@@ -29,7 +29,7 @@ class UserDetailAction: TapActionable {
 //        ctr.navigationController?.pushViewController(aCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: UserItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
+    func rewindAction(with rowItem: UserItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: Model<UITableView>) {
         
     }
 }

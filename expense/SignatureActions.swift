@@ -9,7 +9,7 @@ import UIKit
 class RecipientAction: TapActionable {
     typealias RowActionType = RecipientItem
 
-    func performTap(with rowItem: RecipientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: RecipientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         if rowItem.value.typedState == .signed, let sCtr = R.storyboard.recipient().instantiateInitialViewController() as? RecipientViewController {
             Analytics.showSignature.logEvent()
             
@@ -20,7 +20,7 @@ class RecipientAction: TapActionable {
         }
     }
 
-    func rewindAction(with rowItem: RecipientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: RecipientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
 
     }
 }

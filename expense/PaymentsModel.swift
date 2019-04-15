@@ -24,7 +24,7 @@ class PaymentItem: BasicItem<Payment> {
     }
 }
 
-class PaymentsModel: TableModel {
+class PaymentsModel: Model {
     
     let invoice: Invoice
     

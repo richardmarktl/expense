@@ -11,7 +11,7 @@ import CoreData
 import UIKit
 import RxSwift
 
-class BusinessSettingsModel: TableModel {
+class BusinessSettingsModel: Model {
     
     private let footerUpdate: ReplaySubject<(Int, String)> = ReplaySubject.create(bufferSize: 2)
     private let isValid: ReplaySubject<Bool> = ReplaySubject.create(bufferSize: 1)

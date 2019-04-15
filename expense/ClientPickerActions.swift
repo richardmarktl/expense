@@ -36,7 +36,7 @@ class ClientSelectAction {
 class NewClientAction: ClientSelectAction, TapActionable {
     typealias RowActionType = AddItem
     
-    func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         guard let nCtr = R.storyboard.clients.clientViewRootController(), let root = nCtr.childViewControllers.first as? ClientViewController else {
             return
         }
@@ -59,7 +59,7 @@ class NewClientAction: ClientSelectAction, TapActionable {
         ctr.present(nCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }
@@ -73,7 +73,7 @@ class PickFromAddressBookAction: ClientSelectAction, TapActionable {
         self.context = context
     }
     
-    func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         let contactController = CNContactPickerViewController()
         let cancel = contactController.rx.didCancel
         
@@ -87,7 +87,7 @@ class PickFromAddressBookAction: ClientSelectAction, TapActionable {
         ctr.present(contactController, animated: true)
     }
     
-    func rewindAction(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }
@@ -95,11 +95,11 @@ class PickFromAddressBookAction: ClientSelectAction, TapActionable {
 // MARK: - Picks one of the clients from the local storage
 class PickClientAction: ClientSelectAction, TapActionable {
     typealias RowActionType = ClientItem
-    func performTap(with rowItem: ClientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ClientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.addInvoicePickClient.logEvent()
         complete(with: rowItem.value, in: ctr)
     }
     
-    func rewindAction(with rowItem: ClientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ClientItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }

@@ -41,7 +41,7 @@ class ItemSelectAction {
     /// Shows the controller and prefills the item if we have one
     ///
     /// - Parameter item: item we want to prefill the controller with
-    fileprivate func showController(with item: Item? = nil, presentOn ctr: UIViewController, model: TableModel) {
+    fileprivate func showController(with item: Item? = nil, presentOn ctr: UIViewController, model: Model) {
         
         guard let model = model as? ItemPickerModel else {
             return
@@ -73,12 +73,12 @@ class ItemSelectAction {
 class NewOrderAction: ItemSelectAction, TapActionable {
     typealias RowActionType = AddItem
     
-    func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.addInvoiceNewOrder.logEvent()
         showController(presentOn: ctr, model: model)
     }
     
-    func rewindAction(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }
 
@@ -86,11 +86,11 @@ class NewOrderAction: ItemSelectAction, TapActionable {
 class PickItemAction: ItemSelectAction, TapActionable {
     typealias RowActionType = ItemItem
     
-    func performTap(with rowItem: ItemItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ItemItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.addInvoicePickItem.logEvent()
         showController(with: rowItem.data.value, presentOn: ctr, model: model)
     }
     
-    func rewindAction(with rowItem: ItemItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ItemItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }

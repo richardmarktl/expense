@@ -18,9 +18,9 @@ protocol ConfigurableRow {
 
 protocol ControllerActionable: ConfigurableRow {
     associatedtype SenderType
-    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>)
-    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>) -> Bool
-    func rewindAction(sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>)
+    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>)
+    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) -> Bool
+    func rewindAction(sender: SenderType, in ctr: UIViewController, model: Model<SenderType>)
 }
 
 class Row<T>: ControllerActionable {
@@ -35,15 +35,15 @@ class Row<T>: ControllerActionable {
 
     // MARK: ControllerActionable Implementation -
 
-    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>) {
+    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
         self.indexPath = indexPath
     }
 
-    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>) -> Bool {
+    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) -> Bool {
         return true
     }
 
-    func rewindAction(sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>) {
+    func rewindAction(sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
 
     }
 }
@@ -67,16 +67,16 @@ class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UITab
     }
 
     // MARK: ControllerActionable Implementation -
-    override func performTap(indexPath: IndexPath, sender: UITableView, in ctr: UIViewController, model: TableModel<UITableView>) {
+    override func performTap(indexPath: IndexPath, sender: UITableView, in ctr: UIViewController, model: Model<UITableView>) {
         self.indexPath = indexPath
         self.action.performTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    override func canPerformTap(indexPath: IndexPath, sender: UITableView, in ctr: UIViewController, model: TableModel<UITableView>) -> Bool {
+    override func canPerformTap(indexPath: IndexPath, sender: UITableView, in ctr: UIViewController, model: Model<UITableView>) -> Bool {
         return action.canPerformTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    override func rewindAction(sender: UITableView, in ctr: UIViewController, model: TableModel<UITableView>) {
+    override func rewindAction(sender: UITableView, in ctr: UIViewController, model: Model<UITableView>) {
         guard let indexPath = indexPath else {
             return
         }
@@ -120,16 +120,16 @@ class GridRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UIColl
     }
 
     // MARK: ControllerActionable Implementation -
-    override func performTap(indexPath: IndexPath, sender: UICollectionView, in ctr: UIViewController, model: TableModel<UICollectionView>) {
+    override func performTap(indexPath: IndexPath, sender: UICollectionView, in ctr: UIViewController, model: Model<UICollectionView>) {
         self.indexPath = indexPath
         self.action.performTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    override func canPerformTap(indexPath: IndexPath, sender: UICollectionView, in ctr: UIViewController, model: TableModel<UICollectionView>) -> Bool {
+    override func canPerformTap(indexPath: IndexPath, sender: UICollectionView, in ctr: UIViewController, model: Model<UICollectionView>) -> Bool {
         return action.canPerformTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    override func rewindAction(sender: UICollectionView, in ctr: UIViewController, model: TableModel<UICollectionView>) {
+    override func rewindAction(sender: UICollectionView, in ctr: UIViewController, model: Model<UICollectionView>) {
         guard let indexPath = indexPath else {
             return
         }

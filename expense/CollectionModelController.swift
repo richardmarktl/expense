@@ -8,7 +8,7 @@ import UIKit
 import CoreData
 import RxSwift
 
-class CollectionModelController<Model: TableModel<UICollectionView>>: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CollectionModelController<DataProvider: Model<UICollectionView>>: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
 
     let bag = DisposeBag()
@@ -16,10 +16,10 @@ class CollectionModelController<Model: TableModel<UICollectionView>>: UIViewCont
     var lastSelectedItem: ConfigurableRow?
     var manuallyManageDataUpdate: Bool = false
 
-    lazy var model: Model = { return createModel() }()
+    lazy var model: DataProvider = { return createModel() }()
 
-    public func createModel() -> Model {
-        return Model(with: context)
+    public func createModel() -> DataProvider {
+        return DataProvider(with: context)
     }
 
     override func viewWillAppear(_ animated: Bool) {

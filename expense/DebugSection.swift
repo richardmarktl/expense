@@ -54,21 +54,21 @@ fileprivate extension SubtitleItem {
 fileprivate class UpdateExpireDateTo2MinutesFromNowAction: TapActionable {
     typealias RowActionType = SubtitleItem
     func performTap(with rowItem: SubtitleItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model:
-        TableModel) {
+        Model) {
         defer { tableView.deselectRow(at: indexPath, animated: true) }
         
         guard let section = model.sections.last as? DebugSection else { return }
         section.updateExpireTime2ToMinutesFromNow()
     }
     
-    func rewindAction(with rowItem: SubtitleItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SubtitleItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }
 
 fileprivate class ResetFuckUpStateAction: TapActionable {
     typealias RowActionType = SubtitleItem
     func performTap(with rowItem: SubtitleItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model:
-        TableModel) {
+        Model) {
         defer { tableView.deselectRow(at: indexPath, animated: true) }
         
         UserDefaults.standard.set(false, forKey: "did_run_fuck_up_resolver")
@@ -79,6 +79,6 @@ fileprivate class ResetFuckUpStateAction: TapActionable {
         }
     }
     
-    func rewindAction(with rowItem: SubtitleItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SubtitleItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }

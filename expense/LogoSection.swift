@@ -27,7 +27,7 @@ class LogoAction: TapActionable, GalleryItemsDataSource {
     private var imagePickerBehaviour: ImagePickBehaviour?
     typealias RowActionType = LogoItem
     
-    func performTap(with rowItem: LogoItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: LogoItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.themeLogo.logEvent()
         
@@ -68,7 +68,7 @@ class LogoAction: TapActionable, GalleryItemsDataSource {
         }
     }
     
-    func rewindAction(with rowItem: LogoItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: LogoItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
     

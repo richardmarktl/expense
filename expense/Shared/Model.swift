@@ -1,5 +1,5 @@
 //
-//  TableModel.swift
+//  Model.swift
 //  InVoice
 //
 //  Created by Georg Kitz on 15/11/2017.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import RxSwift
 
-class TableModel<CollectionType> {
+class Model<CollectionType> {
     typealias TypedSection = TableSection<CollectionType>
     let bag = DisposeBag()
     let sectionsVariable: Variable<[TypedSection]> = Variable([])

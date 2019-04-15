@@ -8,7 +8,7 @@ import UIKit
 import RxSwift
 import CoreData
 
-class GridSearchableModel<ItemType: Filterable>: TableModel<UICollectionView> {
+class GridSearchableModel<ItemType: Filterable>: Model<UICollectionView> {
 
     /// Model that combines the data loading + searching
     ///

@@ -9,7 +9,7 @@
 import UIKit
 
 class NewPaymentAction: ProTapAction<AddItem> {
-    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.addPayment.logEvent()
         
         if isProExpired {
@@ -33,7 +33,7 @@ class NewPaymentAction: ProTapAction<AddItem> {
 }
 
 class MarkAsPayedInFullAction: ProTapAction<AddItem> {
-    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.markAsFullyPaid.logEvent()
         
         if isProExpired {
@@ -51,7 +51,7 @@ class MarkAsPayedInFullAction: ProTapAction<AddItem> {
 }
 
 class ShowPaymentAction: ProTapAction<PaymentItem> {
-    override func performTap(with rowItem: PaymentItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: PaymentItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.showPayment.logEvent()
         
         if isProExpired {

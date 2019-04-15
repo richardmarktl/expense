@@ -11,7 +11,7 @@ import UIKit
 class ShowDocumentFieldsAction: TapActionable {
     typealias RowActionType = ActionItem
     
-    func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         guard let languageSetCtr = R.storyboard.languageSet.instantiateInitialViewController() else {
             return
         }
@@ -22,6 +22,6 @@ class ShowDocumentFieldsAction: TapActionable {
         ctr.navigationController?.pushViewController(languageSetCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ActionItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
     }
 }

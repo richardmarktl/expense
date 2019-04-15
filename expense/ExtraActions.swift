@@ -15,7 +15,7 @@ import ImageViewer
 class AddAttachmentAction: ProTapAction<AddItem> {
     private var imagePickerBehaviour: ImagePickBehaviour?
 
-    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
@@ -85,7 +85,7 @@ class AttachmentAction: ProTapAction<AttachmentItem>, GalleryItemsDataSource {
 
     private var previewItem: GalleryItem?
 
-    override func performTap(with rowItem: AttachmentItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: AttachmentItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         if isProExpired {
             super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)

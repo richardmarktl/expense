@@ -25,7 +25,7 @@ class ColorItem: BasicItem<UIColor> {
 /// ColorAction
 class ColorAction: TapActionable {
     typealias RowActionType = ColorItem
-    func performTap(with rowItem: ColorItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: ColorItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.themeColor.logEvent()
         
@@ -37,7 +37,7 @@ class ColorAction: TapActionable {
         ctr.navigationController?.pushViewController(colorCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: ColorItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ColorItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }

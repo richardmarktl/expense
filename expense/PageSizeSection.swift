@@ -17,7 +17,7 @@ struct PageSelectItem {
 class SelectPageSizeAction: TapActionable {
     typealias RowActionType = PageSelectItem
     
-    func performTap(with rowItem: PageSelectItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: PageSelectItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
         Analytics.themeSelection.logEvent()
         
@@ -32,7 +32,7 @@ class SelectPageSizeAction: TapActionable {
         tableView.reloadData()
     }
     
-    func rewindAction(with rowItem: PageSelectItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: PageSelectItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }

@@ -12,7 +12,7 @@ import RxSwift
 
 
 /// LanguageSetModel
-class LanguageSetModel: TableModel {
+class LanguageSetModel: Model {
     
     let localizationSection: LocalizationSection
     
@@ -68,14 +68,14 @@ class LocalizationCell: ReusableCell, ConfigurableCell {
 class LocalizationAction: TapActionable {
     typealias RowActionType = LocalizationItem
     
-    func performTap(with rowItem: LocalizationItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: LocalizationItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         Analytics.themeEditLanguageSet.logEvent()
         
         let editCtr = EditLocalizationForLanguageController.show(item: rowItem.item)
         ctr.navigationController?.pushViewController(editCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: LocalizationItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: LocalizationItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }
@@ -120,7 +120,7 @@ class LocalizationSection: TableSection {
 /// AddLanguageSection
 class AddLanguageAction: TapActionable {
     typealias RowActionType = AddItem
-    func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         guard let addCtr = R.storyboard.languageSet.addLocalizationFromLanguageController() else {
             return
         }
@@ -131,7 +131,7 @@ class AddLanguageAction: TapActionable {
         ctr.navigationController?.pushViewController(addCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: AddItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: Model) {
         
     }
 }

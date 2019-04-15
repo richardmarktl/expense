@@ -19,7 +19,7 @@ target 'expense' do
   # pod 'RxStoreKit', '~> 1.2.1'
   
   # Invoice Bot Private Pods
-  pod 'InvoiceBotSDK', '~> 1.0.3'
+  pod 'InvoiceBotSDK', '~> 1.0.5'
   
   # Generator
   pod 'R.swift', '~> 5.0'

@@ -59,7 +59,7 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
         
         if item.managedObjectContext! != context {
             //swiftlint:disable force_cast
-            ctrs.1.item = context.object(with: item.objectID) as! ItemType
+            ctrs.1.item = (context.object(with: item.objectID) as! ItemType)
             //swiftlint:enable force_cast
         } else {
             ctrs.1.item = item

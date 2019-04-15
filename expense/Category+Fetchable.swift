@@ -9,10 +9,11 @@
 import Foundation
 import CoreData
 import CoreDataExtensio
+import InvoiceBotSDK
 
-extension Category: Fetchable, Createable {
-    public typealias CreatedType = Category
-    public typealias FetchableType = Category
+extension BudgetCategory: Fetchable, Createable {
+    public typealias CreatedType = BudgetCategory
+    public typealias FetchableType = BudgetCategory
     public typealias I = String
     
     public static func idName() -> String {
@@ -23,8 +24,8 @@ extension Category: Fetchable, Createable {
         return [NSSortDescriptor(key: "createdTimestamp", ascending: true)]
     }
     
-    public static func create(in context: NSManagedObjectContext) -> Category {
-        let instance = Category(inContext: context)
+    public static func create(in context: NSManagedObjectContext) -> BudgetCategory {
+        let instance = BudgetCategory(inContext: context)
         instance.uuid = UUID().uuidString.lowercased()
         instance.createdTimestamp = Date()
         instance.updatedTimestamp = Date()

@@ -146,7 +146,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-ji-Ofm">
                                 <rect key="frame" x="14" y="730" width="386" height="118"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tm-Er-ekx" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0tm-Er-ekx" customClass="ActionButton" customModule="expense" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="386" height="55"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -165,7 +165,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTa-kc-UQW" customClass="ActionButton" customModule="InVoice" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTa-kc-UQW" customClass="ActionButton" customModule="expense" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="63" width="386" height="55"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>

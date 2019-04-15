@@ -9,36 +9,46 @@
 import UIKit
 
 
-// FIXME: move code
 class TapAction<ItemType>: TapActionable {
     var analytics: (() -> ())?
     
     typealias RowActionType = ItemType
+    typealias SenderType = UITableView
 
-//    var isProExpired: Bool {
-//        return CurrentAccountState.value == .trialExpired;
-//    }
-
-    func performTap(with rowItem: ItemType, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func performTap(with rowItem: ItemType, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+        sender.deselectRow(at: indexPath, animated: true)
     }
 
-    func rewindAction(with rowItem: ItemType, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: ItemType, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
         
     }
 }
 
+class CollectionTapAction<ItemType>: TapActionable {
+    var analytics: (() -> ())?
+
+    typealias RowActionType = ItemType
+    typealias SenderType = UICollectionView
+
+    func performTap(with rowItem: ItemType, indexPath: IndexPath, sender: UICollectionView, ctr: UIViewController, model: TableModel) {
+        sender.deleteItems(at: [indexPath])
+    }
+
+    func rewindAction(with rowItem: ItemType, indexPath: IndexPath, sender: UICollectionView, ctr: UIViewController, model: TableModel) {
+
+    }
+}
 
 //class FirstResponderActionTextViewCell: TapAction<TextEntry> {
 //
-//    override func performTap(with rowItem: TextEntry, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+//    override func performTap(with rowItem: TextEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
 //
 ////        if (isProExpired) {
-////            super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
+////            super.performTap(with: rowItem, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
 ////            return
 ////        }
 //
-//        guard let cell = tableView.cellForRow(at: indexPath) as? TextViewCell else {
+//        guard let cell = sender.cellForRow(at: indexPath) as? TextViewCell else {
 //            return
 //        }
 //
@@ -46,8 +56,8 @@ class TapAction<ItemType>: TapActionable {
 //        _ = cell.textView.becomeFirstResponder()
 //    }
 //
-//    override func rewindAction(with rowItem: TextEntry, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-//        guard let cell = tableView.cellForRow(at: indexPath) as? TextViewCell else {
+//    override func rewindAction(with rowItem: TextEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+//        guard let cell = sender.cellForRow(at: indexPath) as? TextViewCell else {
 //            return
 //        }
 //
@@ -59,14 +69,14 @@ class TapAction<ItemType>: TapActionable {
 class FirstResponderActionTextFieldCell: TapAction<TextEntry> {
     typealias RowActionType = TextEntry
     
-    override func performTap(with rowItem: TextEntry, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: TextEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
         
 //        if (isProExpired) {
-//            super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
+//            super.performTap(with: rowItem, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
 //            return
 //        }
         
-        guard let cell = tableView.cellForRow(at: indexPath) as? TextFieldCell else {
+        guard let cell = sender.cellForRow(at: indexPath) as? TextFieldCell else {
             return
         }
         
@@ -74,8 +84,8 @@ class FirstResponderActionTextFieldCell: TapAction<TextEntry> {
         _ = cell.textField.becomeFirstResponder()
     }
     
-    override func rewindAction(with rowItem: TextEntry, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? TextFieldCell else {
+    override func rewindAction(with rowItem: TextEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+        guard let cell = sender.cellForRow(at: indexPath) as? TextFieldCell else {
             return
         }
         
@@ -87,14 +97,14 @@ class FirstResponderActionTextFieldCell: TapAction<TextEntry> {
 //class FirstResponderActionNumberCell: ProTapAction<NumberEntry> {
 //    typealias RowActionType = NumberEntry
 //
-//    override func performTap(with rowItem: NumberEntry, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+//    override func performTap(with rowItem: NumberEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
 //
 //        if (isProExpired) {
-//            super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
+//            super.performTap(with: rowItem, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
 //            return
 //        }
 //
-//        guard let cell = tableView.cellForRow(at: indexPath) as? NumberCell else {
+//        guard let cell = sender.cellForRow(at: indexPath) as? NumberCell else {
 //            return
 //        }
 //
@@ -102,8 +112,8 @@ class FirstResponderActionTextFieldCell: TapAction<TextEntry> {
 //        _ = cell.textField.becomeFirstResponder()
 //    }
 //
-//    override func rewindAction(with rowItem: NumberEntry, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-//        guard let cell = tableView.cellForRow(at: indexPath) as? NumberCell else {
+//    override func rewindAction(with rowItem: NumberEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+//        guard let cell = sender.cellForRow(at: indexPath) as? NumberCell else {
 //            return
 //        }
 //
@@ -115,14 +125,14 @@ class FirstResponderActionTextFieldCell: TapAction<TextEntry> {
 //class FirstResponderActionDiscountCell: ProTapAction<DiscountEntry> {
 //    typealias RowActionType = DiscountEntry
 //
-//    override func performTap(with rowItem: DiscountEntry, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+//    override func performTap(with rowItem: DiscountEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
 //
 //        if (isProExpired) {
-//            super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
+//            super.performTap(with: rowItem, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
 //            return
 //        }
 //
-//        guard let cell = tableView.cellForRow(at: indexPath) as? DiscountCell else {
+//        guard let cell = sender.cellForRow(at: indexPath) as? DiscountCell else {
 //            return
 //        }
 //
@@ -130,8 +140,8 @@ class FirstResponderActionTextFieldCell: TapAction<TextEntry> {
 //        _ = cell.textField.becomeFirstResponder()
 //    }
 //
-//    override func rewindAction(with rowItem: DiscountEntry, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-//        guard let cell = tableView.cellForRow(at: indexPath) as? DiscountCell else {
+//    override func rewindAction(with rowItem: DiscountEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+//        guard let cell = sender.cellForRow(at: indexPath) as? DiscountCell else {
 //            return
 //        }
 //

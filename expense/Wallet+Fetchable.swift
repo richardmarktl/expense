@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 import CoreDataExtensio
+import InvoiceBotSDK
 
 
 enum WalletType: Int32 {
@@ -16,9 +17,9 @@ enum WalletType: Int32 {
     case business = 1
 }
 
-extension Wallet: Fetchable, Createable {
-    public typealias CreatedType = Wallet
-    public typealias FetchableType = Wallet
+extension BudgetWallet: Fetchable, Createable {
+    public typealias CreatedType = BudgetWallet
+    public typealias FetchableType = BudgetWallet
     public typealias I = String
     
     public static func idName() -> String {
@@ -29,8 +30,8 @@ extension Wallet: Fetchable, Createable {
         return [NSSortDescriptor(key: "createdTimestamp", ascending: true)]
     }
     
-    public static func create(in context: NSManagedObjectContext) -> Wallet {
-        let instance = Wallet(inContext: context)
+    public static func create(in context: NSManagedObjectContext) -> BudgetWallet {
+        let instance = BudgetWallet(inContext: context)
         instance.uuid = UUID().uuidString.lowercased()
         instance.createdTimestamp = Date()
         instance.updatedTimestamp = Date()

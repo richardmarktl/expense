@@ -6,41 +6,67 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Wallet View Controller-->
-        <scene sceneID="N09-l4-rZl">
+        <scene sceneID="Zd9-eH-ikq">
             <objects>
-                <collectionViewController id="l0o-Xz-NZk" customClass="WalletViewController" customModule="expense" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="L06-bS-GVe">
+                <viewController id="O9i-NM-3tt" customClass="WalletViewController" customModule="expense" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HxD-L8-lk1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TSf-Ro-bYO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nq7-Wg-kx6">
+                                    <size key="itemSize" width="320" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hWm-BW-dtJ">
+                                        <rect key="frame" x="47" y="0.0" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="O9i-NM-3tt" id="lhh-8I-tb3"/>
+                                    <outlet property="delegate" destination="O9i-NM-3tt" id="0UL-xp-Zv5"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="5as-Nv-4qs">
-                            <size key="itemSize" width="406" height="218"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="22" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
-                        <connections>
-                            <outlet property="dataSource" destination="l0o-Xz-NZk" id="8qr-VZ-Xny"/>
-                            <outlet property="delegate" destination="l0o-Xz-NZk" id="aKQ-oB-HxN"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="1nn-BX-4Ba">
-                        <barButtonItem key="leftBarButtonItem" title="Expense Bot" style="done" id="gtS-8F-8Dk"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="settings" id="xEm-ql-lUS">
+                        <constraints>
+                            <constraint firstItem="TSf-Ro-bYO" firstAttribute="leading" secondItem="1vr-21-b1S" secondAttribute="leading" id="DJr-Q0-pt8"/>
+                            <constraint firstItem="1vr-21-b1S" firstAttribute="bottom" secondItem="TSf-Ro-bYO" secondAttribute="bottom" id="ZKm-Dw-USR"/>
+                            <constraint firstItem="1vr-21-b1S" firstAttribute="trailing" secondItem="TSf-Ro-bYO" secondAttribute="trailing" id="nyv-HL-Nj7"/>
+                            <constraint firstItem="TSf-Ro-bYO" firstAttribute="top" secondItem="1vr-21-b1S" secondAttribute="top" id="zpF-HX-E0j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1vr-21-b1S"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NlE-4z-QIP">
+                        <barButtonItem key="leftBarButtonItem" title="Expense Bot" id="XGe-LO-c2B"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="settings" id="7on-rJ-M8G">
                             <connections>
-                                <segue destination="pkg-35-ZcE" kind="presentation" id="IU3-OT-WYh"/>
+                                <segue destination="pkg-35-ZcE" kind="presentation" id="A5U-q2-nmX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="523-G5-86c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="collectionView" destination="TSf-Ro-bYO" id="bKG-d7-yKJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECb-iA-NDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250.72463768115944" y="-210.26785714285714"/>
+            <point key="canvasLocation" x="180" y="-210"/>
         </scene>
         <!--Settings-->
         <scene sceneID="hYy-6I-B2z">
@@ -60,7 +86,7 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="l0o-Xz-NZk" kind="relationship" relationship="rootViewController" id="2O6-bH-9rx"/>
+                        <segue destination="O9i-NM-3tt" kind="relationship" relationship="rootViewController" id="6ja-Ug-FH6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcI-PT-b38" userLabel="First Responder" sceneMemberID="firstResponder"/>

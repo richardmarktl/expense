@@ -10,15 +10,16 @@ import UIKit
 
 protocol TapActionable {
     var analytics: (() -> ())? { get set }
-    
     associatedtype RowActionType
-    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) -> Bool
-    func performTap(with rowItem: RowActionType, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel)
-    func rewindAction(with rowItem: RowActionType, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel)
+    associatedtype SenderType
+
+    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) -> Bool
+    func performTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel)
+    func rewindAction(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel)
 }
 
 extension TapActionable {
-    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) -> Bool {
+    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) -> Bool {
         return true
     }
 }

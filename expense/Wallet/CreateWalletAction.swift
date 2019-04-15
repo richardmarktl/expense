@@ -4,19 +4,12 @@
 //
 
 import Foundation
+import UIKit
 
-class CreateWalletAction: TapAction<WalletItem> {
-    override func performTap(with rowItem: WalletItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-
-//        if isProExpired {
-//            super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
-//            return
-//        }
-        print("did select wallet")
-        //this ensures that the client is loaded in a childcontext to allow changes
-        // TODO: add an controller to list the entries.
-//        let nCtr =  ClientViewController.show(item: rowItem.item)
-//        Analytics.clientSelect.logEvent()
-//        ctr.present(nCtr, animated: true)
+class CreateWalletAction: CollectionTapAction<ActionItem> {
+    func performTap(with rowItem: WalletItem, indexPath: IndexPath, sender: UICollectionView, ctr: UIViewController, model: TableModel) {
+        let nCtr = NewWalletViewController.createWallet()
+        // Analytics.itemNew.logEvent() FIXME: please add a create wallet event.
+        ctr.present(nCtr, animated: true)
     }
 }

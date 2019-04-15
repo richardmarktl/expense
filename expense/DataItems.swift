@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import CoreData
 import ImageStorage
-
+import InvoiceBotSDK
 
 // MARK: RowItem stuff
 class BasicItem<DataType> {

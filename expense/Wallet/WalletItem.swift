@@ -4,18 +4,19 @@
 //
 
 import Foundation
+import InvoiceBotSDK
 
-class WalletItem: BasicItem<Wallet> {
+class WalletItem: BasicItem<BudgetWallet> {
 
     private(set) var name: String = ""
     private(set) var type: String = ""
 
-    init(defaultData: Wallet) {
+    init(defaultData: BudgetWallet) {
         super.init(defaultData: defaultData)
         update(with: defaultData)
     }
 
-    func update(with wallet: Wallet) {
+    func update(with wallet: BudgetWallet) {
         name = wallet.name ?? ""
         type = wallet.localizedWalletType
         data.value = wallet

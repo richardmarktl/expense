@@ -9,6 +9,7 @@
 import CoreData
 import CoreDataExtensio
 import Crashlytics
+import InvoiceBotSDK
 
 extension CoreDataContainer {
 
@@ -43,7 +44,17 @@ extension CoreDataContainer {
     }
 
     fileprivate class func modelURL() -> URL {
-        return Bundle.main.url(forResource: "invoice", withExtension: "momd")!
+        let frameworkBundle = Bundle(for: BudgetWallet.self) // Bundle(forClass: BudgetWallet.self)
+        guard let url = frameworkBundle.url(forResource: "invoice", withExtension: "momd") else {
+            fatalError("No invoice.momd found.")
+        }
+        return url
+//        let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("InvoiceBotSDK.bundle")
+//        let resourceBundle = Bundle(url: bundleURL!)
+//        // let image = UIImage(named: "ic_arrow_back", inBundle: resourceBundle, compatibleWithTraitCollection: nil)
+//        // print(image)
+//
+//        return Bundle.main.url(forResource: "invoice", withExtension: "momd")!
     }
 
     fileprivate class func containerStoreURL() -> URL? {

@@ -11,6 +11,8 @@ import Fabric
 import Crashlytics
 import FacebookCore
 import Amplitude_iOS
+import InvoiceBotSDK
+
 
 enum Analytics: String {
     

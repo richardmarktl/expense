@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import CoreData
 import Crashlytics
+import InvoiceBotSDK
 
 /// The wallet model is used to create and handle wallet objects.
 /// - row type (
@@ -20,7 +21,7 @@ import Crashlytics
 ///    - wallet type
 ///         - title, *storage item* (int)
 /// )
-class WalletModel: DetailModel<Wallet> {
+class WalletModel: DetailModel<BudgetWallet> {
     
     /// Data model items that hold the values the user edits
     private let name: TextEntry
@@ -42,7 +43,7 @@ class WalletModel: DetailModel<Wallet> {
     /// - Parameters:
     ///   - item: if we get a template item we init it with the data of the template
     ///   - context: the context we operate on
-    required init(item: Wallet, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: BudgetWallet, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
         
         // Locale.current.currencyCode.map(Currency.create).map(CurrencyLoader.update)
         
@@ -75,7 +76,7 @@ class WalletModel: DetailModel<Wallet> {
         fatalError()
     }
     
-    override func save() -> Wallet {
+    override func save() -> BudgetWallet {
         if storeChangesAutomatically {
             
             // TODO: add analytics

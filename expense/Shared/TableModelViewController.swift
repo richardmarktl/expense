@@ -68,9 +68,12 @@ class TableModelController<Model: TableModel>: UIViewController, UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = model.sections[indexPath.section].rows[indexPath.row]
+
+        item.action.perform
         item.performTap(indexPath: indexPath, tableView: tableView, in: self, model: model)
         
-        if let lastItem = lastSelectedItem, item.identifier != lastItem.identifier {
+        if let lastItem = lastSelectedItem as? ControllerActionable<UITableView>,
+           item.identifier != lastItem.identifier {
             lastItem.rewindAction(tableView: tableView, in: self, model: model)
             lastSelectedItem = nil
         }

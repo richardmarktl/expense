@@ -10,11 +10,9 @@ import UIKit
 import CoreData
 import RxSwift
 import RxCocoa
-//import MessageUI
-//import SwiftReorder
+import InvoiceBotSDK
 
-
-class NewWalletViewController: DetailTableModelController<Wallet, WalletModel> {
+class NewWalletViewController: DetailTableModelController<BudgetWallet, WalletModel> {
     override class func controllers<T>(type: T.Type) -> (UINavigationController, T) {
         guard let nCtr = R.storyboard.wallet.newWalletRootViewController(), let ctr = nCtr.children.first as? T else {
             fatalError()

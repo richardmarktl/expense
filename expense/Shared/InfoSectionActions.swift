@@ -17,8 +17,9 @@ class EmailSupportAction: TapActionable {
     
     private var emailSupport: SupportEmail?
     typealias RowActionType = SettingsItem
+    typealias SenderType = UITableView
     
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
         emailSupport = SupportEmail()
         emailSupport?.sendAsTextFile = true
         
@@ -33,28 +34,28 @@ class EmailSupportAction: TapActionable {
                     ErrorPresentable.show(error: R.string.localizable.noMailApp())
                 }
             }
-            tableView.deselectRow(at: indexPath, animated: true)
+            sender.deselectRow(at: indexPath, animated: true)
         })
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
     }
 }
 
 class ShareAction: TapActionable {
     var analytics: (() -> ())?
-    
-    
+
     typealias RowActionType = SettingsItem
-    
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    typealias SenderType = UITableView
+
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
         
         let message = R.string.localizable.shareAppMessage()
         let activityCtr = UIActivityViewController(activityItems: [message], applicationActivities: nil)
         
         if UIDevice.current.userInterfaceIdiom == .pad {
-            activityCtr.popoverPresentationController?.sourceView = tableView.cellForRow(at: indexPath)
-            activityCtr.popoverPresentationController?.sourceRect = tableView.cellForRow(at: indexPath)?.bounds ?? CGRect.zero
+            activityCtr.popoverPresentationController?.sourceView = sender.cellForRow(at: indexPath)
+            activityCtr.popoverPresentationController?.sourceRect = sender.cellForRow(at: indexPath)?.bounds ?? CGRect.zero
         }
         
         if let analytics = self.analytics {
@@ -63,11 +64,11 @@ class ShareAction: TapActionable {
         ctr.present(activityCtr, animated: true)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            tableView.deselectRow(at: indexPath, animated: true)
+            sender.deselectRow(at: indexPath, animated: true)
         }
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
     }
 }
 
@@ -75,8 +76,9 @@ class RateAction: TapActionable {
     var analytics: (() -> ())?
     
     typealias RowActionType = SettingsItem
-    
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    typealias SenderType = UITableView
+
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
         if let analytics = self.analytics {
             analytics();
         }
@@ -84,11 +86,11 @@ class RateAction: TapActionable {
         RatingDisplayable.showRatingDialog(openAppStore: true)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25) {
-            tableView.deselectRow(at: indexPath, animated: true)
+            sender.deselectRow(at: indexPath, animated: true)
         }
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
     }
 }
 
@@ -96,8 +98,9 @@ class TermsAndPrivacyAction: TapActionable {
     var analytics: (() -> ())?
     
     typealias RowActionType = SettingsItem
-    
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    typealias SenderType = UITableView
+
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
 
         
         let pCtr = PrivacyController(nibName: nil, bundle: nil)
@@ -107,7 +110,7 @@ class TermsAndPrivacyAction: TapActionable {
         ctr.navigationController?.pushViewController(pCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
     }
 }
 
@@ -115,8 +118,9 @@ class NewsletterAction: TapActionable {
     var analytics: (() -> ())?
     
     typealias RowActionType = SettingsItem
-    
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    typealias SenderType = UITableView
+
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
         
         let alert = UIAlertController(title: R.string.localizable.subscribeToNewsletter(), message: R.string.localizable.pleaseEnterEmailAndHit(), preferredStyle: .alert)
         
@@ -133,12 +137,12 @@ class NewsletterAction: TapActionable {
                 self.subscribe(emai: email)
             }
             
-            tableView.deselectRow(at: indexPath, animated: true)
+            sender.deselectRow(at: indexPath, animated: true)
         }
         alert.addAction(subscribe)
         
         let cancel = UIAlertAction(title: R.string.localizable.cancel(), style: .cancel) { (_) in
-            tableView.deselectRow(at: indexPath, animated: true)
+            sender.deselectRow(at: indexPath, animated: true)
         }
         alert.addAction(cancel)
         if let analytics = self.analytics {
@@ -147,7 +151,7 @@ class NewsletterAction: TapActionable {
         ctr.present(alert, animated: true)
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
         
     }
     

@@ -32,7 +32,7 @@ extension UIViewController {
     ///
     /// - Parameter name: constraint name as string.
     func removeConstraint(by name: String) -> Void {
-        if let index = view.constraints.index(where: { (constraint) -> Bool in
+        if let index = view.constraints.firstIndex(where: { (constraint) -> Bool in
             return constraint.identifier == name
         }) {
             view.constraints[index].isActive = false

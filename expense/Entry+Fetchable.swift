@@ -9,15 +9,16 @@
 import Foundation
 import CoreData
 import CoreDataExtensio
+import InvoiceBotSDK
 
 enum EntryType: Int32 {
     case expense = 0
     case revenue = 1
 }
 
-extension Entry: Fetchable, Createable {
-    public typealias CreatedType = Entry
-    public typealias FetchableType = Entry
+extension BudgetEntry: Fetchable, Createable {
+    public typealias CreatedType = BudgetEntry
+    public typealias FetchableType = BudgetEntry
     public typealias I = String
     
     public static func idName() -> String {
@@ -28,8 +29,8 @@ extension Entry: Fetchable, Createable {
         return [NSSortDescriptor(key: "createdTimestamp", ascending: true)]
     }
     
-    public static func create(in context: NSManagedObjectContext) -> Entry {
-        let instance = Entry(inContext: context)
+    public static func create(in context: NSManagedObjectContext) -> BudgetEntry {
+        let instance = BudgetEntry(inContext: context)
         instance.uuid = UUID().uuidString.lowercased()
         instance.createdTimestamp = Date()
         instance.updatedTimestamp = Date()

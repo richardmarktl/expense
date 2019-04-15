@@ -14,7 +14,7 @@ import CoreDataExtensio
 class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
     
     let item: ItemType
-    internal(set) var isDeleteButtonHidden: Bool
+    var isDeleteButtonHidden: Bool
     let storeChangesAutomatically: Bool
     let deleteAutomatically: Bool
     

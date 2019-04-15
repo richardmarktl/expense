@@ -8,7 +8,7 @@ import UIKit
 import CoreData
 import RxSwift
 
-class CollectionModelController<Model: TableModel>: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CollectionModelController<Model: TableModel<UICollectionView>>: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
 
     let bag = DisposeBag()

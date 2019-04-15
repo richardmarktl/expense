@@ -10,13 +10,13 @@ import Foundation
 import CoreData
 import RxSwift
 
-class TableModel {
-    
+class TableModel<CollectionType> {
+    typealias TypedSection = TableSection<CollectionType>
     let bag = DisposeBag()
-    let sectionsVariable: Variable<[TableSection]> = Variable([])
+    let sectionsVariable: Variable<[TypedSection]> = Variable([])
     let context: NSManagedObjectContext
     
-    var sections: [TableSection] {
+    var sections: [TypedSection] {
         set {
             sectionsVariable.value = newValue
         }
@@ -25,7 +25,7 @@ class TableModel {
         }
     }
     
-    var sectionsObservable: Observable<[TableSection]> {
+    var sectionsObservable: Observable<[TypedSection]> {
         return sectionsVariable.asObservable()
     }
     
@@ -33,7 +33,7 @@ class TableModel {
         self.context = context
     }
     
-    func insert(tableRow: ConfigurableRow, at indexPath: IndexPath) {
+    func insert(tableRow: Row<CollectionType>, at indexPath: IndexPath) {
         sections[indexPath.section].insert(tableRow: tableRow, at: indexPath.row)
     }
     

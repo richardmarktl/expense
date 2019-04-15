@@ -16,6 +16,7 @@
 		47571782A937A9537F7104B8 /* SelectWalletAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571C0EA1526E27F832C2AC /* SelectWalletAction.swift */; };
 		475718D3446FDAF866AFAB20 /* CreateWalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */; };
 		475719EDC9AA696A7C454659 /* CreateWalletAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571ADB15499231EF42EC00 /* CreateWalletAction.swift */; };
+		47571A13029ED6B2A851FDE2 /* GridSearchableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4757195710FF014AF955A266 /* GridSearchableModel.swift */; };
 		47571B5562DA231746C1F663 /* WalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475713978ADBDC1396656323 /* WalletItem.swift */; };
 		5C4EE1D4C3B9C8635E265EA9 /* Pods_expenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */; };
 		7967983E225CFDB900C85009 /* KeyboardAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7967983D225CFDB900C85009 /* KeyboardAccessory.xib */; };
@@ -130,6 +131,7 @@
 		475713978ADBDC1396656323 /* WalletItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletItem.swift; sourceTree = "<group>"; };
 		4757152E8D7874B049144E29 /* SearchableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableModel.swift; sourceTree = "<group>"; };
 		47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWalletCell.swift; sourceTree = "<group>"; };
+		4757195710FF014AF955A266 /* GridSearchableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSearchableModel.swift; sourceTree = "<group>"; };
 		47571A7860F1ED7AF3D97D89 /* Invoice+Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Invoice+Predicate.swift"; sourceTree = "<group>"; };
 		47571ADB15499231EF42EC00 /* CreateWalletAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWalletAction.swift; sourceTree = "<group>"; };
 		47571C0EA1526E27F832C2AC /* SelectWalletAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWalletAction.swift; sourceTree = "<group>"; };
@@ -524,6 +526,7 @@
 				47571E390612756C8C846C8E /* DataItems.swift */,
 				4757152E8D7874B049144E29 /* SearchableModel.swift */,
 				47571A7860F1ED7AF3D97D89 /* Invoice+Predicate.swift */,
+				4757195710FF014AF955A266 /* GridSearchableModel.swift */,
 			);
 			path = expense;
 			sourceTree = "<group>";
@@ -965,6 +968,7 @@
 				47571782A937A9537F7104B8 /* SelectWalletAction.swift in Sources */,
 				475715414C0019C7283A271C /* Invoice+Predicate.swift in Sources */,
 				475719EDC9AA696A7C454659 /* CreateWalletAction.swift in Sources */,
+				47571A13029ED6B2A851FDE2 /* GridSearchableModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

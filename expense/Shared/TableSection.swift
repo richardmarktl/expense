@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class TableSection: Equatable {
+class TableSection<T>: Equatable {
     
     static func == (lhs: TableSection, rhs: TableSection) -> Bool {
         return lhs === rhs
@@ -18,7 +18,7 @@ class TableSection: Equatable {
     private var internalHeaderTitle: Variable<String?>
     private var internalFooterTitle: Variable<String?>
     
-    var rows: [ConfigurableRow] = []
+    var rows: [Row<T>] = []
     var headerTitle: String? {
         return rows.count == 0 ? nil : internalHeaderTitle.value
     }
@@ -39,17 +39,17 @@ class TableSection: Equatable {
         return Observable.empty()
     }
     
-    init(rows: [ConfigurableRow], headerTitle: String? = nil, footerTitle: String? = nil) {
+    init(rows: [Row<T>], headerTitle: String? = nil, footerTitle: String? = nil) {
         self.internalHeaderTitle = Variable(headerTitle)
         self.internalFooterTitle = Variable(footerTitle)
         self.rows = rows
     }
     
-    func insert(tableRow: ConfigurableRow, at idx: Int) {
+    func insert(tableRow: Row<T>, at idx: Int) {
         rows.insert(tableRow, at: idx)
     }
     
-    func add(tableRow: ConfigurableRow) {
+    func add(tableRow: Row<T>) {
         rows.insert(tableRow, at: rows.count)
     }
     

@@ -11,13 +11,13 @@ import RxSwift
 import CoreData
 import SwiftRichString
 
-class TableModelController<Model: TableModel>: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableModelController<Model: TableModel<UITableView>>: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
     let bag = DisposeBag()
     var context: NSManagedObjectContext!
-    var lastSelectedItem: ConfigurableRow?
+    var lastSelectedItem: Row<UITableView>?
     var manuallyManageDataUpdate: Bool = false
     
     lazy var model: Model = { return createModel() }()
@@ -69,12 +69,10 @@ class TableModelController<Model: TableModel>: UIViewController, UITableViewDele
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = model.sections[indexPath.section].rows[indexPath.row]
 
-        item.action.perform
-        item.performTap(indexPath: indexPath, tableView: tableView, in: self, model: model)
+        item.performTap(indexPath: indexPath, sender: tableView, in: self, model: model)
         
-        if let lastItem = lastSelectedItem as? ControllerActionable<UITableView>,
-           item.identifier != lastItem.identifier {
-            lastItem.rewindAction(tableView: tableView, in: self, model: model)
+        if let lastItem = lastSelectedItem, item.identifier != lastItem.identifier {
+            lastItem.rewindAction(sender: tableView, in: self, model: model)
             lastSelectedItem = nil
         }
         

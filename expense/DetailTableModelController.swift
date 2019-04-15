@@ -170,7 +170,7 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
         navigationItem.leftBarButtonItem?.rx.tap.asObservable().flatMap({ [unowned self] (_) -> Observable<Bool> in
             Analytics.cancel.logEvent(["hasWarning": self.model.shouldShowCancelWarning.asNSNumber])
             
-            self.lastSelectedItem?.rewindAction(tableView: self.tableView, in: self, model: self.model)
+            self.lastSelectedItem?.rewindAction(sender: self.tableView, in: self, model: self.model)
             
             if self.completionBlock == nil && self.model.shouldShowCancelWarning {
                 return self.cancelAlert(for: self.model)

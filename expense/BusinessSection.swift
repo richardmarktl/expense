@@ -7,17 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
-class BusinessSection: TableSection {
+class BusinessSection: TableSection<UITableView> {
     init() {
-        let rows: [ConfigurableRow] = [];
+        let rows: [Row<UITableView>] = [];
 //        let row1 = SettingsItem(image: R.image.settings_business_details()!, title: R.string.localizable.businessDetails(), isProFeature: false, allowToAccessProFeature: false)
 //        let action1 = SettingsBusinessDetailsAction()
 //        let row3 = SettingsItem(image: R.image.settings_taxes()!, title: R.string.localizable.taxes(), isProFeature: false, allowToAccessProFeature: false)
 //        let action3 = SettingsTaxAction()
 //        let row2 = SettingsItem(image: R.image.settings_default_note()!, title: R.string.localizable.businessSettings(), isProFeature: false, allowToAccessProFeature: false)
 //        let action2 = SettingsBusinessSettingsAction()
-//        
+//
 //        let rows: [ConfigurableRow] = [
 //            TableRow<SettingsCell, SettingsBusinessDetailsAction>(item: row1, action: action1),
 //            TableRow<SettingsCell, SettingsBusinessSettingsAction>(item: row2, action: action2),

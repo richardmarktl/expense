@@ -13,16 +13,34 @@ protocol TapActionable {
     associatedtype RowActionType
     associatedtype SenderType
 
-    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) -> Bool
-    func performTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel)
-    func rewindAction(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel)
+    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel<SenderType>) -> Bool
+    func performTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel<SenderType>)
+    func rewindAction(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel<SenderType>)
 }
 
 extension TapActionable {
-    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) -> Bool {
+    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel<SenderType>) -> Bool {
         return true
     }
 }
+
+//class TapAction: TapActionable {
+//    typealias RowActionType = ActionItem
+//    typealias SenderType = UITableView
+//    var analytics: (() -> ())? = nil
+//
+//    func performTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) {
+//
+//    }
+//
+//    func rewindAction(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) {
+//
+//    }
+//
+//    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) -> Bool {
+//        return true
+//    }
+//}
 
 // FIXME: move code
 //class ProTapAction<ItemType>: TapActionable {

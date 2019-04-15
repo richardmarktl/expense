@@ -19,7 +19,7 @@ class EmailSupportAction: TapActionable {
     typealias RowActionType = SettingsItem
     typealias SenderType = UITableView
     
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
         emailSupport = SupportEmail()
         emailSupport?.sendAsTextFile = true
         
@@ -38,7 +38,7 @@ class EmailSupportAction: TapActionable {
         })
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
     }
 }
 
@@ -48,7 +48,7 @@ class ShareAction: TapActionable {
     typealias RowActionType = SettingsItem
     typealias SenderType = UITableView
 
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
         
         let message = R.string.localizable.shareAppMessage()
         let activityCtr = UIActivityViewController(activityItems: [message], applicationActivities: nil)
@@ -68,7 +68,7 @@ class ShareAction: TapActionable {
         }
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
     }
 }
 
@@ -78,7 +78,7 @@ class RateAction: TapActionable {
     typealias RowActionType = SettingsItem
     typealias SenderType = UITableView
 
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
         if let analytics = self.analytics {
             analytics();
         }
@@ -90,7 +90,7 @@ class RateAction: TapActionable {
         }
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
     }
 }
 
@@ -100,7 +100,7 @@ class TermsAndPrivacyAction: TapActionable {
     typealias RowActionType = SettingsItem
     typealias SenderType = UITableView
 
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
 
         
         let pCtr = PrivacyController(nibName: nil, bundle: nil)
@@ -110,7 +110,7 @@ class TermsAndPrivacyAction: TapActionable {
         ctr.navigationController?.pushViewController(pCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
     }
 }
 
@@ -120,7 +120,7 @@ class NewsletterAction: TapActionable {
     typealias RowActionType = SettingsItem
     typealias SenderType = UITableView
 
-    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
         
         let alert = UIAlertController(title: R.string.localizable.subscribeToNewsletter(), message: R.string.localizable.pleaseEnterEmailAndHit(), preferredStyle: .alert)
         
@@ -151,7 +151,7 @@ class NewsletterAction: TapActionable {
         ctr.present(alert, animated: true)
     }
     
-    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: SettingsItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
         
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoSection: TableSection {
+class InfoSection: TableSection<UITableView> {
     init() {
         
         let row1 = SettingsItem(image: R.image.settings_email_support()!, title: R.string.localizable.emailSupport(), isProFeature: false, allowToAccessProFeature: false)
@@ -22,7 +22,7 @@ class InfoSection: TableSection {
         let row5 = SettingsItem(image: R.image.settings_newsletter()!, title: R.string.localizable.subscribeToNewsletter(), isProFeature: false, allowToAccessProFeature: false)
         let action5 = NewsletterAction()
         
-        let rows: [ConfigurableRow] = [
+        let rows: [Row<UITableView>] = [
             TableRow<SettingsCell, EmailSupportAction>(item: row1, action: action1),
             TableRow<SettingsCell, ShareAction>(item: row2, action: action2),
             TableRow<SettingsCell, RateAction>(item: row3, action: action3),

@@ -11,7 +11,7 @@ import RxSwift
 import CoreData
 import CoreDataExtensio
 
-class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
+class DetailModel<ItemType: NSManagedObject & Createable>: TableModel<UITableView> {
     
     let item: ItemType
     var isDeleteButtonHidden: Bool
@@ -39,7 +39,9 @@ class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
         }) > 0
     }
     
-    required init(item: ItemType, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection] = [], in context: NSManagedObjectContext) {
+    required init(item: ItemType, storeChangesAutomatically: Bool,
+                  deleteAutomatically: Bool,
+                  sections: [TableSection<UITableView>] = [], in context: NSManagedObjectContext) {
 
         self.item = item
         self.storeChangesAutomatically = storeChangesAutomatically

@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import RxSwift
 
-class SettingsModel: TableModel {
+class SettingsModel: TableModel<UITableView> {
     private let storeService: StoreService
     
     func restorePurchase() -> Observable<Void> {

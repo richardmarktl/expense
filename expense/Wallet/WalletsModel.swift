@@ -36,9 +36,9 @@ struct WalletItemHelper {
         }.observeOn(MainScheduler.instance)
     }
 
-    static func mapper(_ items: [WalletItem]) -> TableSection {
-        let rows: [ConfigurableRow] = items.map({ (item) -> ConfigurableRow in
-            let configRow: ConfigurableRow = TableRow<WalletCell, SelectWalletAction>(item: item, action: SelectWalletAction())
+    static func mapper(_ items: [WalletItem]) -> TableSection<UICollectionView> {
+        let rows: [Row<UICollectionView>] = items.map({ (item) -> Row<UICollectionView> in
+            let configRow: Row<UICollectionView> = GridRow<WalletCell, SelectWalletAction>(item: item, action: SelectWalletAction())
             return configRow
         })
         return TableSection(rows: rows)
@@ -47,12 +47,12 @@ struct WalletItemHelper {
 
 
 /// The wallets model is used to load and handle all the wallets objects.
-class WalletsModel: SearchableTableModel<WalletItem> {
+class WalletsModel: GridSearchableModel<WalletItem> {
 
     convenience init(searchObservable: Observable<String>, with context: NSManagedObjectContext) {
         // add the create wallet cell.
-        let rows: [ConfigurableRow] = [
-            TableRow<CreateWalletCell, CreateWalletAction>(item: ActionItem(title: ""), action: CreateWalletAction()),
+        let rows: [Row<UICollectionView>] = [
+            GridRow<CreateWalletCell, CreateWalletAction>(item: ActionItem(title: ""), action: CreateWalletAction()),
         ]
 
         self.init(searchObservable: searchObservable,

@@ -17,11 +17,11 @@ struct UserItem {
 
 class UserDetailAction: TapActionable {
     var analytics: (() -> ())?
-    
+
     typealias RowActionType = UserItem
     typealias SenderType = UITableView
 
-    func performTap(with rowItem: UserItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func performTap(with rowItem: UserItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
 //        guard let aCtr = R.storyboard.settings.accountDetailViewController() else {
 //            return
 //        }
@@ -29,12 +29,12 @@ class UserDetailAction: TapActionable {
 //        ctr.navigationController?.pushViewController(aCtr, animated: true)
     }
     
-    func rewindAction(with rowItem: UserItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel) {
+    func rewindAction(with rowItem: UserItem, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
         
     }
 }
 
-class UserSection: TableSection {
+class UserSection: TableSection<UITableView> {
     private let bag = DisposeBag()
     
     init(with context: NSManagedObjectContext) {
@@ -45,7 +45,7 @@ class UserSection: TableSection {
         // TODO: replace this with the right account.
         let row1 = UserItem(name: "Test Account", email: "test@email.com")
         
-        let rows: [ConfigurableRow] = [
+        let rows: [Row<UITableView>] = [
             TableRow<UserCell, UserDetailAction>(item: row1, action: UserDetailAction())
         ]
         

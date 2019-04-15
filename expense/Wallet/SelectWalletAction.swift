@@ -6,7 +6,7 @@
 import UIKit
 
 class SelectWalletAction: CollectionTapAction<WalletItem> {
-    func performTap(with rowItem: WalletItem, indexPath: IndexPath, sender: UICollectionView, ctr: UIViewController, model: TableModel) {
+    override func performTap(with rowItem: WalletItem, indexPath: IndexPath, sender: UICollectionView, ctr: UIViewController, model: TableModel<UICollectionView>) {
 
 //        if isProExpired {
 //            super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)

@@ -16,24 +16,44 @@ protocol ConfigurableRow {
     func configure(_ cell: UIView)
 }
 
-protocol ControllerActionable {
+protocol ControllerActionable: ConfigurableRow {
     associatedtype SenderType
-    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel)
-    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel) -> Bool
-    func rewindAction(sender: SenderType, in ctr: UIViewController, model: TableModel)
+    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>)
+    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>) -> Bool
+    func rewindAction(sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>)
 }
 
+class Row<T>: ControllerActionable {
+    typealias SenderType = T
+    var indexPath: IndexPath?
 
-class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: ConfigurableRow, ControllerActionable where CellAction.RowActionType == CellType.ConfigType, CellAction.SenderType == UICollectionView {
-    typealias SenderType = SenderType
 
     let identifier: String = UUID().uuidString.lowercased()
+    private(set) var reuseIdentifier: String = ""
+    func configure(_ cell: UIView) {
+    }
 
-    var indexPath: IndexPath?
+    // MARK: ControllerActionable Implementation -
+
+    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>) {
+        self.indexPath = indexPath
+    }
+
+    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>) -> Bool {
+        return true
+    }
+
+    func rewindAction(sender: SenderType, in ctr: UIViewController, model: TableModel<SenderType>) {
+
+    }
+}
+
+class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UITableView>
+        where CellAction.RowActionType == CellType.ConfigType, TableRow.SenderType == CellAction.SenderType {
     let item: CellType.ConfigType
     let action: CellAction
 
-    var reuseIdentifier: String {
+    override var reuseIdentifier: String {
         return CellType.reuseIdentifier
     }
 
@@ -42,20 +62,21 @@ class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Configura
         self.action = action
     }
 
-    func configure(_ cell: UIView) {
+    override func configure(_ cell: UIView) {
         (cell as? CellType)?.configure(with: item)
     }
 
     // MARK: ControllerActionable Implementation -
-    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel) {
+    override func performTap(indexPath: IndexPath, sender: UITableView, in ctr: UIViewController, model: TableModel<UITableView>) {
         self.indexPath = indexPath
+        self.action.performTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel) -> Bool {
+    override func canPerformTap(indexPath: IndexPath, sender: UITableView, in ctr: UIViewController, model: TableModel<UITableView>) -> Bool {
         return action.canPerformTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    func rewindAction(sender: SenderType, in ctr: UIViewController, model: TableModel) {
+    override func rewindAction(sender: UITableView, in ctr: UIViewController, model: TableModel<UITableView>) {
         guard let indexPath = indexPath else {
             return
         }
@@ -80,14 +101,12 @@ class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Configura
     }
 }
 
-class GridRow<CellType: ConfigurableCell, CellAction: TapActionable>: ConfigurableRow, ControllerActionable where CellAction.RowActionType == CellType.ConfigType, CellAction.SenderType == UICollectionView {
-    let identifier: String = UUID().uuidString.lowercased()
-
-    var indexPath: IndexPath?
+class GridRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UICollectionView>
+        where CellAction.RowActionType == CellType.ConfigType, GridRow.SenderType == CellAction.SenderType {
     let item: CellType.ConfigType
     let action: CellAction
 
-    var reuseIdentifier: String {
+    override var reuseIdentifier: String {
         return CellType.reuseIdentifier
     }
 
@@ -96,20 +115,21 @@ class GridRow<CellType: ConfigurableCell, CellAction: TapActionable>: Configurab
         self.action = action
     }
 
-    func configure(_ cell: UIView) {
+    override func configure(_ cell: UIView) {
         (cell as? CellType)?.configure(with: item)
     }
 
     // MARK: ControllerActionable Implementation -
-    func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel) {
+    override func performTap(indexPath: IndexPath, sender: UICollectionView, in ctr: UIViewController, model: TableModel<UICollectionView>) {
         self.indexPath = indexPath
+        self.action.performTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: TableModel) -> Bool {
+    override func canPerformTap(indexPath: IndexPath, sender: UICollectionView, in ctr: UIViewController, model: TableModel<UICollectionView>) -> Bool {
         return action.canPerformTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    func rewindAction(sender: SenderType, in ctr: UIViewController, model: TableModel) {
+    override func rewindAction(sender: UICollectionView, in ctr: UIViewController, model: TableModel<UICollectionView>) {
         guard let indexPath = indexPath else {
             return
         }

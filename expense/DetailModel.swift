@@ -29,7 +29,7 @@ class DetailModel<ItemType: NSManagedObject & Createable>: TableModel<UITableVie
     var shouldAutoSelectFirstRowIfNewlyInserted: Bool {
         return true
     }
-    
+
     var shouldShowCancelWarning: Bool {
         let all = context.updatedObjects
         return all.reduce(0, { (current, object) -> Int in

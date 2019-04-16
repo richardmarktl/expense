@@ -14,7 +14,7 @@ protocol Filterable {
     func isFoundWithSearchString(searchString: String) -> Bool
 }
 
-class SearchableTableModel<ItemType: Filterable>: Model<UITableView> {
+class SearchableTableModel<ItemType: Filterable>: TableModel {
     
     /// Model that combines the data loading + searching
     ///

@@ -23,38 +23,3 @@ extension TapActionable {
         return true
     }
 }
-
-//class TapAction: TapActionable {
-//    typealias RowActionType = ActionItem
-//    typealias SenderType = UITableView
-//    var analytics: (() -> ())? = nil
-//
-//    func performTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) {
-//
-//    }
-//
-//    func rewindAction(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) {
-//
-//    }
-//
-//    func canPerformTap(with rowItem: RowActionType, indexPath: IndexPath, sender: SenderType, ctr: UIViewController, model: TableModel) -> Bool {
-//        return true
-//    }
-//}
-
-// FIXME: move code
-//class ProTapAction<ItemType>: TapActionable {
-//    typealias RowActionType = ItemType
-//
-//    var isProExpired: Bool {
-//        return CurrentAccountState.value == .trialExpired;
-//    }
-//
-//    func performTap(with rowItem: ItemType, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        UpsellTrialExpiredController.present(in: ctr)
-//    }
-//
-//    func rewindAction(with rowItem: ItemType, indexPath: IndexPath, tableView: UITableView, ctr: UIViewController, model: TableModel) {
-//    }
-//}

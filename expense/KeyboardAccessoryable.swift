@@ -29,7 +29,7 @@ protocol InputAccessoryAble {
 }
 
 // MARK: - Extends a ReusableCell so we can use the accesory from within it
-extension InputAccessoryAble where Self: ReusableCell {
+extension InputAccessoryAble where Self: ReusableTableViewCell {
     
     func registerAccessory(for item: AccessoryItemAble, customCenterView: UIView? = nil) {
         

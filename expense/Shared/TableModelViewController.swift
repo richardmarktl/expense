@@ -88,12 +88,12 @@ class TableModelController<TableModelType: TableModel>: UIViewController, UITabl
         return 100
     }
 
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let identifier = R.nib.tableFooterView.name
-        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier) as? TableFooterView
-        footer?.footerLabel?.attributedText = model.section(at: section)?.footerTitle?.set(style: StyleGroup.headerFooterStyleGroup())
-        return footer
-    }
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let identifier = R.nib.tableFooterView.name
+//        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier) as? TableFooterView
+//        footer?.footerLabel?.attributedText = model.section(at: section)?.footerTitle?.set(style: StyleGroup.headerFooterStyleGroup())
+//        return footer
+//    }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let headerView = view as? UITableViewHeaderFooterView else { return }

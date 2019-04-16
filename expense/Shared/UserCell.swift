@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserCell: ReusableCell, ConfigurableCell {
+class UserCell: ReusableTableViewCell, ConfigurableCell {
     typealias ConfigType = UserItem
     
     @IBOutlet weak var nameLabel: UILabel!

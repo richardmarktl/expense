@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class TextFieldCell: ReusableCell, ConfigurableCell, InputAccessoryAble, UITextFieldDelegate {
+class TextFieldCell: ReusableTableViewCell, ConfigurableCell, InputAccessoryAble, UITextFieldDelegate {
     typealias ConfigType = TextEntry
     
     @IBOutlet weak var textField: PlaceholderTextField!

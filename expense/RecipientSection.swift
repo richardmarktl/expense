@@ -9,7 +9,7 @@ import RxSwift
 
 /// The class SignatureSections, contains the controls to add or remove a signature from the customer and
 /// the user to the job.
-class RecipientSection: TableSection {
+class RecipientSection: Section {
     var job: Job
 
     private let bag = DisposeBag()

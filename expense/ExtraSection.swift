@@ -21,7 +21,7 @@ private extension IndexPath {
     }
 }
 
-class ExtraSection: TableSection {
+class ExtraSection: Section {
     
     let bag = DisposeBag()
     let context: NSManagedObjectContext
@@ -87,7 +87,7 @@ class ExtraSection: TableSection {
         }
         
         let row = TableRow<AttachementCell, AttachmentAction>(item: AttachmentItem(attachment: attachment), action: AttachmentAction())
-        insert(tableRow: row, at: indexPath.row)
+        insert(row: row, at: indexPath.row)
         attachments.insert(attachment, at: indexPath.normalizedRow)
         
         changeSubject.onNext(())
@@ -98,7 +98,7 @@ class ExtraSection: TableSection {
         attachments.remove(at: indexPath.normalizedRow)
         
         let row = TableRow<AttachementCell, AttachmentAction>(item: AttachmentItem(attachment: attachment), action: AttachmentAction())
-        insert(tableRow: row, at: indexPath.row)
+        insert(row: row, at: indexPath.row)
         attachments.insert(attachment, at: indexPath.normalizedRow)
         
         changeSubject.onNext(())
@@ -108,7 +108,7 @@ class ExtraSection: TableSection {
         
         let attachmentItem = AttachmentItem()
         let row = TableRow<AttachementCell, AttachmentAction>(item: attachmentItem, action: AttachmentAction())
-        insert(tableRow: row, at: indexPath.row)
+        insert(row: row, at: indexPath.row)
         
         guard let convertedImage = originalImage.resized(to: 1600) else {
             return Observable.just(())

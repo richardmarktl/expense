@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class ItemSection: TableSection {
+class ItemSection: Section {
     
     private let bag = DisposeBag()
     private let showArticleNumber: BoolItem

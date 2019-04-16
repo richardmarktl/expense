@@ -8,18 +8,20 @@ import UIKit
 import CoreData
 import RxSwift
 
-class CollectionModelController<DataProvider: Model<UICollectionView>>: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CollectionModel: Model<UICollectionView> { }
+
+class CollectionModelController<CollectionModelType: CollectionModel>: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
 
     let bag = DisposeBag()
     var context: NSManagedObjectContext!
-    var lastSelectedItem: ConfigurableRow?
     var manuallyManageDataUpdate: Bool = false
 
-    lazy var model: DataProvider = { return createModel() }()
+    lazy var model: CollectionModelType = { return createModel() }()
 
-    public func createModel() -> DataProvider {
-        return DataProvider(with: context)
+    /// Override point for the lazy Model creation.
+    public func createModel() -> CollectionModelType {
+        return CollectionModelType(with: context)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,32 +42,24 @@ class CollectionModelController<DataProvider: Model<UICollectionView>>: UIViewCo
     // MARK: - CollectionView
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return model.sections.count
+        return model.numberOfSections()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("section: \(section), row \(model.sections[section].rows.count)")
-        return model.sections[section].rows.count
-
+        return model.numberOfRows(in: section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = model.sections[indexPath.section].rows[indexPath.row]
-        print(item.reuseIdentifier)
+        guard let item = model.row(at: indexPath) else {
+            fatalError("CollectionModelController no cell at \(indexPath)")
+        }
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item.reuseIdentifier, for: indexPath)
         item.configure(cell)
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = model.sections[indexPath.section].rows[indexPath.row]
-        item.performTap(indexPath: indexPath, sender: collectionView, in: self, model: model)
-
-        if let lastItem = lastSelectedItem, item.identifier != lastItem.identifier {
-            // lastItem.rewindAction(tableView: tableView, in: self, model: model) FIXME: improve the rewind action
-            lastSelectedItem = nil
-        }
-
-        lastSelectedItem = item
+        model.performTap(at: indexPath, sender: collectionView, in: self)
     }
 }

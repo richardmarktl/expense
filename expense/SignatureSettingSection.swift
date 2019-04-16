@@ -49,7 +49,7 @@ class SignatureSettingAction: TapActionable {
 }
 
 
-class SignatureSettingSection: TableSection {
+class SignatureSettingSection: Section {
     private let bag = DisposeBag()
     private let item: Account
     

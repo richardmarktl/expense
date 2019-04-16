@@ -97,21 +97,21 @@ struct ClientOverviewItemHelper {
         }.observeOn(MainScheduler.instance)
     }
     
-    static func mapper(_ items: [ClientOverviewItem]) -> TableSection {
+    static func mapper(_ items: [ClientOverviewItem]) -> Section {
         
         let rows: [ConfigurableRow] = items.map({ (item) -> ConfigurableRow in
             let configRow: ConfigurableRow = TableRow<ClientsCell, SelectClientAction>(item: item, action: SelectClientAction())
             return configRow
         })
-        return TableSection(rows: rows)
+        return Section(rows: rows)
     }
 
-    static func mailMapper(_ items: [ClientOverviewItem]) -> TableSection {
+    static func mailMapper(_ items: [ClientOverviewItem]) -> Section {
         let rows: [ConfigurableRow] = items.map({ (item) -> ConfigurableRow in
             let configRow: ConfigurableRow = TableRow<MailInvoiceClientCell, NoOperationClientAction>(item: item, action: NoOperationClientAction())
             return configRow
         })
-        return TableSection(rows: rows)
+        return Section(rows: rows)
     }
 }
 

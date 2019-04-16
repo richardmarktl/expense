@@ -37,7 +37,7 @@ class SelectPageSizeAction: TapActionable {
     }
 }
 
-class PageSizeSection: TableSection {
+class PageSizeSection: Section {
     
     private let design: JobDesign
     

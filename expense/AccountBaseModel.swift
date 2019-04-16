@@ -50,7 +50,7 @@ class AccountBaseModel: Model {
             TableRow<TextFieldCell, FirstResponderActionTextFieldCell>(item: nameEntry, action: FirstResponderActionTextFieldCell()),
             TableRow<TextFieldCell, FirstResponderActionTextFieldCell>(item: emailEntry, action: FirstResponderActionTextFieldCell())
         ]
-        sections = [TableSection(rows: rows, footerTitle: sectionTitle)]
+        sections = [Section(rows: rows, footerTitle: sectionTitle)]
     }
     
     required init(with context: NSManagedObjectContext) {

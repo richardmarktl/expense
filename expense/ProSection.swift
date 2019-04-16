@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProSection: TableSection {
+class ProSection: Section {
     init(storeService: StoreService) {
         
         let shouldShowProBadge = !storeService.hasValidReceipt

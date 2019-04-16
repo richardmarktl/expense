@@ -51,8 +51,8 @@ class ItemPickerModel: Model {
                 })
                 
                 return [
-                    TableSection(rows: rowsSection1, headerTitle: R.string.localizable.actions()),
-                    TableSection(rows: rowsSection2, headerTitle: R.string.localizable.items())
+                    Section(rows: rowsSection1, headerTitle: R.string.localizable.actions()),
+                    Section(rows: rowsSection2, headerTitle: R.string.localizable.items())
                 ]
                 
             }.bind(to: sectionsVariable).disposed(by: bag)

@@ -57,7 +57,7 @@ class AccountDetailModel: AccountBaseModel {
         }
         
         var modifiedSections = sections
-        modifiedSections.append(TableSection(rows: rows))
+        modifiedSections.append(Section(rows: rows))
         sections = modifiedSections
     }
     

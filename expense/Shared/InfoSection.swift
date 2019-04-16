@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoSection: TableSection<UITableView> {
+class InfoSection: Section<UITableView> {
     init() {
         
         let row1 = SettingsItem(image: R.image.settings_email_support()!, title: R.string.localizable.emailSupport(), isProFeature: false, allowToAccessProFeature: false)

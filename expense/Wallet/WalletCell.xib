@@ -13,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WalletCell" id="VpC-pK-hgh">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WalletCell" id="VpC-pK-hgh" customClass="WalletCell" customModule="expense" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -69,6 +69,10 @@
                 <constraint firstItem="CWg-8v-JBf" firstAttribute="top" secondItem="VpC-pK-hgh" secondAttribute="top" id="fQN-Nv-ZFe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fvZ-mF-088"/>
+            <connections>
+                <outlet property="nameLabel" destination="zGe-gx-FsZ" id="Gce-jv-b7x"/>
+                <outlet property="typeLabel" destination="eBM-r6-2fr" id="sRM-D7-1Uq"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

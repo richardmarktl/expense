@@ -56,8 +56,8 @@ class ClientPickerModel: Model {
             })
             
             return [
-                TableSection(rows: rowsSection1, headerTitle: R.string.localizable.actions()),
-                TableSection(rows: rowsSection2, headerTitle: R.string.localizable.clients())
+                Section(rows: rowsSection1, headerTitle: R.string.localizable.actions()),
+                Section(rows: rowsSection2, headerTitle: R.string.localizable.clients())
             ]
             
         }.bind(to: sectionsVariable).disposed(by: bag)

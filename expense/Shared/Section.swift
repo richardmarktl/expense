@@ -1,5 +1,5 @@
 //
-//  TableSection.swift
+//  Section.swift
 //  InVoice
 //
 //  Created by Georg Kitz on 15/11/2017.
@@ -9,9 +9,9 @@
 import Foundation
 import RxSwift
 
-class TableSection<T>: Equatable {
+class Section<T>: Equatable {
     
-    static func == (lhs: TableSection, rhs: TableSection) -> Bool {
+    static func == (lhs: Section, rhs: Section) -> Bool {
         return lhs === rhs
     }
     
@@ -44,13 +44,20 @@ class TableSection<T>: Equatable {
         self.internalFooterTitle = Variable(footerTitle)
         self.rows = rows
     }
-    
-    func insert(tableRow: Row<T>, at idx: Int) {
-        rows.insert(tableRow, at: idx)
+
+    func row(at index: Int) -> Row<T>? {
+        guard index >= 0 && index <= rows.count else {
+            return nil
+        }
+        return rows[index]
+    }
+
+    func insert(row: Row<T>, at idx: Int) {
+        rows.insert(row, at: idx)
     }
     
-    func add(tableRow: Row<T>) {
-        rows.insert(tableRow, at: rows.count)
+    func add(row: Row<T>) {
+        rows.insert(row, at: rows.count)
     }
     
     func delete(at idx: Int) {

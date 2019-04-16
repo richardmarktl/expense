@@ -42,7 +42,7 @@ class CreateLocalizationFromLanguageAction: TapActionable {
     }
 }
 
-class AddLocalizationFromLanguageSection: TableSection {
+class AddLocalizationFromLanguageSection: Section {
     
     convenience init(context: NSManagedObjectContext) {
         

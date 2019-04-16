@@ -36,7 +36,7 @@ class SelectTemplateAction: TapActionable {
     }
 }
 
-class TemplateSection: TableSection {
+class TemplateSection: Section {
     
     private let design: JobDesign
     

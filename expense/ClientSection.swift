@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class ClientSection: TableSection {
+class ClientSection: Section {
     
     private let job: Job
     private var clientItem: ClientItem?

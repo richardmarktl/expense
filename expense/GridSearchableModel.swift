@@ -8,15 +8,15 @@ import UIKit
 import RxSwift
 import CoreData
 
-class GridSearchableModel<ItemType: Filterable>: Model<UICollectionView> {
+class GridSearchableModel<ItemType: Filterable>: CollectionModel {
 
     /// Model that combines the data loading + searching
     ///
     /// - Parameters:
     ///   - searchObservable: observable which changes when the searchstring changes
     ///   - loadObservable: data load observable
-    init(searchObservable: Observable<String>, loadObservable: Observable<[ItemType]>, itemMapper: @escaping (([ItemType]) -> TableSection<UICollectionView>),
-         defaultSections: [TableSection<UICollectionView>], with context: NSManagedObjectContext) {
+    init(searchObservable: Observable<String>, loadObservable: Observable<[ItemType]>, itemMapper: @escaping (([ItemType]) -> Section<UICollectionView>),
+         defaultSections: [Section<UICollectionView>], with context: NSManagedObjectContext) {
 
         super.init(with: context)
 

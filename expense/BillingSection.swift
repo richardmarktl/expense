@@ -9,7 +9,7 @@
 import CoreData
 import RxSwift
 
-class BillingSection: TableSection {
+class BillingSection: Section {
     
     let discount: DiscountEntry
     

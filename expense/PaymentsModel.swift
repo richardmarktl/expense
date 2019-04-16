@@ -40,7 +40,7 @@ class PaymentsModel: Model {
         
         Payment.rxPayments(for: invoice, in: context).map { (payments) in
             return payments.map { PaymentItem(item: $0) }
-        }.map { (payments) -> [TableSection] in
+        }.map { (payments) -> [Section] in
             
             let rowsSection1: [ConfigurableRow] = [
                 TableRow<AddCell, MarkAsPayedInFullAction>(item: AddItem(title: R.string.localizable.markAsFullyPayed(), image: R.image.add_payment()), action: MarkAsPayedInFullAction()),
@@ -53,8 +53,8 @@ class PaymentsModel: Model {
             })
             
             return [
-                TableSection(rows: rowsSection1, headerTitle: R.string.localizable.actions()),
-                TableSection(rows: rowsSection2, headerTitle: R.string.localizable.payments())
+                Section(rows: rowsSection1, headerTitle: R.string.localizable.actions()),
+                Section(rows: rowsSection2, headerTitle: R.string.localizable.payments())
             ]
         }
         .bind(to: sectionsVariable).disposed(by: bag)

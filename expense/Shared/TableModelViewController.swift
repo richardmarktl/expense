@@ -11,19 +11,19 @@ import RxSwift
 import CoreData
 import SwiftRichString
 
-class TableModelController<DataProvider: Model<UITableView>>: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class TableModel: Model<UITableView> { }
+
+class TableModelController<TableModelType: TableModel>: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     let bag = DisposeBag()
     var context: NSManagedObjectContext!
-    var lastSelectedItem: Row<UITableView>?
     var manuallyManageDataUpdate: Bool = false
     
-    lazy var model: DataProvider = { return createModel() }()
+    lazy var model: TableModelType = { return createModel() }()
     
-    public func createModel() -> DataProvider {
-        return DataProvider(with: context)
+    public func createModel() -> TableModelType {
+        return TableModelType(with: context)
     }
     
     override func viewDidLoad() {
@@ -52,39 +52,33 @@ class TableModelController<DataProvider: Model<UITableView>>: UIViewController, 
     
     // MARK: - TableView
     func numberOfSections(in tableView: UITableView) -> Int {
-        return model.sections.count
+        return model.numberOfSections()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.sections[section].rows.count
+        return model.numberOfRows(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = model.sections[indexPath.section].rows[indexPath.row]
+        guard let item = model.row(at: indexPath) else {
+            fatalError("TableModelController no cell at \(indexPath)")
+        }
+
         let cell = tableView.dequeueReusableCell(withIdentifier: item.reuseIdentifier, for: indexPath)
         item.configure(cell)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = model.sections[indexPath.section].rows[indexPath.row]
-
-        item.performTap(indexPath: indexPath, sender: tableView, in: self, model: model)
-        
-        if let lastItem = lastSelectedItem, item.identifier != lastItem.identifier {
-            lastItem.rewindAction(sender: tableView, in: self, model: model)
-            lastSelectedItem = nil
-        }
-        
-        lastSelectedItem = item
+        model.performTap(at: indexPath, sender: tableView, in: self)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return model.sections[section].headerTitle
+        return model.section(at: section)?.headerTitle
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        guard model.sections[section].footerTitle != nil else {
+        guard model.section(at: section)?.footerTitle != nil else {
             return 0
         }
         return UITableView.automaticDimension
@@ -97,7 +91,7 @@ class TableModelController<DataProvider: Model<UITableView>>: UIViewController, 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let identifier = R.nib.tableFooterView.name
         let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier) as? TableFooterView
-        footer?.footerLabel?.attributedText = model.sections[section].footerTitle?.set(style: StyleGroup.headerFooterStyleGroup())
+        footer?.footerLabel?.attributedText = model.section(at: section)?.footerTitle?.set(style: StyleGroup.headerFooterStyleGroup())
         return footer
     }
     

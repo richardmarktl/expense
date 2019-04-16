@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class AddItemSection: TableSection {
+class AddItemSection: Section {
     
     private let bag = DisposeBag()
     private(set) var orders: [Order] = []
@@ -34,7 +34,7 @@ class AddItemSection: TableSection {
                 .enumerated().forEach({ (idx, item) in
                     self.add(order: item, at: IndexPath(row: idx, section: 0))
                 })
-            self.add(tableRow: rows[0])
+            self.add(row: rows[0])
             self.changeSubject.onNext(())
         }).disposed(by: bag)
     }
@@ -46,7 +46,7 @@ class AddItemSection: TableSection {
         }
         
         let row = TableRow<OrderItemCell, OrderItemAction>(item: OrderItem(defaultData: order), action: OrderItemAction())
-        insert(tableRow: row, at: indexPath.row)
+        insert(row: row, at: indexPath.row)
         orders.insert(order, at: indexPath.row)
         
         changeSubject.onNext(())
@@ -57,7 +57,7 @@ class AddItemSection: TableSection {
         orders.remove(at: indexPath.row)
         
         let row = TableRow<OrderItemCell, OrderItemAction>(item: OrderItem(defaultData: order), action: OrderItemAction())
-        insert(tableRow: row, at: indexPath.row)
+        insert(row: row, at: indexPath.row)
         orders.insert(order, at: indexPath.row)
         
         changeSubject.onNext(())

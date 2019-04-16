@@ -130,13 +130,13 @@ class BackupModel: Model {
         let rows1: [ConfigurableRow] = [
             TableRow<ProgressCell, RestoreBackupAction>(item: item1, action: RestoreBackupAction())
         ]
-        let section1 = TableSection(rows: rows1, footerTitle: backupFooter)
+        let section1 = Section(rows: rows1, footerTitle: backupFooter)
         
         let item2 = ProgressItem(image: R.image.export_csv_icon()!, title: R.string.localizable.exportCSV(), isInProgress: false)
         let rows2: [ConfigurableRow] = [
             TableRow<ProgressCell, ExportCSVAction>(item: item2, action: ExportCSVAction())
         ]
-        let section2 = TableSection(rows: rows2, footerTitle: R.string.localizable.exportCSVFooter())
+        let section2 = Section(rows: rows2, footerTitle: R.string.localizable.exportCSVFooter())
         
         sections = [section1, section2]
     }

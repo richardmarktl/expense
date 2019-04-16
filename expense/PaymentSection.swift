@@ -13,7 +13,7 @@ import RxSwift
 typealias PaymentRegisterBlock = () -> Void
 
 /// The class PaymentSection, contains the all the possible payment provider.
-class PaymentSection: TableSection {
+class PaymentSection: Section {
     let stripe: StripeEntry
     let paypal: PayPalEntry
 

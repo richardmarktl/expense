@@ -22,14 +22,14 @@ class PaymentDetailsModel: DetailModel<Account> {
         return paymentDetails.value.value?.isEmpty ?? false
     }
     
-    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section], in context: NSManagedObjectContext) {
         
         paymentDetails = TextEntry(placeholder: R.string.localizable.paymentDetailsTitle(), value: item.paymentDetails,
                                    autoCapitalizationType: UITextAutocapitalizationType.sentences)
         let rows: [ConfigurableRow] = [
             TableRow<TextViewCell, FirstResponderActionTextViewCell>(item: paymentDetails, action: FirstResponderActionTextViewCell())
         ]
-        let sections = [TableSection(rows: rows)]
+        let sections = [Section(rows: rows)]
         
         super.init(item: item, storeChangesAutomatically: true, deleteAutomatically: true, sections: sections, in: context)
         title = R.string.localizable.paymentDetailsTitle()

@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class PersonalizeSection: TableSection {
+class PersonalizeSection: Section {
     
     private let bag = DisposeBag()
     private let item: Account

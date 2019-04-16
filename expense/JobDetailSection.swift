@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import SwiftMoment
 
-class DateSection: TableSection {
+class DateSection: Section {
     
     private let bag = DisposeBag()
     
@@ -100,7 +100,7 @@ fileprivate extension Job {
     }
 }
 
-class JobDetailSection: TableSection {
+class JobDetailSection: Section {
     
     private let bag = DisposeBag()
     private let job: Job

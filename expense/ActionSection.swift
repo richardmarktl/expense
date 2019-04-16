@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import RxSwift
 
-class ActionSection: TableSection {
+class ActionSection: Section {
     
     private let job: Job
     

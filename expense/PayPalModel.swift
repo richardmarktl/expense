@@ -31,7 +31,7 @@ class PayPalModel: DetailModel<Account> {
         return false
     }
     
-    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section], in context: NSManagedObjectContext) {
         
         paypalId = TextEntry(
             placeholder: R.string.localizable.paypalId(),
@@ -44,7 +44,7 @@ class PayPalModel: DetailModel<Account> {
         let rows: [ConfigurableRow] = [
             TableRow<TextFieldCell, FirstResponderActionTextFieldCell>(item: paypalId, action: FirstResponderActionTextFieldCell())
         ]
-        let sections = [TableSection(rows: rows)]
+        let sections = [Section(rows: rows)]
         paypalDisposable = paypalId.value.asObservable().subscribe(onNext: {
             item.paypalId = $0.databaseValue
         })

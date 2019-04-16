@@ -55,13 +55,13 @@ struct ItemHelper {
         }.observeOn(MainScheduler.instance)
     }
     
-    static func mapper(_ items: [ItemItem]) -> TableSection {
+    static func mapper(_ items: [ItemItem]) -> Section {
         
         let rows: [ConfigurableRow] = items.map({ (item) -> ConfigurableRow in
             let configRow: ConfigurableRow = TableRow<ItemCell, SelectItemAction>(item: item, action: SelectItemAction())
             return configRow
         })
-        return TableSection(rows: rows)
+        return Section(rows: rows)
     }
 }
 

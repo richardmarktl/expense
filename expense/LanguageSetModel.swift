@@ -16,8 +16,8 @@ class LanguageSetModel: Model {
     
     let localizationSection: LocalizationSection
     
-    override var sectionsObservable: Observable<[TableSection]> {
-        return Observable.combineLatest(super.sectionsObservable, localizationSection.changedObservable.startWith(()), resultSelector: { (items, _) -> [TableSection] in
+    override var sectionsObservable: Observable<[Section]> {
+        return Observable.combineLatest(super.sectionsObservable, localizationSection.changedObservable.startWith(()), resultSelector: { (items, _) -> [Section] in
             return items
         })
     }
@@ -80,7 +80,7 @@ class LocalizationAction: TapActionable {
     }
 }
 
-class LocalizationSection: TableSection {
+class LocalizationSection: Section {
     private let bag = DisposeBag()
     private let changeSubject: PublishSubject<Void> = PublishSubject()
     private(set) var localizationItems: [LocalizationItem] = []
@@ -136,7 +136,7 @@ class AddLanguageAction: TapActionable {
     }
 }
 
-class AddLocalizationSection: TableSection {
+class AddLocalizationSection: Section {
     convenience init() {
         let addLanguage = AddItem(title: R.string.localizable.languageSetAdd(), image: R.image.add_item())
         let rows: [ConfigurableRow] = [

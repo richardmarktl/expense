@@ -446,12 +446,12 @@ extension JobViewController: UITableViewDataSource, UITableViewDelegate, TableVi
     }
     
     func tableView(_ tableView: UITableView, canReorderRowAt indexPath: IndexPath) -> Bool {
-        let section: TableSection = jobModel.sections[indexPath.section]
+        let section: Section = jobModel.sections[indexPath.section]
         return section.canBeReordered(at: indexPath)
     }
     
     func tableView(_ tableView: UITableView, targetIndexPathForReorderFromRowAt sourceIndexPath: IndexPath, to proposedDestinationIndexPath: IndexPath) -> IndexPath {
-        let section: TableSection = jobModel.sections[sourceIndexPath.section]
+        let section: Section = jobModel.sections[sourceIndexPath.section]
         return section.targetIndexPathForReorderFromRow(at: sourceIndexPath, to: proposedDestinationIndexPath)
     }
     
@@ -465,7 +465,7 @@ extension JobViewController: UITableViewDataSource, UITableViewDelegate, TableVi
     }
     
     func tableViewDidFinishReordering(_ tableView: UITableView, from initialSourceIndexPath: IndexPath, to finalDestinationIndexPath: IndexPath) {
-        let section: TableSection = jobModel.sections[initialSourceIndexPath.section]
+        let section: Section = jobModel.sections[initialSourceIndexPath.section]
         section.reorderRow(at: initialSourceIndexPath, to: finalDestinationIndexPath)
         
         let generator = UISelectionFeedbackGenerator()

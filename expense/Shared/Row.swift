@@ -1,5 +1,5 @@
 //
-//  TableRow.swift
+//  Row.swift
 //  InVoice
 //
 //  Created by Georg Kitz on 15/11/2017.
@@ -20,32 +20,29 @@ protocol ControllerActionable: ConfigurableRow {
     associatedtype SenderType
     func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>)
     func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) -> Bool
-    func rewindAction(sender: SenderType, in ctr: UIViewController, model: Model<SenderType>)
+    func rewindAction(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>)
 }
 
 class Row<T>: ControllerActionable {
     typealias SenderType = T
     var indexPath: IndexPath?
-
-
     let identifier: String = UUID().uuidString.lowercased()
     private(set) var reuseIdentifier: String = ""
+
     func configure(_ cell: UIView) {
     }
 
     // MARK: ControllerActionable Implementation -
-
     func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
-        self.indexPath = indexPath
     }
 
     func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) -> Bool {
         return true
     }
 
-    func rewindAction(sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
-
+    func rewindAction(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
     }
+
 }
 
 class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UITableView>
@@ -57,7 +54,7 @@ class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UITab
         return CellType.reuseIdentifier
     }
 
-    init(item: CellType.ConfigType, action: CellAction) {
+    required init(item: CellType.ConfigType, action: CellAction) {
         self.item = item
         self.action = action
     }
@@ -67,37 +64,17 @@ class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UITab
     }
 
     // MARK: ControllerActionable Implementation -
-    override func performTap(indexPath: IndexPath, sender: UITableView, in ctr: UIViewController, model: Model<UITableView>) {
+    override func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
         self.indexPath = indexPath
         self.action.performTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    override func canPerformTap(indexPath: IndexPath, sender: UITableView, in ctr: UIViewController, model: Model<UITableView>) -> Bool {
+    override func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) -> Bool {
         return action.canPerformTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    override func rewindAction(sender: UITableView, in ctr: UIViewController, model: Model<UITableView>) {
-        guard let indexPath = indexPath else {
-            return
-        }
-
-        defer {
-            self.indexPath = nil
-        }
-
-        var index = NSNotFound
-        model.sections[indexPath.section].rows.enumerated().forEach { (idx, item) in
-            if item.identifier == self.identifier {
-                index = idx
-            }
-        }
-
-        if index == NSNotFound {
-            return
-        }
-
-        let newIndexPath = IndexPath(row: index, section: indexPath.section)
-        action.rewindAction(with: item, indexPath: newIndexPath, sender: sender, ctr: ctr, model: model)
+    override func rewindAction(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
+        action.rewindAction(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 }
 
@@ -110,7 +87,7 @@ class GridRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UIColl
         return CellType.reuseIdentifier
     }
 
-    init(item: CellType.ConfigType, action: CellAction) {
+    required init(item: CellType.ConfigType, action: CellAction) {
         self.item = item
         self.action = action
     }
@@ -120,36 +97,16 @@ class GridRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UIColl
     }
 
     // MARK: ControllerActionable Implementation -
-    override func performTap(indexPath: IndexPath, sender: UICollectionView, in ctr: UIViewController, model: Model<UICollectionView>) {
+    override func performTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
         self.indexPath = indexPath
         self.action.performTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    override func canPerformTap(indexPath: IndexPath, sender: UICollectionView, in ctr: UIViewController, model: Model<UICollectionView>) -> Bool {
+    override func canPerformTap(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) -> Bool {
         return action.canPerformTap(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 
-    override func rewindAction(sender: UICollectionView, in ctr: UIViewController, model: Model<UICollectionView>) {
-        guard let indexPath = indexPath else {
-            return
-        }
-
-        defer {
-            self.indexPath = nil
-        }
-
-        var index = NSNotFound
-        model.sections[indexPath.section].rows.enumerated().forEach { (idx, item) in
-            if item.identifier == self.identifier {
-                index = idx
-            }
-        }
-
-        if index == NSNotFound {
-            return
-        }
-
-        let newIndexPath = IndexPath(row: index, section: indexPath.section)
-        action.rewindAction(with: item, indexPath: newIndexPath, sender: sender, ctr: ctr, model: model)
+    override func rewindAction(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>) {
+        action.rewindAction(with: item, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
     }
 }

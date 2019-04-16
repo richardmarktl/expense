@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import SwiftMoment
 
-class DebugSection: TableSection {
+class DebugSection: Section {
     let isProAccount: BoolItem
     private let bag = DisposeBag()
     init() {

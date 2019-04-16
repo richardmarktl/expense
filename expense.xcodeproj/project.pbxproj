@@ -23,8 +23,8 @@
 		79679842225E2BB000C85009 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79679841225E2BB000C85009 /* WalletCell.xib */; };
 		79679844225E2BC300C85009 /* CreateWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79679843225E2BC300C85009 /* CreateWalletCell.xib */; };
 		79679846225E2C7400C85009 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79679845225E2C7400C85009 /* CornerView.swift */; };
-		79D13FEE225B236600B11435 /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FEC225B236500B11435 /* TableRow.swift */; };
-		79D13FEF225B236600B11435 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FED225B236600B11435 /* TableSection.swift */; };
+		79D13FEE225B236600B11435 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FEC225B236500B11435 /* Row.swift */; };
+		79D13FEF225B236600B11435 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FED225B236600B11435 /* Section.swift */; };
 		79D13FF1225B32A600B11435 /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13FF0225B32A600B11435 /* TableFooterView.xib */; };
 		79D13FF3225B32DD00B11435 /* UIFont+Fira.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FF2225B32DC00B11435 /* UIFont+Fira.swift */; };
 		79D13FF5225B341A00B11435 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13FF4225B341A00B11435 /* UserCell.xib */; };
@@ -88,7 +88,6 @@
 		79D14092225CE8FC00B11435 /* UIView+Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14091225CE8FC00B11435 /* UIView+Find.swift */; };
 		79D14094225CE9D700B11435 /* OrderActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14093225CE9D700B11435 /* OrderActions.swift */; };
 		79F98D752256053E0026C17B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D742256053E0026C17B /* AppDelegate.swift */; };
-		79F98D772256053E0026C17B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D762256053E0026C17B /* ViewController.swift */; };
 		79F98D7A2256053E0026C17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F98D782256053E0026C17B /* Main.storyboard */; };
 		79F98D7C225605400026C17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F98D7B225605400026C17B /* Assets.xcassets */; };
 		79F98D7F225605400026C17B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F98D7D225605400026C17B /* LaunchScreen.storyboard */; };
@@ -142,8 +141,8 @@
 		79679841225E2BB000C85009 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
 		79679843225E2BC300C85009 /* CreateWalletCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateWalletCell.xib; sourceTree = "<group>"; };
 		79679845225E2C7400C85009 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
-		79D13FEC225B236500B11435 /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
-		79D13FED225B236600B11435 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		79D13FEC225B236500B11435 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		79D13FED225B236600B11435 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		79D13FF0225B32A600B11435 /* TableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
 		79D13FF2225B32DC00B11435 /* UIFont+Fira.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Fira.swift"; sourceTree = "<group>"; };
 		79D13FF4225B341A00B11435 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -208,7 +207,6 @@
 		79D14093225CE9D700B11435 /* OrderActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderActions.swift; sourceTree = "<group>"; };
 		79F98D712256053E0026C17B /* expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F98D742256053E0026C17B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79F98D762256053E0026C17B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79F98D792256053E0026C17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79F98D7B225605400026C17B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79F98D7E225605400026C17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -340,9 +338,9 @@
 		79D1403D225BA80C00B11435 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				79D13FED225B236600B11435 /* TableSection.swift */,
+				79D13FED225B236600B11435 /* Section.swift */,
 				79D14015225B72EC00B11435 /* InfoSection.swift */,
-				79D13FEC225B236500B11435 /* TableRow.swift */,
+				79D13FEC225B236500B11435 /* Row.swift */,
 				79F98DB2225647500026C17B /* Model.swift */,
 				79D13FFF225B552600B11435 /* SettingsItem.swift */,
 				79D14016225B72EC00B11435 /* InfoSectionActions.swift */,
@@ -517,7 +515,6 @@
 				79F98DAD225645A70026C17B /* SettingsController.swift */,
 				79F98DA522563ADA0026C17B /* R.generated.swift */,
 				79F98D742256053E0026C17B /* AppDelegate.swift */,
-				79F98D762256053E0026C17B /* ViewController.swift */,
 				79F98D782256053E0026C17B /* Main.storyboard */,
 				79F98D7B225605400026C17B /* Assets.xcassets */,
 				79F98D80225605400026C17B /* Info.plist */,
@@ -902,14 +899,13 @@
 				79D14073225CCE7500B11435 /* UIImage+Resize.swift in Sources */,
 				79F98DB02256470D0026C17B /* UserCell.swift in Sources */,
 				79D14023225B773200B11435 /* UIViewController+TopMostViewController.swift in Sources */,
-				79F98D772256053E0026C17B /* ViewController.swift in Sources */,
 				79D13FFB225B3D7100B11435 /* ConfigurableCell.swift in Sources */,
 				79D1408C225CE85100B11435 /* PlaceholderTextField.swift in Sources */,
 				79D13FF9225B3CC900B11435 /* TapAction.swift in Sources */,
 				79D14008225B67B300B11435 /* StoreService.swift in Sources */,
 				79D1406E225CC23E00B11435 /* Category+Fetchable.swift in Sources */,
 				79D14025225B7B3F00B11435 /* RatingAlertViewController.swift in Sources */,
-				79D13FEF225B236600B11435 /* TableSection.swift in Sources */,
+				79D13FEF225B236600B11435 /* Section.swift in Sources */,
 				79D14084225CE5EB00B11435 /* UIViewController+Rx.swift in Sources */,
 				79D14082225CE20600B11435 /* AutoScroller.swift in Sources */,
 				79D1400E225B6AD900B11435 /* Logger.swift in Sources */,
@@ -944,7 +940,7 @@
 				79D14047225C8AB800B11435 /* CoreDataContainer+Expense.swift in Sources */,
 				79D1400A225B67FF00B11435 /* TableFooterView.swift in Sources */,
 				79F98DA822563D6D0026C17B /* WalletCell.swift in Sources */,
-				79D13FEE225B236600B11435 /* TableRow.swift in Sources */,
+				79D13FEE225B236600B11435 /* Row.swift in Sources */,
 				79F98DA4225639710026C17B /* WalletViewController.swift in Sources */,
 				79D14001225B552600B11435 /* SettingsItem.swift in Sources */,
 				79F98DA622563ADA0026C17B /* R.generated.swift in Sources */,

@@ -29,7 +29,7 @@ class ThemeModel: DetailModel<Account> {
         return attachmentSection.fullWidthItemObservable.filterTrue()
     }
     
-    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section], in context: NSManagedObjectContext) {
         
         rendererContext = Horreum.instance!.childContext()
         templateSection = TemplateSection(design: item.design!)

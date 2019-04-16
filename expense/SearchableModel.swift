@@ -21,8 +21,8 @@ class SearchableTableModel<ItemType: Filterable>: Model<UITableView> {
     /// - Parameters:
     ///   - searchObservable: observable which changes when the searchstring changes
     ///   - loadObservable: data load observable
-    init(searchObservable: Observable<String>, loadObservable: Observable<[ItemType]>, itemMapper: @escaping (([ItemType]) -> TableSection<UITableView>),
-         defaultSections: [TableSection<UITableView>], with context: NSManagedObjectContext) {
+    init(searchObservable: Observable<String>, loadObservable: Observable<[ItemType]>, itemMapper: @escaping (([ItemType]) -> Section<UITableView>),
+         defaultSections: [Section<UITableView>], with context: NSManagedObjectContext) {
         
         super.init(with: context)
         

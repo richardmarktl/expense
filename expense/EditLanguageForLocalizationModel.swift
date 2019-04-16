@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import RxSwift
 
-class EditLanguageForLocalizationSection: TableSection {
+class EditLanguageForLocalizationSection: Section {
     
     private let bag = DisposeBag()
     private(set) var textEntries: [TextEntry] = []
@@ -49,7 +49,7 @@ class EditLanguageForLocalizationModel: DetailModel<JobLocalization> {
         return Observable.of(true)
     }
     
-    required init(item: JobLocalization, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: JobLocalization, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section], in context: NSManagedObjectContext) {
         let section = [EditLanguageForLocalizationSection(jobLocalization: item, context: context)]
         super.init(item: item, storeChangesAutomatically: true, deleteAutomatically: true, sections: section, in: context)
         

@@ -12,7 +12,7 @@ import RxSwift
 
 /// The class SignatureSections, contains the controls to add or remove a signature from the customer and
 /// the user to the job.
-class SignatureSection: TableSection {
+class SignatureSection: Section {
     let customerSignature: CustomerSignature
     let userSignature: UserSignature
     var job: Job

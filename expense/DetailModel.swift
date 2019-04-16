@@ -11,21 +11,22 @@ import RxSwift
 import CoreData
 import CoreDataExtensio
 
-class DetailModel<ItemType: NSManagedObject & Createable>: Model<UITableView> {
-    
+class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
+
     let item: ItemType
     var isDeleteButtonHidden: Bool
     let storeChangesAutomatically: Bool
     let deleteAutomatically: Bool
-    
+
     var deleteButtonTitle: String?
     var title: String
-    
-    /// Observable that determines when to enable the save button, basically we just need a `description` to store an item
+
+    /// Observable that determines when to enable the save button, basically we
+    /// just need a `description` to store an item
     var saveEnabledObservable: Observable<Bool> {
         fatalError()
     }
-    
+
     var shouldAutoSelectFirstRowIfNewlyInserted: Bool {
         return true
     }
@@ -38,39 +39,39 @@ class DetailModel<ItemType: NSManagedObject & Createable>: Model<UITableView> {
             return current + count
         }) > 0
     }
-    
+
     required init(item: ItemType, storeChangesAutomatically: Bool,
                   deleteAutomatically: Bool,
-                  sections: [TableSection<UITableView>] = [], in context: NSManagedObjectContext) {
+                  sections: [Section<UITableView>] = [], in context: NSManagedObjectContext) {
 
         self.item = item
         self.storeChangesAutomatically = storeChangesAutomatically
         self.deleteAutomatically = deleteAutomatically
-        
+
         title = ""
         isDeleteButtonHidden = item.isInserted
         deleteButtonTitle = nil
-        
+
         super.init(with: context)
         self.sections = sections
     }
-    
+
     required init(with context: NSManagedObjectContext) {
         fatalError()
     }
-    
+
     /// Saves the current data an returns a item
     ///
     /// - Returns: the created or modified item
     @discardableResult func save() -> ItemType {
-        
+
         if storeChangesAutomatically {
             try? context.save()
         }
-        
+
         return item
     }
-    
+
     /// Deletes the item
     func delete() {
         if deleteAutomatically {

@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class AttachmentSection: TableSection {
+class AttachmentSection: Section {
     
     private let bag = DisposeBag()
     

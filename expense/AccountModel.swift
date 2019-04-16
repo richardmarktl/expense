@@ -36,7 +36,7 @@ class AccountModel: DetailModel<Account> {
         return item.name?.isEmpty ?? true
     }
     
-    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section], in context: NSManagedObjectContext) {
         
         name = TextEntry(placeholder: R.string.localizable.name(), value: item.name, keyboardType: .default,
                          textContentType: .name, autoCapitalizationType: UITextAutocapitalizationType.words)
@@ -56,7 +56,7 @@ class AccountModel: DetailModel<Account> {
             TableRow<TextFieldCell, FirstResponderActionTextFieldCell>(item: taxId, action: FirstResponderActionTextFieldCell())
         ]
         
-        super.init(item: item, storeChangesAutomatically: storeChangesAutomatically, deleteAutomatically: deleteAutomatically, sections: [TableSection(rows: rows)], in: context)
+        super.init(item: item, storeChangesAutomatically: storeChangesAutomatically, deleteAutomatically: deleteAutomatically, sections: [Section(rows: rows)], in: context)
         
         if storeChangesAutomatically {
             name.value.asObservable().subscribe(onNext: { item.name = $0.databaseValue }).disposed(by: bag)

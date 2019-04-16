@@ -108,7 +108,7 @@ class BusinessSettingsModel: Model {
     }
 }
 
-fileprivate class DisposableSection: TableSection {
+fileprivate class DisposableSection: Section {
     let bag = DisposeBag()
 }
 

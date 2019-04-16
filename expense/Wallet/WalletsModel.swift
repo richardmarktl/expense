@@ -36,12 +36,12 @@ struct WalletItemHelper {
         }.observeOn(MainScheduler.instance)
     }
 
-    static func mapper(_ items: [WalletItem]) -> TableSection<UICollectionView> {
+    static func mapper(_ items: [WalletItem]) -> Section<UICollectionView> {
         let rows: [Row<UICollectionView>] = items.map({ (item) -> Row<UICollectionView> in
             let configRow: Row<UICollectionView> = GridRow<WalletCell, SelectWalletAction>(item: item, action: SelectWalletAction())
             return configRow
         })
-        return TableSection(rows: rows)
+        return Section(rows: rows)
     }
 }
 
@@ -57,7 +57,7 @@ class WalletsModel: GridSearchableModel<WalletItem> {
 
         self.init(searchObservable: searchObservable,
                 loadObservable: WalletItemHelper.instancesObservable(in: context),
-                itemMapper: WalletItemHelper.mapper, defaultSections: [TableSection(rows: rows)], with: context
+                itemMapper: WalletItemHelper.mapper, defaultSections: [Section(rows: rows)], with: context
         )
     }
 }

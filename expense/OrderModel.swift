@@ -82,7 +82,7 @@ class OrderModel: DetailModel<Order> {
             rows.append(TableRow<TextFieldCell, FirstResponderActionTextFieldCell>(item: number, action: FirstResponderActionTextFieldCell()))
         }
         
-        super.init(item: item, storeChangesAutomatically: false, deleteAutomatically: false, sections: [TableSection(rows: rows)], in: context)
+        super.init(item: item, storeChangesAutomatically: false, deleteAutomatically: false, sections: [Section(rows: rows)], in: context)
         
         title = item.isInserted ? R.string.localizable.newItem() : R.string.localizable.updateItem()
         isDeleteButtonHidden = item.item == nil
@@ -93,7 +93,7 @@ class OrderModel: DetailModel<Order> {
         fatalError()
     }
     
-    required init(item: Order, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: Order, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section], in context: NSManagedObjectContext) {
         fatalError()
     }
     

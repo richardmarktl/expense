@@ -15,7 +15,7 @@ import SwiftMoment
 class SignatureModel: DetailModel<Account> {
     let signatureSection: SignatureSettingSection
     
-    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section], in context: NSManagedObjectContext) {
         
         signatureSection = SignatureSettingSection(item: item)
         

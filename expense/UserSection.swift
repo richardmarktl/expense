@@ -34,7 +34,7 @@ class UserDetailAction: TapActionable {
     }
 }
 
-class UserSection: TableSection<UITableView> {
+class UserSection: Section<UITableView> {
     private let bag = DisposeBag()
     
     init(with context: NSManagedObjectContext) {

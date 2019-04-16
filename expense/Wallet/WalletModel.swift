@@ -43,7 +43,7 @@ class WalletModel: DetailModel<BudgetWallet> {
     /// - Parameters:
     ///   - item: if we get a template item we init it with the data of the template
     ///   - context: the context we operate on
-    required init(item: BudgetWallet, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection<UITableView>], in context: NSManagedObjectContext) {
+    required init(item: BudgetWallet, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section<UITableView>], in context: NSManagedObjectContext) {
         
         // Locale.current.currencyCode.map(Currency.create).map(CurrencyLoader.update)
         
@@ -55,7 +55,7 @@ class WalletModel: DetailModel<BudgetWallet> {
             TableRow<TextFieldCell, FirstResponderActionTextFieldCell>(item: description, action: FirstResponderActionTextFieldCell()),
         ]
         
-        super.init(item: item, storeChangesAutomatically: storeChangesAutomatically, deleteAutomatically: false, sections: [TableSection(rows: rows)], in: context)
+        super.init(item: item, storeChangesAutomatically: storeChangesAutomatically, deleteAutomatically: false, sections: [Section(rows: rows)], in: context)
         
         if storeChangesAutomatically {
             

@@ -22,13 +22,13 @@ class TaxModel: DetailModel<Account> {
         return tax.value == NSDecimalNumber.zero
     }
     
-    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [TableSection], in context: NSManagedObjectContext) {
+    required init(item: Account, storeChangesAutomatically: Bool, deleteAutomatically: Bool, sections: [Section], in context: NSManagedObjectContext) {
         
         tax = NumberEntry(title: R.string.localizable.taxes(), defaultData: item.tax!, validatorType: .tax)
         let rows: [ConfigurableRow] = [
             TableRow<NumberCell, FirstResponderActionNumberCell>(item: tax, action: FirstResponderActionNumberCell())
         ]
-        let sections = [TableSection(rows: rows)]
+        let sections = [Section(rows: rows)]
         
         super.init(item: item, storeChangesAutomatically: true, deleteAutomatically: true, sections: sections, in: context)
         title = R.string.localizable.defaultTaxes()

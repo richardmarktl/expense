@@ -64,7 +64,7 @@ class PaymentModel: Model {
         
         super.init(with: context)
         
-        sections = [TableSection(rows: rows)]
+        sections = [Section(rows: rows)]
     }
     
     required init(with context: NSManagedObjectContext) {

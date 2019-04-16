@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonUI
 
 class InfoSection: Section<UITableView> {
     init() {

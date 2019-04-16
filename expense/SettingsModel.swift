@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 import RxSwift
+import CommonUI
+
 
 class SettingsModel: TableModel {
     private let storeService: StoreService

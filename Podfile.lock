@@ -10,6 +10,11 @@ PODS:
   - Charts (3.2.2):
     - Charts/Core (= 3.2.2)
   - Charts/Core (3.2.2)
+  - CommonUI (0.0.12):
+    - CoreDataExtensio (~> 2.0.4)
+    - RxCocoa (~> 4.5.0)
+    - RxOptional (~> 3.6.2)
+    - RxSwift (~> 4.5.0)
   - CoreDataExtensio (2.0.4):
     - RxCocoa (~> 4.5.0)
     - RxOptional (~> 3.6.2)
@@ -146,6 +151,7 @@ PODS:
 DEPENDENCIES:
   - Amplitude-iOS (~> 4.6.0)
   - Charts (~> 3.2.2)
+  - CommonUI (~> 0.0.12)
   - CoreDataExtensio (~> 2.0.4)
   - Crashlytics (~> 3.12.0)
   - EmailValidator (from `https://github.com/gekitz/EmailValidator.git`, commit `e39cb1f`)
@@ -170,6 +176,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   "git@github.com:gekitz/mw-private-pods.git":
+    - CommonUI
     - ImageStorage
     - InvoiceBotSDK
   https://github.com/cocoapods/specs.git:
@@ -228,6 +235,7 @@ SPEC CHECKSUMS:
   Amplitude-iOS: ac1715ae68104b7a51723209ad574f60ab22ae5f
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+  CommonUI: 6b99e9048352503652c15a14dd8803c0533fb559
   CoreDataExtensio: c2bf4e6fdb90606de71f61d71d6cd8b12055319a
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
@@ -267,6 +275,6 @@ SPEC CHECKSUMS:
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: aa032f8c1f1d8046a0d8087bd6ffb7ab8c5d2c90
+PODFILE CHECKSUM: 8a9c02192fad7620d7f44bd94ebc08081bc9f414
 
 COCOAPODS: 1.6.1

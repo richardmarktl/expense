@@ -9,35 +9,26 @@
 /* Begin PBXBuildFile section */
 		245F6595BFB660C0DCB88EC1 /* Pods_expense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5390150F0DE85C1237DE9E6 /* Pods_expense.framework */; };
 		4757101DB1B13234F23E3831 /* WalletsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571ED7915245F3A7389FB4 /* WalletsModel.swift */; };
-		475713A3B6CC0682B00DFA29 /* CollectionModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475711F9CC254A7E8A0243CB /* CollectionModelController.swift */; };
 		475714857F94026A1DE8E620 /* DataItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571E390612756C8C846C8E /* DataItems.swift */; };
 		475715414C0019C7283A271C /* Invoice+Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571A7860F1ED7AF3D97D89 /* Invoice+Predicate.swift */; };
-		475716B83DCE659431137DEA /* SearchableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4757152E8D7874B049144E29 /* SearchableModel.swift */; };
 		47571782A937A9537F7104B8 /* SelectWalletAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571C0EA1526E27F832C2AC /* SelectWalletAction.swift */; };
 		475718D3446FDAF866AFAB20 /* CreateWalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */; };
 		475719EDC9AA696A7C454659 /* CreateWalletAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571ADB15499231EF42EC00 /* CreateWalletAction.swift */; };
-		47571A13029ED6B2A851FDE2 /* GridSearchableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4757195710FF014AF955A266 /* GridSearchableModel.swift */; };
 		47571B5562DA231746C1F663 /* WalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475713978ADBDC1396656323 /* WalletItem.swift */; };
 		5C4EE1D4C3B9C8635E265EA9 /* Pods_expenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */; };
 		7967983E225CFDB900C85009 /* KeyboardAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7967983D225CFDB900C85009 /* KeyboardAccessory.xib */; };
 		79679842225E2BB000C85009 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79679841225E2BB000C85009 /* WalletCell.xib */; };
 		79679844225E2BC300C85009 /* CreateWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79679843225E2BC300C85009 /* CreateWalletCell.xib */; };
 		79679846225E2C7400C85009 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79679845225E2C7400C85009 /* CornerView.swift */; };
-		79D13FEE225B236600B11435 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FEC225B236500B11435 /* Row.swift */; };
-		79D13FEF225B236600B11435 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FED225B236600B11435 /* Section.swift */; };
 		79D13FF1225B32A600B11435 /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13FF0225B32A600B11435 /* TableFooterView.xib */; };
 		79D13FF3225B32DD00B11435 /* UIFont+Fira.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FF2225B32DC00B11435 /* UIFont+Fira.swift */; };
 		79D13FF5225B341A00B11435 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D13FF4225B341A00B11435 /* UserCell.xib */; };
 		79D13FF7225B347100B11435 /* UserSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FF6225B347100B11435 /* UserSection.swift */; };
-		79D13FF9225B3CC900B11435 /* TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FF8225B3CC900B11435 /* TapAction.swift */; };
-		79D13FFB225B3D7100B11435 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FFA225B3D7100B11435 /* ConfigurableCell.swift */; };
-		79D13FFD225B547500B11435 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FFC225B547500B11435 /* ReusableCell.swift */; };
 		79D14000225B552600B11435 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FFE225B552600B11435 /* SettingsModel.swift */; };
 		79D14001225B552600B11435 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D13FFF225B552600B11435 /* SettingsItem.swift */; };
 		79D14003225B554F00B11435 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14002225B554E00B11435 /* UIColor+Extension.swift */; };
 		79D14008225B67B300B11435 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14007225B67B300B11435 /* StoreService.swift */; };
 		79D1400A225B67FF00B11435 /* TableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14009225B67FF00B11435 /* TableFooterView.swift */; };
-		79D1400C225B68B400B11435 /* Observer-Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1400B225B68B400B11435 /* Observer-Void.swift */; };
 		79D1400E225B6AD900B11435 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1400D225B6AD800B11435 /* Logger.swift */; };
 		79D14010225B6B6500B11435 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1400F225B6B6400B11435 /* Date+String.swift */; };
 		79D14012225B6D0700B11435 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14011225B6D0700B11435 /* Styling.swift */; };
@@ -45,9 +36,7 @@
 		79D14018225B72ED00B11435 /* InfoSectionActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14016225B72EC00B11435 /* InfoSectionActions.swift */; };
 		79D1401B225B735800B11435 /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14019225B735700B11435 /* BusinessSection.swift */; };
 		79D1401C225B735800B11435 /* BusinessSectionActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1401A225B735800B11435 /* BusinessSectionActions.swift */; };
-		79D1401E225B756000B11435 /* ErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1401D225B756000B11435 /* ErrorPresentable.swift */; };
 		79D14021225B764300B11435 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79D1401F225B764200B11435 /* Localizable.strings */; };
-		79D14023225B773200B11435 /* UIViewController+TopMostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14022225B773100B11435 /* UIViewController+TopMostViewController.swift */; };
 		79D14025225B7B3F00B11435 /* RatingAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14024225B7B3F00B11435 /* RatingAlertViewController.swift */; };
 		79D14027225B7B7900B11435 /* PrivacyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14026225B7B7900B11435 /* PrivacyController.swift */; };
 		79D14029225B7DCC00B11435 /* RatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14028225B7DCC00B11435 /* RatingService.swift */; };
@@ -56,29 +45,20 @@
 		79D14030225B913500B11435 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D1402F225B913500B11435 /* SettingsCell.xib */; };
 		79D14033225B926700B11435 /* BadgeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D14031225B926700B11435 /* BadgeView.xib */; };
 		79D14034225B926700B11435 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14032225B926700B11435 /* BadgeView.swift */; };
-		79D14036225B92B000B11435 /* XibSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14035225B92B000B11435 /* XibSetupable.swift */; };
 		79D14047225C8AB800B11435 /* CoreDataContainer+Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14046225C8AB800B11435 /* CoreDataContainer+Expense.swift */; };
 		79D1404A225C8E4300B11435 /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14048225C8E4300B11435 /* UITestHelper.swift */; };
 		79D1404B225C8E4300B11435 /* UserDefaults+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14049225C8E4300B11435 /* UserDefaults+Token.swift */; };
 		79D1404D225C9F4100B11435 /* NewWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1404C225C9F4100B11435 /* NewWalletViewController.swift */; };
 		79D14051225CA10300B11435 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D14050225CA10200B11435 /* Wallet.storyboard */; };
-		79D14054225CB2D500B11435 /* ActionButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D14052225CB2D500B11435 /* ActionButton.xib */; };
-		79D14055225CB2D500B11435 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14053225CB2D500B11435 /* ActionButton.swift */; };
 		79D14059225CB6C500B11435 /* terms.html in Resources */ = {isa = PBXBuildFile; fileRef = 79D14056225CB6C500B11435 /* terms.html */; };
 		79D1405A225CB6C500B11435 /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 79D14057225CB6C500B11435 /* privacy.html */; };
 		79D1405B225CB6C500B11435 /* subscription.html in Resources */ = {isa = PBXBuildFile; fileRef = 79D14058225CB6C500B11435 /* subscription.html */; };
 		79D1406C225CC23200B11435 /* Wallet+Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1406B225CC23100B11435 /* Wallet+Fetchable.swift */; };
 		79D1406E225CC23E00B11435 /* Category+Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1406D225CC23E00B11435 /* Category+Fetchable.swift */; };
 		79D14070225CC24C00B11435 /* Entry+Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1406F225CC24C00B11435 /* Entry+Fetchable.swift */; };
-		79D14073225CCE7500B11435 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14071225CCE7500B11435 /* UIImage+Resize.swift */; };
-		79D14074225CCE7500B11435 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14072225CCE7500B11435 /* UIImage+Color.swift */; };
 		79D14076225CD47000B11435 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14075225CD47000B11435 /* WalletModel.swift */; };
-		79D1407A225CD5CA00B11435 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14079225CD5CA00B11435 /* DetailModel.swift */; };
 		79D1407C225CD68400B11435 /* TextEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1407B225CD68400B11435 /* TextEntry.swift */; };
-		79D1407E225CE15B00B11435 /* DetailTableModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1407D225CE15B00B11435 /* DetailTableModelController.swift */; };
 		79D14081225CE20600B11435 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1407F225CE20600B11435 /* Analytics.swift */; };
-		79D14082225CE20600B11435 /* AutoScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14080225CE20600B11435 /* AutoScroller.swift */; };
-		79D14084225CE5EB00B11435 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14083225CE5EB00B11435 /* UIViewController+Rx.swift */; };
 		79D14086225CE74B00B11435 /* Error+NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14085225CE74B00B11435 /* Error+NSError.swift */; };
 		79D14088225CE7EF00B11435 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D14087225CE7EF00B11435 /* TextFieldCell.xib */; };
 		79D1408A225CE81100B11435 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14089225CE81100B11435 /* TextFieldCell.swift */; };
@@ -100,8 +80,6 @@
 		79F98DAC2256457A0026C17B /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DAB2256457A0026C17B /* SettingsCell.swift */; };
 		79F98DAE225645A70026C17B /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DAD225645A70026C17B /* SettingsController.swift */; };
 		79F98DB02256470D0026C17B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DAF2256470D0026C17B /* UserCell.swift */; };
-		79F98DB3225647500026C17B /* TableModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DB1225647500026C17B /* TableModelViewController.swift */; };
-		79F98DB4225647500026C17B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98DB2225647500026C17B /* Model.swift */; };
 		F4700AB500BC61366E250F21 /* Pods_expenseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47F7E3CEC572915E7D231 /* Pods_expenseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,11 +104,8 @@
 		0F0656D62D1BBFEC8F3AD214 /* Pods-expenseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseUITests.release.xcconfig"; path = "Target Support Files/Pods-expenseUITests/Pods-expenseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F40EFEF708DAC57612BC6E9 /* Pods-expenseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseTests.debug.xcconfig"; path = "Target Support Files/Pods-expenseTests/Pods-expenseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expenseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		475711F9CC254A7E8A0243CB /* CollectionModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionModelController.swift; sourceTree = "<group>"; };
 		475713978ADBDC1396656323 /* WalletItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletItem.swift; sourceTree = "<group>"; };
-		4757152E8D7874B049144E29 /* SearchableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableModel.swift; sourceTree = "<group>"; };
 		47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWalletCell.swift; sourceTree = "<group>"; };
-		4757195710FF014AF955A266 /* GridSearchableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSearchableModel.swift; sourceTree = "<group>"; };
 		47571A7860F1ED7AF3D97D89 /* Invoice+Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Invoice+Predicate.swift"; sourceTree = "<group>"; };
 		47571ADB15499231EF42EC00 /* CreateWalletAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWalletAction.swift; sourceTree = "<group>"; };
 		47571C0EA1526E27F832C2AC /* SelectWalletAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWalletAction.swift; sourceTree = "<group>"; };
@@ -141,21 +116,15 @@
 		79679841225E2BB000C85009 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
 		79679843225E2BC300C85009 /* CreateWalletCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateWalletCell.xib; sourceTree = "<group>"; };
 		79679845225E2C7400C85009 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
-		79D13FEC225B236500B11435 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
-		79D13FED225B236600B11435 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		79D13FF0225B32A600B11435 /* TableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
 		79D13FF2225B32DC00B11435 /* UIFont+Fira.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Fira.swift"; sourceTree = "<group>"; };
 		79D13FF4225B341A00B11435 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		79D13FF6225B347100B11435 /* UserSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSection.swift; sourceTree = "<group>"; };
-		79D13FF8225B3CC900B11435 /* TapAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapAction.swift; sourceTree = "<group>"; };
-		79D13FFA225B3D7100B11435 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
-		79D13FFC225B547500B11435 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		79D13FFE225B552600B11435 /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		79D13FFF225B552600B11435 /* SettingsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		79D14002225B554E00B11435 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		79D14007225B67B300B11435 /* StoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoreService.swift; path = expense/Shared/StoreService.swift; sourceTree = SOURCE_ROOT; };
 		79D14009225B67FF00B11435 /* TableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableFooterView.swift; path = expense/Shared/TableFooterView.swift; sourceTree = SOURCE_ROOT; };
-		79D1400B225B68B400B11435 /* Observer-Void.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observer-Void.swift"; path = "expense/Shared/Observer-Void.swift"; sourceTree = SOURCE_ROOT; };
 		79D1400D225B6AD800B11435 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = expense/Shared/Logger.swift; sourceTree = SOURCE_ROOT; };
 		79D1400F225B6B6400B11435 /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+String.swift"; path = "expense/Shared/Date+String.swift"; sourceTree = SOURCE_ROOT; };
 		79D14011225B6D0700B11435 /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = expense/Shared/Styling.swift; sourceTree = SOURCE_ROOT; };
@@ -163,9 +132,7 @@
 		79D14016225B72EC00B11435 /* InfoSectionActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoSectionActions.swift; path = expense/Shared/InfoSectionActions.swift; sourceTree = SOURCE_ROOT; };
 		79D14019225B735700B11435 /* BusinessSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
 		79D1401A225B735800B11435 /* BusinessSectionActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessSectionActions.swift; sourceTree = "<group>"; };
-		79D1401D225B756000B11435 /* ErrorPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorPresentable.swift; path = expense/Shared/ErrorPresentable.swift; sourceTree = SOURCE_ROOT; };
 		79D14020225B764200B11435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		79D14022225B773100B11435 /* UIViewController+TopMostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+TopMostViewController.swift"; path = "expense/Shared/UIViewController+TopMostViewController.swift"; sourceTree = SOURCE_ROOT; };
 		79D14024225B7B3F00B11435 /* RatingAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingAlertViewController.swift; path = expense/Shared/RatingAlertViewController.swift; sourceTree = SOURCE_ROOT; };
 		79D14026225B7B7900B11435 /* PrivacyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrivacyController.swift; path = expense/Shared/PrivacyController.swift; sourceTree = SOURCE_ROOT; };
 		79D14028225B7DCC00B11435 /* RatingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingService.swift; path = expense/Shared/RatingService.swift; sourceTree = SOURCE_ROOT; };
@@ -174,29 +141,20 @@
 		79D1402F225B913500B11435 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		79D14031225B926700B11435 /* BadgeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BadgeView.xib; path = expense/Shared/BadgeView.xib; sourceTree = SOURCE_ROOT; };
 		79D14032225B926700B11435 /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeView.swift; path = expense/Shared/BadgeView.swift; sourceTree = SOURCE_ROOT; };
-		79D14035225B92B000B11435 /* XibSetupable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XibSetupable.swift; path = expense/Shared/XibSetupable.swift; sourceTree = SOURCE_ROOT; };
 		79D14046225C8AB800B11435 /* CoreDataContainer+Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataContainer+Expense.swift"; sourceTree = "<group>"; };
 		79D14048225C8E4300B11435 /* UITestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
 		79D14049225C8E4300B11435 /* UserDefaults+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Token.swift"; sourceTree = "<group>"; };
 		79D1404C225C9F4100B11435 /* NewWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWalletViewController.swift; sourceTree = "<group>"; };
 		79D14050225CA10200B11435 /* Wallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
-		79D14052225CB2D500B11435 /* ActionButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionButton.xib; sourceTree = "<group>"; };
-		79D14053225CB2D500B11435 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		79D14056225CB6C500B11435 /* terms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terms.html; sourceTree = "<group>"; };
 		79D14057225CB6C500B11435 /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
 		79D14058225CB6C500B11435 /* subscription.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = subscription.html; sourceTree = "<group>"; };
 		79D1406B225CC23100B11435 /* Wallet+Fetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+Fetchable.swift"; sourceTree = "<group>"; };
 		79D1406D225CC23E00B11435 /* Category+Fetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Fetchable.swift"; sourceTree = "<group>"; };
 		79D1406F225CC24C00B11435 /* Entry+Fetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Fetchable.swift"; sourceTree = "<group>"; };
-		79D14071225CCE7500B11435 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
-		79D14072225CCE7500B11435 /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		79D14075225CD47000B11435 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
-		79D14079225CD5CA00B11435 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		79D1407B225CD68400B11435 /* TextEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntry.swift; sourceTree = "<group>"; };
-		79D1407D225CE15B00B11435 /* DetailTableModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableModelController.swift; sourceTree = "<group>"; };
 		79D1407F225CE20600B11435 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
-		79D14080225CE20600B11435 /* AutoScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScroller.swift; sourceTree = "<group>"; };
-		79D14083225CE5EB00B11435 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		79D14085225CE74B00B11435 /* Error+NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error+NSError.swift"; sourceTree = "<group>"; };
 		79D14087225CE7EF00B11435 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		79D14089225CE81100B11435 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
@@ -224,8 +182,6 @@
 		79F98DAB2256457A0026C17B /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		79F98DAD225645A70026C17B /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		79F98DAF2256470D0026C17B /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		79F98DB1225647500026C17B /* TableModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModelViewController.swift; sourceTree = "<group>"; };
-		79F98DB2225647500026C17B /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		982292CDDC061988462F331C /* Pods-expenseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseUITests.debug.xcconfig"; path = "Target Support Files/Pods-expenseUITests/Pods-expenseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B045DFA250E5B1A342F8C8F7 /* Pods-expense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expense.release.xcconfig"; path = "Target Support Files/Pods-expense/Pods-expense.release.xcconfig"; sourceTree = "<group>"; };
 		BE861D7146213010F838D237 /* Pods-expenseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseTests.release.xcconfig"; path = "Target Support Files/Pods-expenseTests/Pods-expenseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -311,14 +267,10 @@
 			isa = PBXGroup;
 			children = (
 				79D1402C225B7F6400B11435 /* AppInfo.swift */,
-				79D14022225B773100B11435 /* UIViewController+TopMostViewController.swift */,
-				79D14035225B92B000B11435 /* XibSetupable.swift */,
 				79D1402A225B7EE100B11435 /* String+Error.swift */,
 				79D14011225B6D0700B11435 /* Styling.swift */,
-				79D1401D225B756000B11435 /* ErrorPresentable.swift */,
 				79D1400F225B6B6400B11435 /* Date+String.swift */,
 				79D1400D225B6AD800B11435 /* Logger.swift */,
-				79D1400B225B68B400B11435 /* Observer-Void.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -330,7 +282,6 @@
 				79D14040225C738300B11435 /* View */,
 				79D1403E225BA83200B11435 /* Actions */,
 				79D1403D225BA80C00B11435 /* Model */,
-				79F98DB1225647500026C17B /* TableModelViewController.swift */,
 			);
 			name = Table;
 			sourceTree = "<group>";
@@ -338,10 +289,7 @@
 		79D1403D225BA80C00B11435 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				79D13FED225B236600B11435 /* Section.swift */,
 				79D14015225B72EC00B11435 /* InfoSection.swift */,
-				79D13FEC225B236500B11435 /* Row.swift */,
-				79F98DB2225647500026C17B /* Model.swift */,
 				79D13FFF225B552600B11435 /* SettingsItem.swift */,
 				79D14016225B72EC00B11435 /* InfoSectionActions.swift */,
 			);
@@ -351,7 +299,6 @@
 		79D1403E225BA83200B11435 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				79D13FF8225B3CC900B11435 /* TapAction.swift */,
 				79D14028225B7DCC00B11435 /* RatingService.swift */,
 				79D14026225B7B7900B11435 /* PrivacyController.swift */,
 				79D14024225B7B3F00B11435 /* RatingAlertViewController.swift */,
@@ -379,8 +326,6 @@
 		79D14041225C738900B11435 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				79D13FFC225B547500B11435 /* ReusableCell.swift */,
-				79D13FFA225B3D7100B11435 /* ConfigurableCell.swift */,
 				79F98DAB2256457A0026C17B /* SettingsCell.swift */,
 				79F98DAF2256470D0026C17B /* UserCell.swift */,
 			);
@@ -398,8 +343,6 @@
 		79D14045225C8A7700B11435 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				79D14072225CCE7500B11435 /* UIImage+Color.swift */,
-				79D14071225CCE7500B11435 /* UIImage+Resize.swift */,
 				79D14048225C8E4300B11435 /* UITestHelper.swift */,
 				79D14049225C8E4300B11435 /* UserDefaults+Token.swift */,
 				79D14046225C8AB800B11435 /* CoreDataContainer+Expense.swift */,
@@ -490,16 +433,10 @@
 				79D14089225CE81100B11435 /* TextFieldCell.swift */,
 				79D14087225CE7EF00B11435 /* TextFieldCell.xib */,
 				79D14085225CE74B00B11435 /* Error+NSError.swift */,
-				79D14083225CE5EB00B11435 /* UIViewController+Rx.swift */,
 				79D1407F225CE20600B11435 /* Analytics.swift */,
-				79D14080225CE20600B11435 /* AutoScroller.swift */,
-				79D1407D225CE15B00B11435 /* DetailTableModelController.swift */,
 				79D1407B225CD68400B11435 /* TextEntry.swift */,
-				79D14079225CD5CA00B11435 /* DetailModel.swift */,
 				79D1405F225CB6EA00B11435 /* Database */,
 				79D1405D225CB6D000B11435 /* Support */,
-				79D14053225CB2D500B11435 /* ActionButton.swift */,
-				79D14052225CB2D500B11435 /* ActionButton.xib */,
 				C114864B225CA00A00A87A48 /* expense.entitlements */,
 				79D1404F225CA0E100B11435 /* Wallet */,
 				79D1404E225CA0C300B11435 /* Storyboards */,
@@ -519,11 +456,8 @@
 				79F98D7B225605400026C17B /* Assets.xcassets */,
 				79F98D80225605400026C17B /* Info.plist */,
 				79D13FF4225B341A00B11435 /* UserCell.xib */,
-				475711F9CC254A7E8A0243CB /* CollectionModelController.swift */,
 				47571E390612756C8C846C8E /* DataItems.swift */,
-				4757152E8D7874B049144E29 /* SearchableModel.swift */,
 				47571A7860F1ED7AF3D97D89 /* Invoice+Predicate.swift */,
-				4757195710FF014AF955A266 /* GridSearchableModel.swift */,
 			);
 			path = expense;
 			sourceTree = "<group>";
@@ -677,7 +611,6 @@
 				79D14059225CB6C500B11435 /* terms.html in Resources */,
 				79D13FF1225B32A600B11435 /* TableFooterView.xib in Resources */,
 				79D1405B225CB6C500B11435 /* subscription.html in Resources */,
-				79D14054225CB2D500B11435 /* ActionButton.xib in Resources */,
 				79F98DAA225643C00026C17B /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,6 +753,7 @@
 				"${BUILT_PRODUCTS_DIR}/Amplitude-iOS/Amplitude_iOS.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/CommonUI/CommonUI.framework",
 				"${BUILT_PRODUCTS_DIR}/CoreDataExtensio/CoreDataExtensio.framework",
 				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/EmailValidator/EmailValidator.framework",
@@ -854,6 +788,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Amplitude_iOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreDataExtensio.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmailValidator.framework",
@@ -896,43 +831,29 @@
 				79D14000225B552600B11435 /* SettingsModel.swift in Sources */,
 				79D14018225B72ED00B11435 /* InfoSectionActions.swift in Sources */,
 				79D1408A225CE81100B11435 /* TextFieldCell.swift in Sources */,
-				79D14073225CCE7500B11435 /* UIImage+Resize.swift in Sources */,
 				79F98DB02256470D0026C17B /* UserCell.swift in Sources */,
-				79D14023225B773200B11435 /* UIViewController+TopMostViewController.swift in Sources */,
-				79D13FFB225B3D7100B11435 /* ConfigurableCell.swift in Sources */,
 				79D1408C225CE85100B11435 /* PlaceholderTextField.swift in Sources */,
-				79D13FF9225B3CC900B11435 /* TapAction.swift in Sources */,
 				79D14008225B67B300B11435 /* StoreService.swift in Sources */,
 				79D1406E225CC23E00B11435 /* Category+Fetchable.swift in Sources */,
 				79D14025225B7B3F00B11435 /* RatingAlertViewController.swift in Sources */,
-				79D13FEF225B236600B11435 /* Section.swift in Sources */,
-				79D14084225CE5EB00B11435 /* UIViewController+Rx.swift in Sources */,
-				79D14082225CE20600B11435 /* AutoScroller.swift in Sources */,
 				79D1400E225B6AD900B11435 /* Logger.swift in Sources */,
 				79F98D752256053E0026C17B /* AppDelegate.swift in Sources */,
 				79D14017225B72ED00B11435 /* InfoSection.swift in Sources */,
 				79D14092225CE8FC00B11435 /* UIView+Find.swift in Sources */,
-				79D14055225CB2D500B11435 /* ActionButton.swift in Sources */,
 				79D1404D225C9F4100B11435 /* NewWalletViewController.swift in Sources */,
 				79D13FF7225B347100B11435 /* UserSection.swift in Sources */,
 				79D14034225B926700B11435 /* BadgeView.swift in Sources */,
 				79679846225E2C7400C85009 /* CornerView.swift in Sources */,
 				79D14029225B7DCC00B11435 /* RatingService.swift in Sources */,
-				79F98DB3225647500026C17B /* TableModelViewController.swift in Sources */,
-				79D1407A225CD5CA00B11435 /* DetailModel.swift in Sources */,
-				79D1400C225B68B400B11435 /* Observer-Void.swift in Sources */,
 				79D1408E225CE87900B11435 /* KeyboardAccessoryable.swift in Sources */,
-				79F98DB4225647500026C17B /* Model.swift in Sources */,
 				79D14010225B6B6500B11435 /* Date+String.swift in Sources */,
 				79D1404A225C8E4300B11435 /* UITestHelper.swift in Sources */,
 				79D14012225B6D0700B11435 /* Styling.swift in Sources */,
-				79D14036225B92B000B11435 /* XibSetupable.swift in Sources */,
 				79D1401B225B735800B11435 /* BusinessSection.swift in Sources */,
 				79F98DAC2256457A0026C17B /* SettingsCell.swift in Sources */,
 				79D1401C225B735800B11435 /* BusinessSectionActions.swift in Sources */,
 				79D13FF3225B32DD00B11435 /* UIFont+Fira.swift in Sources */,
 				79D14076225CD47000B11435 /* WalletModel.swift in Sources */,
-				79D1407E225CE15B00B11435 /* DetailTableModelController.swift in Sources */,
 				79F98DAE225645A70026C17B /* SettingsController.swift in Sources */,
 				79D1404B225C8E4300B11435 /* UserDefaults+Token.swift in Sources */,
 				79D1402D225B7F6400B11435 /* AppInfo.swift in Sources */,
@@ -940,7 +861,6 @@
 				79D14047225C8AB800B11435 /* CoreDataContainer+Expense.swift in Sources */,
 				79D1400A225B67FF00B11435 /* TableFooterView.swift in Sources */,
 				79F98DA822563D6D0026C17B /* WalletCell.swift in Sources */,
-				79D13FEE225B236600B11435 /* Row.swift in Sources */,
 				79F98DA4225639710026C17B /* WalletViewController.swift in Sources */,
 				79D14001225B552600B11435 /* SettingsItem.swift in Sources */,
 				79F98DA622563ADA0026C17B /* R.generated.swift in Sources */,
@@ -951,20 +871,14 @@
 				79D1407C225CD68400B11435 /* TextEntry.swift in Sources */,
 				79D14094225CE9D700B11435 /* OrderActions.swift in Sources */,
 				79D14090225CE8A400B11435 /* KeyboardAccessory.swift in Sources */,
-				79D1401E225B756000B11435 /* ErrorPresentable.swift in Sources */,
-				79D13FFD225B547500B11435 /* ReusableCell.swift in Sources */,
 				79D14003225B554F00B11435 /* UIColor+Extension.swift in Sources */,
-				79D14074225CCE7500B11435 /* UIImage+Color.swift in Sources */,
-				475713A3B6CC0682B00DFA29 /* CollectionModelController.swift in Sources */,
 				475718D3446FDAF866AFAB20 /* CreateWalletCell.swift in Sources */,
 				47571B5562DA231746C1F663 /* WalletItem.swift in Sources */,
 				475714857F94026A1DE8E620 /* DataItems.swift in Sources */,
 				4757101DB1B13234F23E3831 /* WalletsModel.swift in Sources */,
-				475716B83DCE659431137DEA /* SearchableModel.swift in Sources */,
 				47571782A937A9537F7104B8 /* SelectWalletAction.swift in Sources */,
 				475715414C0019C7283A271C /* Invoice+Predicate.swift in Sources */,
 				475719EDC9AA696A7C454659 /* CreateWalletAction.swift in Sources */,
-				47571A13029ED6B2A851FDE2 /* GridSearchableModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 import UIKit
 import RxSwift
 import CoreData
+import CommonUI
+
 
 struct UserItem {
     let name: String

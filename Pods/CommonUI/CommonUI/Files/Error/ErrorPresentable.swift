@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonUtil
 
 public struct ErrorPresentable {
     

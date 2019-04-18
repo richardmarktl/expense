@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import CommonUI
 
 /// View that wraps keyboard accessory stuff like up/down and hide keyboard
 class KeyboardAccessory: UIView, XibSetupable {

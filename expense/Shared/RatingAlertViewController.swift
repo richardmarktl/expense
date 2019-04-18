@@ -10,6 +10,7 @@ import UIKit
 import StoreKit
 import SupportEmail
 import MessageUI
+import CommonUI
 
 // protocol
 struct RatingDisplayable {

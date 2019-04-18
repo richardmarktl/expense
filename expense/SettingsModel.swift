@@ -12,7 +12,7 @@ import RxSwift
 import CommonUI
 
 
-class SettingsModel: TableModel {
+class SettingsModel: Model<UITableView> {
     private let storeService: StoreService
     
     func restorePurchase() -> Observable<Void> {

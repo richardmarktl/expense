@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import CommonUtil
 
 public struct JobRequest {
     public static func send(job: Job, with message: String) -> Observable<Void> {

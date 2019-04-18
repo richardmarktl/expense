@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CommonUI
 
 class TapAction<ItemType>: TapActionable {
     var analytics: (() -> ())?

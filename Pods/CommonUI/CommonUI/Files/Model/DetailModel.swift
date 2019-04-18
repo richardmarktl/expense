@@ -11,8 +11,7 @@ import RxSwift
 import CoreData
 import CoreDataExtensio
 
-public class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
-
+open class DetailModel<ItemType: NSManagedObject & Createable, T>: Model<T> {
     public let item: ItemType
     public var isDeleteButtonHidden: Bool
     public let storeChangesAutomatically: Bool
@@ -23,15 +22,15 @@ public class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
 
     /// Observable that determines when to enable the save button, basically we
     /// just need a `description` to store an item
-    public var saveEnabledObservable: Observable<Bool> {
+    open var saveEnabledObservable: Observable<Bool> {
         fatalError()
     }
 
-    public var shouldAutoSelectFirstRowIfNewlyInserted: Bool {
+    open var shouldAutoSelectFirstRowIfNewlyInserted: Bool {
         return true
     }
 
-    public var shouldShowCancelWarning: Bool {
+    open var shouldShowCancelWarning: Bool {
         let all = context.updatedObjects
         return all.reduce(0, { (current, object) -> Int in
             //we don't want to show the dialog if the item was newly created
@@ -42,7 +41,7 @@ public class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
 
     public required init(item: ItemType, storeChangesAutomatically: Bool,
                          deleteAutomatically: Bool,
-                         sections: [Section<UITableView>] = [], in context: NSManagedObjectContext) {
+                         sections: [Section<T>] = [], in context: NSManagedObjectContext) {
 
         self.item = item
         self.storeChangesAutomatically = storeChangesAutomatically
@@ -63,7 +62,7 @@ public class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
     /// Saves the current data an returns a item
     ///
     /// - Returns: the created or modified item
-    @discardableResult public func save() -> ItemType {
+    @discardableResult open func save() -> ItemType {
         if storeChangesAutomatically {
             try? context.save()
         }
@@ -72,7 +71,7 @@ public class DetailModel<ItemType: NSManagedObject & Createable>: TableModel {
     }
 
     /// Deletes the item
-    public func delete() {
+    open func delete() {
         if deleteAutomatically {
             context.delete(item)
         }

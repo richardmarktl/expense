@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonUI
 
 class WalletCell: ReusableCollectionViewCell, ConfigurableCell {
     typealias ConfigType = WalletItem

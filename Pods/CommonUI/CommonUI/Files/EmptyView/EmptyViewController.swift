@@ -57,7 +57,7 @@ public extension EmptyViewable where Self: UIViewController {
     }
 }
 
-public class EmptyViewController: UIViewController {
+open class EmptyViewController: UIViewController {
     public typealias EmptyViewAddClosure = () -> Void
 
     @IBOutlet public weak var messageTitleLabel: UILabel!
@@ -79,7 +79,7 @@ public class EmptyViewController: UIViewController {
         }
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         messageLabel.text = message
         messageTitleLabel.text = messageTitle

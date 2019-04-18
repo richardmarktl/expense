@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 @IBDesignable
-public class ActionButton: UIView, XibSetupable {
+open class ActionButton: UIView, XibSetupable {
     
     @IBOutlet public weak var button: UIButton?
     @IBOutlet public weak var leftImageView: UIImageView?
@@ -121,12 +121,12 @@ public class ActionButton: UIView, XibSetupable {
         clipsToBounds = true
     }
     
-    public override var intrinsicContentSize: CGSize {
+    open override var intrinsicContentSize: CGSize {
         let size = super.intrinsicContentSize
         return CGSize(width: size.width, height: 52)
     }
-    
-    public override func prepareForInterfaceBuilder() {
+
+    open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         title = "Sample Title"
     }

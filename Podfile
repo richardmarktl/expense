@@ -1,7 +1,7 @@
-# Uncomment the next line to define a global platform for your project
 source 'git@github.com:gekitz/mw-private-pods.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
+# Uncomment the next line to define a global platform for your project
 platform :ios, '11.1'
 inhibit_all_warnings!
 
@@ -19,8 +19,8 @@ target 'expense' do
   # pod 'RxStoreKit', '~> 1.2.1'
   
   # Invoice Bot Private Pods
-  pod 'InvoiceBotSDK', '~> 1.0.5'
-  pod 'CommonUI', '~> 0.0.12'
+  pod 'InvoiceBotSDK', '~> 1.0.6'
+  pod 'CommonUI', '~> 0.0.17'
   
   # Generator
   pod 'R.swift', '~> 5.0'

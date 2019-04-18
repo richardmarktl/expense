@@ -10,7 +10,9 @@ import UIKit
 import RxSwift
 import CoreData
 
-public class SearchableTableModelController<ItemType, Model: SearchableTableModel<ItemType>>: TableModelController<Model>, UISearchResultsUpdating, UISearchControllerDelegate, EmptyViewable {
+open class SearchableTableModel<ItemType: Filterable>: SearchableModel<ItemType, UITableView> { }
+
+open class SearchableTableModelController<ItemType, Model: SearchableTableModel<ItemType>>: TableModelController<Model>, UISearchResultsUpdating, UISearchControllerDelegate, EmptyViewable {
 
     public var emptyTitle: String = ""
     public var emptyMessage: String = ""
@@ -23,7 +25,7 @@ public class SearchableTableModelController<ItemType, Model: SearchableTableMode
         return searchSubject.asObservable().startWith("")
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         let searchController = UISearchController(searchResultsController: nil)

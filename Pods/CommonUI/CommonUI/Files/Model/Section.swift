@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-public class Section<T>: Equatable {
+open class Section<T>: Equatable {
 
     public static func == (lhs: Section, rhs: Section) -> Bool {
         return lhs === rhs

@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxOptional
+import CommonUI
 
 /// Text Input Type
 ///

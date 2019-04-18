@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxOptional
+import CommonUtil
 
 public protocol AutoScroller: class {
     var scrollViewDefaultInsets: UIEdgeInsets {get set}

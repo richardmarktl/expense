@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import CommonUI
 
 class TextFieldCell: ReusableTableViewCell, ConfigurableCell, InputAccessoryAble, UITextFieldDelegate {
     typealias ConfigType = TextEntry

@@ -23,7 +23,7 @@ public protocol ControllerActionable: ConfigurableRow {
     func rewindAction(indexPath: IndexPath, sender: SenderType, in ctr: UIViewController, model: Model<SenderType>)
 }
 
-public class Row<T>: ControllerActionable {
+open class Row<T>: ControllerActionable {
     public typealias SenderType = T
     public var indexPath: IndexPath?
     public let identifier: String = UUID().uuidString.lowercased()
@@ -44,7 +44,7 @@ public class Row<T>: ControllerActionable {
     }
 }
 
-public class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UITableView>
+open class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UITableView>
         where CellAction.RowActionType == CellType.ConfigType, TableRow.SenderType == CellAction.SenderType {
     public let item: CellType.ConfigType
     public let action: CellAction
@@ -77,7 +77,7 @@ public class TableRow<CellType: ConfigurableCell, CellAction: TapActionable>: Ro
     }
 }
 
-public class GridRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UICollectionView>
+open class GridRow<CellType: ConfigurableCell, CellAction: TapActionable>: Row<UICollectionView>
         where CellAction.RowActionType == CellType.ConfigType, GridRow.SenderType == CellAction.SenderType {
     public let item: CellType.ConfigType
     public let action: CellAction

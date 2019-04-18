@@ -11,6 +11,7 @@ import RxSwift
 import CoreData
 import Crashlytics
 import InvoiceBotSDK
+import CommonUI
 
 /// The wallet model is used to create and handle wallet objects.
 /// - row type (
@@ -21,7 +22,7 @@ import InvoiceBotSDK
 ///    - wallet type
 ///         - title, *storage item* (int)
 /// )
-class WalletModel: DetailModel<BudgetWallet> {
+class WalletModel: DetailModel<BudgetWallet, UITableView> {
     
     /// Data model items that hold the values the user edits
     private let name: TextEntry
@@ -29,7 +30,7 @@ class WalletModel: DetailModel<BudgetWallet> {
     
     /// Observable that determines when to enable the save button, basically we just need a `description` to store an item
     override var saveEnabledObservable: Observable<Bool> {
-        return description.value.asObservable().map({ (value) -> Bool in
+        return name.value.asObservable().map({ (value) -> Bool in
             return !(value?.isEmpty ?? true)
         })
     }

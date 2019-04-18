@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonUI
 
 class UserCell: ReusableTableViewCell, ConfigurableCell {
     typealias ConfigType = UserItem

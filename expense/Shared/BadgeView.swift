@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonUI
 
 @IBDesignable
 class BadgeView: UIView, XibSetupable {

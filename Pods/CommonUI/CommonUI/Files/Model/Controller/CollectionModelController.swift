@@ -8,9 +8,7 @@ import UIKit
 import CoreData
 import RxSwift
 
-public class CollectionModel: Model<UICollectionView> {}
-
-public class CollectionModelController<CollectionModelType: CollectionModel>: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+open class CollectionModelController<CollectionModelType: Model<UICollectionView>>: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet public weak var collectionView: UICollectionView!
 
     public let bag = DisposeBag()
@@ -22,11 +20,11 @@ public class CollectionModelController<CollectionModelType: CollectionModel>: UI
     }()
 
     /// Override point for the lazy Model creation.
-    public func createModel() -> CollectionModelType {
+    open func createModel() -> CollectionModelType {
         return CollectionModelType(with: context)
     }
 
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         if let items = collectionView.indexPathsForSelectedItems, items.count > 0 {

@@ -4,19 +4,13 @@
 //
 
 import UIKit
+import CommonUI
 
 class SelectWalletAction: CollectionTapAction<WalletItem> {
-    override func performTap(with rowItem: WalletItem, indexPath: IndexPath, sender: UICollectionView, ctr: UIViewController, model: Model<UICollectionView>) {
-
-//        if isProExpired {
-//            super.performTap(with: rowItem, indexPath: indexPath, tableView: tableView, ctr: ctr, model: model)
-//            return
-//        }
-        print("did select wallet")
-        //this ensures that the client is loaded in a childcontext to allow changes
-        // TODO: add an controller to list the entries.
-//        let nCtr =  ClientViewController.show(item: rowItem.item)
-//        Analytics.clientSelect.logEvent()
-//        ctr.present(nCtr, animated: true)
+    override func performTap(with rowItem: WalletItem, indexPath: IndexPath, sender: UICollectionView,
+                             ctr: UIViewController, model: Model<UICollectionView>) {
+        let nCtr = NewWalletViewController.show(item: rowItem.data.value)
+        Analytics.walletSelect.logEvent()
+        ctr.present(nCtr, animated: true)
     }
 }

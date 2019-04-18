@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonUI
 
 /// The CornerView is an convience implementation that helps the Interface Builder
 /// to set the layer corner properties.

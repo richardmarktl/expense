@@ -10,9 +10,7 @@ import UIKit
 import RxSwift
 import CoreData
 
-open class TableModel: Model<UITableView> { }
-
-public class TableModelController<TableModelType: TableModel>: UIViewController, UITableViewDelegate, UITableViewDataSource {
+open class TableModelController<TableModelType:  Model<UITableView>>: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet public weak var tableView: UITableView!
 
     public let bag = DisposeBag()
@@ -20,12 +18,12 @@ public class TableModelController<TableModelType: TableModel>: UIViewController,
     public var manuallyManageDataUpdate: Bool = false
 
     public lazy var model: TableModelType = { return createModel() }()
-    
-    public func createModel() -> TableModelType {
+
+    open func createModel() -> TableModelType {
         return TableModelType(with: context)
     }
 
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {

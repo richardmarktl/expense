@@ -9,22 +9,22 @@
 import UIKit
 import RxSwift
 
-public class ReusableTableViewCell: UITableViewCell {
+open class ReusableTableViewCell: UITableViewCell {
 
     private(set) public var reusableBag: DisposeBag = DisposeBag()
 
-    public override func prepareForReuse() {
+    open override func prepareForReuse() {
         super.prepareForReuse()
         reusableBag = DisposeBag()
     }
 }
 
 
-public class ReusableCollectionViewCell: UICollectionViewCell {
+open class ReusableCollectionViewCell: UICollectionViewCell {
 
     private(set) public var reusableBag: DisposeBag = DisposeBag()
 
-    public override func prepareForReuse() {
+    open override func prepareForReuse() {
         super.prepareForReuse()
         reusableBag = DisposeBag()
     }

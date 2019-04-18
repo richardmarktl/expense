@@ -7,12 +7,13 @@
 //
 
 import Foundation
-import CoreData
-import CoreDataExtensio
 import RxSwift
 import RxCocoa
+import CoreData
+import CoreDataExtensio
+import CommonUtil
 
-class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableModelController<Model>, AutoScroller {
+open class DetailTableModelController<ItemType, Model: DetailModel<ItemType, UITableView>>: TableModelController<Model>, AutoScroller {
     @IBOutlet weak var deleteButton: ActionButton?
     @IBOutlet weak var saveButton: ActionButton?
 
@@ -28,7 +29,7 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
     public var dismissActionBlock: ((UIViewController) -> Void)?
     public var askBeforeDeletion: Bool = true
 
-    override public func createModel() -> Model {
+    override open func createModel() -> Model {
         let storeChangesAutomatically = completionBlock == nil
         let deleteAutomatically = removeBlock == nil
         return Model(item: item, storeChangesAutomatically: storeChangesAutomatically, deleteAutomatically: deleteAutomatically, sections: [], in: context)
@@ -38,6 +39,14 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
     public var scrollViewDefaultInsets: UIEdgeInsets = .zero
     public var scrollView: UIScrollView!
     public var additionalHeight: CGFloat = 0
+
+    open class func createItem() -> UIViewController {
+        let ctx = CoreDataContainer.instance!.newMainThreadChildContext()
+        //swiftlint:disable force_cast
+        let item = ItemType.create(in: ctx) as! ItemType
+        //swiftlint:enable force_cast
+        return show(item: item, in: ctx)
+    }
 
     public class func show(item: ItemType,
                            in context: NSManagedObjectContext = CoreDataContainer.instance!.newMainThreadChildContext(),
@@ -62,11 +71,11 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
         return controllers.0
     }
 
-    public class func controllers<T>(type: T.Type) -> (UIViewController, T) {
+    open class func controllers<T>(type: T.Type) -> (UIViewController, T) {
         fatalError()
     }
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         title = model.title
@@ -77,12 +86,12 @@ class DetailTableModelController<ItemType, Model: DetailModel<ItemType>>: TableM
         setupCancel()
     }
 
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         registerForKeyboardEvents(rx.viewWillDisappear.mapToVoid())
     }
 
-    public override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if model.shouldAutoSelectFirstRowIfNewlyInserted {
             tableView.delegate?.tableView!(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CommonUI
 
 class SettingsCell: UITableViewCell, ConfigurableCell {
     typealias ConfigType = SettingsItem

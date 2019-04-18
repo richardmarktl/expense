@@ -8,6 +8,7 @@ import RxSwift
 import CoreData
 import Crashlytics
 import InvoiceBotSDK
+import CommonUI
 
 /// MARK: -
 /// Item to display the data in the cell
@@ -47,8 +48,7 @@ struct WalletItemHelper {
 
 
 /// The wallets model is used to load and handle all the wallets objects.
-class WalletsModel: GridSearchableModel<WalletItem> {
-
+class WalletsModel: SearchableModel<WalletItem, UICollectionView> {
     convenience init(searchObservable: Observable<String>, with context: NSManagedObjectContext) {
         // add the create wallet cell.
         let rows: [Row<UICollectionView>] = [

@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import CoreData
 import CoreDataExtensio
-
+import CommonUI
 
 class WalletViewController: CollectionModelController<WalletsModel> {
     private let emptyViewAddSubject: PublishSubject<Void> = PublishSubject()
@@ -62,6 +62,6 @@ class WalletViewController: CollectionModelController<WalletsModel> {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Analytics.client.logEvent()
+        Analytics.wallet.logEvent()
     }
 }

@@ -124,13 +124,6 @@ enum Analytics: String {
     case item
     case itemNew
     case itemSelect
-
-    // events called from the wallet tab
-    case wallet
-    case walletNew
-    case walletSelect
-
-    // events call
     
     // events called from the report tab
     case report
@@ -252,7 +245,19 @@ enum Analytics: String {
     
     case pushProvisional
     case pushDenied
-    
+
+    // MARK: -
+    /// NEW FOR EXPENSE
+
+    case wallet
+    case walletNew
+    case walletSelect
+
+    // events call
+    case category
+    case categoryNew
+    case categorySelect
+
     func logEvent(with activity: UIActivity.ActivityType?) {
         let parameters: [String: NSObject]?
         if let activityType = activity?.rawValue {

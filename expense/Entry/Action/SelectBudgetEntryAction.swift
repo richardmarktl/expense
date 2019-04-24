@@ -9,9 +9,7 @@ import CommonUI
 class SelectBudgetEntryAction: CollectionTapAction<BudgetEntryItem> {
     override func performTap(with rowItem: BudgetEntryItem, indexPath: IndexPath, sender: UICollectionView,
                              ctr: UIViewController, model: Model<UICollectionView>) {
-        print("not implemented")
-//        let nCtr = NewWalletViewController.show(item: rowItem.data.value)
-//        Analytics.walletSelect.logEvent()
-//        ctr.present(nCtr, animated: true)
+        let editCtr = EditBudgetEntryViewController.edit(entry: rowItem.value)
+        ctr.navigationController?.pushViewController(editCtr, animated: true)
     }
 }

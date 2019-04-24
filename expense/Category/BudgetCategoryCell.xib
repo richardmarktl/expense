@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BudgetCategoryCell" id="BXY-Cu-0Zp" customClass="BudgetCategoryCell" customModule="expense" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-AC-wf3" customClass="CornerView" customModule="expense" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="341" height="97"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQh-jF-c3j">
+                                <rect key="frame" x="10" y="10" width="321" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="nIG-s4-6e9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYM-P0-M4c">
+                                <rect key="frame" x="10" y="42" width="321" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FM4-Yw-9Ua"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="main"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fYM-P0-M4c" secondAttribute="trailing" constant="10" id="K9e-G1-Q1a"/>
+                            <constraint firstItem="fYM-P0-M4c" firstAttribute="top" secondItem="PQh-jF-c3j" secondAttribute="bottom" constant="6" id="ZtT-jl-nuf"/>
+                            <constraint firstItem="PQh-jF-c3j" firstAttribute="leading" secondItem="BMh-AC-wf3" secondAttribute="leading" constant="10" id="evL-st-Idt"/>
+                            <constraint firstAttribute="trailing" secondItem="PQh-jF-c3j" secondAttribute="trailing" constant="10" id="qLG-mg-qeN"/>
+                            <constraint firstItem="fYM-P0-M4c" firstAttribute="leading" secondItem="BMh-AC-wf3" secondAttribute="leading" constant="10" id="rvY-SL-nOc"/>
+                            <constraint firstItem="PQh-jF-c3j" firstAttribute="top" secondItem="BMh-AC-wf3" secondAttribute="top" constant="10" id="teD-nc-ub8"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BMh-AC-wf3" secondAttribute="bottom" id="6N9-1s-R1o"/>
+                <constraint firstAttribute="trailing" secondItem="BMh-AC-wf3" secondAttribute="trailing" id="NeC-nT-deq"/>
+                <constraint firstItem="BMh-AC-wf3" firstAttribute="leading" secondItem="BXY-Cu-0Zp" secondAttribute="leading" id="R8b-x8-t3a"/>
+                <constraint firstItem="BMh-AC-wf3" firstAttribute="top" secondItem="BXY-Cu-0Zp" secondAttribute="top" id="hpk-JT-lPl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="5C4-aV-maj"/>
+            <size key="customSize" width="341" height="97"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="fYM-P0-M4c" id="bBr-7m-MYX"/>
+                <outlet property="nameLabel" destination="PQh-jF-c3j" id="FoD-V9-ams"/>
+            </connections>
+            <point key="canvasLocation" x="-357.24637681159425" y="-103.45982142857143"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="main">
+            <color red="0.19215686274509805" green="0.62352941176470589" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

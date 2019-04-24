@@ -14,17 +14,26 @@ class EditBudgetEntryViewController:  DetailTableModelController<BudgetEntry, Bu
         super.viewDidLoad()
         tableView.register(R.nib.textFieldCell)
         tableView.register(R.nib.numberCell)
-
+        tableView.register(R.nib.budgetEntrySelectCategoryCell)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(done))
     }
 
     public class func newEntry(with wallet: BudgetWallet) -> EditBudgetEntryViewController {
         guard let controller = R.storyboard.wallet.editBudgetEntryViewController() else {
-            fatalError("The EditBudgetEntryViewController is not set.")
+            fatalError("The EditBudgetEntryViewController is not in the storyboard.")
         }
         controller.context = CoreDataContainer.instance!.newMainThreadChildContext()
         controller.item =  BudgetEntry.create(in: controller.context)
         controller.item.wallet = controller.context.object(with: wallet.objectID) as? BudgetWallet
+        return controller
+    }
+
+    public class func edit(entry: BudgetEntry) -> EditBudgetEntryViewController {
+        guard let controller = R.storyboard.wallet.editBudgetEntryViewController() else {
+            fatalError("The EditBudgetEntryViewController is not in the storyboard.")
+        }
+        controller.context = CoreDataContainer.instance!.newMainThreadChildContext()
+        controller.item = entry
         return controller
     }
 

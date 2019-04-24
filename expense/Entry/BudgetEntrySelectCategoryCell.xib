@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BudgetEntrySelectCategoryCell" id="9gh-De-XE8" customClass="BudgetEntrySelectCategoryCell" customModule="expense" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9gh-De-XE8" id="w9I-sC-w3b">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eyH-gt-m3i">
+                        <rect key="frame" x="0.0" y="0.0" width="45" height="45.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="IWQ-9b-OaJ"/>
+                            <constraint firstAttribute="width" constant="45" id="uid-oM-pyf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSa-QY-20h">
+                        <rect key="frame" x="55" y="12.5" width="311" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="NSa-QY-20h" secondAttribute="trailing" constant="10" id="7C4-JW-phG"/>
+                    <constraint firstAttribute="bottom" secondItem="eyH-gt-m3i" secondAttribute="bottom" id="E1a-mo-CSL"/>
+                    <constraint firstItem="NSa-QY-20h" firstAttribute="centerY" secondItem="w9I-sC-w3b" secondAttribute="centerY" id="EKt-3y-n31"/>
+                    <constraint firstItem="NSa-QY-20h" firstAttribute="top" secondItem="w9I-sC-w3b" secondAttribute="top" constant="12" id="cLG-j4-wOJ"/>
+                    <constraint firstItem="NSa-QY-20h" firstAttribute="leading" secondItem="eyH-gt-m3i" secondAttribute="trailing" constant="10" id="j4p-N6-f5o"/>
+                    <constraint firstItem="eyH-gt-m3i" firstAttribute="top" secondItem="w9I-sC-w3b" secondAttribute="top" id="tPJ-go-bUE"/>
+                    <constraint firstItem="eyH-gt-m3i" firstAttribute="leading" secondItem="w9I-sC-w3b" secondAttribute="leading" id="yEM-BD-B6J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="categoryIcon" destination="eyH-gt-m3i" id="eBZ-3f-J2l"/>
+                <outlet property="categoryName" destination="NSa-QY-20h" id="Rw6-RZ-3NR"/>
+            </connections>
+            <point key="canvasLocation" x="-129" y="-34"/>
+        </tableViewCell>
+    </objects>
+</document>

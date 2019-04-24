@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E44-kh-UDM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Categories-->
+        <scene sceneID="So6-gS-18u">
+            <objects>
+                <viewController id="ENh-Sw-gcz" customClass="BudgetCategoriesViewController" customModule="expense" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QME-w3-4m7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V5D-CR-Naf">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pMU-Va-vWu">
+                                    <size key="itemSize" width="280" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EpX-W5-tsp">
+                                        <rect key="frame" x="67" y="0.0" width="280" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ENh-Sw-gcz" id="PHg-oB-7El"/>
+                                    <outlet property="delegate" destination="ENh-Sw-gcz" id="hQI-od-dcl"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V5D-CR-Naf" firstAttribute="leading" secondItem="FK5-Vb-xwu" secondAttribute="leading" id="E7J-D8-YDp"/>
+                            <constraint firstItem="FK5-Vb-xwu" firstAttribute="bottom" secondItem="V5D-CR-Naf" secondAttribute="bottom" id="Unt-wR-d70"/>
+                            <constraint firstItem="V5D-CR-Naf" firstAttribute="top" secondItem="FK5-Vb-xwu" secondAttribute="top" id="Vy8-cr-leM"/>
+                            <constraint firstItem="FK5-Vb-xwu" firstAttribute="trailing" secondItem="V5D-CR-Naf" secondAttribute="trailing" id="kFo-mL-nsh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FK5-Vb-xwu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Categories" id="1NH-ub-aCh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="mix-Ku-Pk2">
+                            <connections>
+                                <action selector="done" destination="ENh-Sw-gcz" id="evX-ms-Gmh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="V5D-CR-Naf" id="K2V-dm-ifN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qjj-Ab-fxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-896" y="-340"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jpz-NA-K0S">
+            <objects>
+                <navigationController storyboardIdentifier="BudgetCategoriesViewController" id="E44-kh-UDM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nmH-aO-D9f">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ENh-Sw-gcz" kind="relationship" relationship="rootViewController" id="lTp-TL-Y19"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5NN-zy-ySd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1681" y="-340"/>
+        </scene>
+        <!--Budget Category Edit View Controller-->
+        <scene sceneID="afr-tG-FGv">
+            <objects>
+                <viewController storyboardIdentifier="BudgetCategoryEditViewController" id="FDD-US-47i" customClass="BudgetCategoryEditViewController" customModule="expense" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cAR-ku-KJv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iRr-ty-6uA">
+                                <rect key="frame" x="14" y="730" width="386" height="118"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96L-EX-5V6" customClass="ActionButton" customModule="CommonUI">
+                                        <rect key="frame" x="0.0" y="0.0" width="386" height="55"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="rlZ-4J-CAO"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Delete"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.94509803920000002" green="0.2274509804" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.96470588239999999" green="0.61176470589999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCc-ch-IVm" customClass="ActionButton" customModule="CommonUI">
+                                        <rect key="frame" x="0.0" y="63" width="386" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="1Qk-gd-gVL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Save"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.74901960779999999" green="0.90980392160000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9L3-3P-Ba4">
+                                <rect key="frame" x="0.0" y="-44" width="414" height="760"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FDD-US-47i" id="qfr-iH-NS2"/>
+                                    <outlet property="delegate" destination="FDD-US-47i" id="Z6j-JH-yJN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9L3-3P-Ba4" firstAttribute="top" secondItem="fyt-4S-wWd" secondAttribute="top" constant="-88" id="3BF-bw-dpd"/>
+                            <constraint firstItem="fyt-4S-wWd" firstAttribute="trailing" secondItem="iRr-ty-6uA" secondAttribute="trailing" constant="14" id="4W9-aR-V0o"/>
+                            <constraint firstItem="9L3-3P-Ba4" firstAttribute="leading" secondItem="fyt-4S-wWd" secondAttribute="leading" id="SZF-e8-Ho4"/>
+                            <constraint firstItem="iRr-ty-6uA" firstAttribute="top" secondItem="9L3-3P-Ba4" secondAttribute="bottom" constant="14" id="T14-Y9-LLc"/>
+                            <constraint firstItem="fyt-4S-wWd" firstAttribute="bottom" secondItem="iRr-ty-6uA" secondAttribute="bottom" constant="14" id="WB5-i2-yfy"/>
+                            <constraint firstItem="fyt-4S-wWd" firstAttribute="trailing" secondItem="9L3-3P-Ba4" secondAttribute="trailing" id="l9X-x7-fYW"/>
+                            <constraint firstItem="iRr-ty-6uA" firstAttribute="leading" secondItem="fyt-4S-wWd" secondAttribute="leading" constant="14" id="nX0-vJ-0Um"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fyt-4S-wWd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xug-jh-8OR"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="96L-EX-5V6" id="32K-AV-mv7"/>
+                        <outlet property="saveButton" destination="fCc-ch-IVm" id="kdO-6e-ybl"/>
+                        <outlet property="tableView" destination="9L3-3P-Ba4" id="dsP-3K-ecr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wg9-CQ-n3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="-340"/>
+        </scene>
+    </scenes>
+</document>

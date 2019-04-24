@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Medium.otf">
+            <string>FiraSans-Medium</string>
+        </array>
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Empty View Controller-->
+        <scene sceneID="vYL-HV-Bio">
+            <objects>
+                <viewController storyboardIdentifier="EmptyViewController" id="DkP-ZO-Z9r" customClass="EmptyViewController" customModule="CommonUI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XMG-b9-1uH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwC-XD-eCm">
+                                <rect key="frame" x="14" y="428" width="386" height="40.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aae-ji-Yb9">
+                                        <rect key="frame" x="0.0" y="0.0" width="386" height="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Medium" family="Fira Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.62352941179999999" green="0.70588235290000001" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A potentially long message " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTE-HA-CK3">
+                                        <rect key="frame" x="0.0" y="24" width="386" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
+                                        <color key="textColor" red="0.62352941179999999" green="0.70588235290000001" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Aae-ji-Yb9" firstAttribute="top" secondItem="hwC-XD-eCm" secondAttribute="top" id="FJX-sE-WNm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aae-ji-Yb9" secondAttribute="trailing" id="IIf-8N-t8h"/>
+                                    <constraint firstItem="gTE-HA-CK3" firstAttribute="top" secondItem="Aae-ji-Yb9" secondAttribute="bottom" constant="4" id="TIa-e6-QTz"/>
+                                    <constraint firstItem="gTE-HA-CK3" firstAttribute="leading" secondItem="hwC-XD-eCm" secondAttribute="leading" id="f9l-1z-381"/>
+                                    <constraint firstAttribute="bottom" secondItem="gTE-HA-CK3" secondAttribute="bottom" id="ugB-ch-nss"/>
+                                    <constraint firstItem="Aae-ji-Yb9" firstAttribute="leading" secondItem="hwC-XD-eCm" secondAttribute="leading" id="wzO-xK-BDk"/>
+                                    <constraint firstAttribute="trailing" secondItem="gTE-HA-CK3" secondAttribute="trailing" id="zcs-VO-I8H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mOS-zO-QA2" firstAttribute="trailing" secondItem="hwC-XD-eCm" secondAttribute="trailing" constant="14" id="OO0-SS-KrD"/>
+                            <constraint firstItem="hwC-XD-eCm" firstAttribute="leading" secondItem="mOS-zO-QA2" secondAttribute="leading" constant="14" id="WgT-nO-71F"/>
+                            <constraint firstItem="hwC-XD-eCm" firstAttribute="centerY" secondItem="XMG-b9-1uH" secondAttribute="centerY" id="vIi-oT-W4z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mOS-zO-QA2"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="gTE-HA-CK3" id="qa2-xw-Vl0"/>
+                        <outlet property="messageTitleLabel" destination="Aae-ji-Yb9" id="ilF-bO-CBW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cq2-eY-TNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-246" y="3"/>
+        </scene>
+    </scenes>
+</document>

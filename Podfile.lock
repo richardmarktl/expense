@@ -112,7 +112,7 @@ PODS:
   - ImageStorage (1.0.2):
     - RxCocoa (~> 4.5.0)
     - RxSwift (~> 4.5.0)
-  - InvoiceBotSDK (1.0.6):
+  - InvoiceBotSDK (1.0.7):
     - CommonUtil (~> 0.0.3)
     - CoreDataExtensio (~> 2.0.4)
     - ImageStorage (~> 1.0.2)
@@ -166,7 +166,7 @@ DEPENDENCIES:
   - FirebaseMessaging
   - FirebaseRemoteConfig
   - GoogleSignIn
-  - InvoiceBotSDK (~> 1.0.6)
+  - InvoiceBotSDK (~> 1.0.7)
   - JLRoutes (~> 2.1)
   - Kvitto (~> 1.0.2)
   - Moya/RxSwift (~> 12.0.1)
@@ -264,7 +264,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   ImageStorage: 740dd713b1fa074762d9c4cfd742af452ef72ada
-  InvoiceBotSDK: 3a86e78b45c326b4440ae6ffa4c62ca44eb64b52
+  InvoiceBotSDK: fb9da32cf84267b8352883bc2a3c6d4dc63e0a3a
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   Kvitto: d451f893f84ad669850b7cb7d3f8781363e14232
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
@@ -283,6 +283,6 @@ SPEC CHECKSUMS:
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: 8ef1b9533725feaadda41a1401d5885b0ff0d229
+PODFILE CHECKSUM: 2653f0aa500b9b1d99405f5f46c28ed4bcdddab3
 
 COCOAPODS: 1.6.1

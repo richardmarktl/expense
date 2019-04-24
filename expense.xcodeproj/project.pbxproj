@@ -9,17 +9,24 @@
 /* Begin PBXBuildFile section */
 		245F6595BFB660C0DCB88EC1 /* Pods_expense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5390150F0DE85C1237DE9E6 /* Pods_expense.framework */; };
 		4757101DB1B13234F23E3831 /* WalletsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571ED7915245F3A7389FB4 /* WalletsModel.swift */; };
+		4757136E7D2E2707E46131DD /* CreateBudgetEntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571937DD0B48E81B2CF93C /* CreateBudgetEntryAction.swift */; };
 		4757146B1620691C0999B4A4 /* BudgetEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4757104753111F3520F64D98 /* BudgetEntryCell.swift */; };
 		475714857F94026A1DE8E620 /* DataItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571E390612756C8C846C8E /* DataItems.swift */; };
 		475714EA5E0043DFAE79E11C /* BudgetEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571BB1632917F4B1CDDBF1 /* BudgetEntriesViewController.swift */; };
 		475715414C0019C7283A271C /* Invoice+Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571A7860F1ED7AF3D97D89 /* Invoice+Predicate.swift */; };
+		475715E10821C695BCAF7E98 /* NumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47571101FFF57D12713FC0EC /* NumberCell.xib */; };
+		475716DEE08F50131A85DC29 /* EditBudgetEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571519C39F9ADFD79E863D /* EditBudgetEntryViewController.swift */; };
 		47571782A937A9537F7104B8 /* SelectWalletAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571C0EA1526E27F832C2AC /* SelectWalletAction.swift */; };
+		475717AA9836ECDDA7469466 /* NumberEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4757189E9DBB3ECC214886BC /* NumberEntry.swift */; };
+		47571859D9D795B152EF8C81 /* BudgetEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571043E57423AE48872687 /* BudgetEntryModel.swift */; };
 		475718D3446FDAF866AFAB20 /* CreateWalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */; };
 		475718F9FFDA7068FCA02D0A /* BudgetEntryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475713425847F13BD9ECCE07 /* BudgetEntryItem.swift */; };
 		475719EDC9AA696A7C454659 /* CreateWalletAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571ADB15499231EF42EC00 /* CreateWalletAction.swift */; };
 		47571B5562DA231746C1F663 /* WalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475713978ADBDC1396656323 /* WalletItem.swift */; };
-		47571BC47DE7FC2DBABF1C29 /* SelectBudgetEntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571FD090ED03D4CFA25392 /* SelectBudgetEntryAction.swift */; };
+		47571BB22009DB5E0440BADE /* NumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4757194B95E0885C31690CAE /* NumberValidator.swift */; };
 		47571CE666531DC2877CD7FF /* BudgetEntriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571DC8D7D15D1172357708 /* BudgetEntriesModel.swift */; };
+		47571E9A1779590104E70E9E /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571BC6BB98AD68DC3EA1ED /* NumberCell.swift */; };
+		47571F89540DBBEF8EF83F2F /* SelectBudgetEntryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47571C80C8F24253F47B7898 /* SelectBudgetEntryAction.swift */; };
 		5C4EE1D4C3B9C8635E265EA9 /* Pods_expenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */; };
 		7967983E225CFDB900C85009 /* KeyboardAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7967983D225CFDB900C85009 /* KeyboardAccessory.xib */; };
 		79679842225E2BB000C85009 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79679841225E2BB000C85009 /* WalletCell.xib */; };
@@ -72,6 +79,8 @@
 		79D14090225CE8A400B11435 /* KeyboardAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1408F225CE8A300B11435 /* KeyboardAccessory.swift */; };
 		79D14092225CE8FC00B11435 /* UIView+Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14091225CE8FC00B11435 /* UIView+Find.swift */; };
 		79D14094225CE9D700B11435 /* OrderActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D14093225CE9D700B11435 /* OrderActions.swift */; };
+		79D7F0E0226F1CF0005866F3 /* EmptyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D7F0DF226F1CF0005866F3 /* EmptyViewController.storyboard */; };
+		79D7F0E2226F296C005866F3 /* BudgetEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D7F0E1226F296C005866F3 /* BudgetEntryCell.xib */; };
 		79F98D752256053E0026C17B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F98D742256053E0026C17B /* AppDelegate.swift */; };
 		79F98D7A2256053E0026C17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F98D782256053E0026C17B /* Main.storyboard */; };
 		79F98D7C225605400026C17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F98D7B225605400026C17B /* Assets.xcassets */; };
@@ -109,18 +118,25 @@
 		0F0656D62D1BBFEC8F3AD214 /* Pods-expenseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseUITests.release.xcconfig"; path = "Target Support Files/Pods-expenseUITests/Pods-expenseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F40EFEF708DAC57612BC6E9 /* Pods-expenseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-expenseTests.debug.xcconfig"; path = "Target Support Files/Pods-expenseTests/Pods-expenseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F3B2193CB4E72383A193040 /* Pods_expenseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expenseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47571043E57423AE48872687 /* BudgetEntryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntryModel.swift; sourceTree = "<group>"; };
 		4757104753111F3520F64D98 /* BudgetEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntryCell.swift; sourceTree = "<group>"; };
+		47571101FFF57D12713FC0EC /* NumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCell.xib; sourceTree = "<group>"; };
 		475713425847F13BD9ECCE07 /* BudgetEntryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntryItem.swift; sourceTree = "<group>"; };
 		475713978ADBDC1396656323 /* WalletItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletItem.swift; sourceTree = "<group>"; };
+		47571519C39F9ADFD79E863D /* EditBudgetEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBudgetEntryViewController.swift; sourceTree = "<group>"; };
+		4757189E9DBB3ECC214886BC /* NumberEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberEntry.swift; sourceTree = "<group>"; };
 		47571931E9BE90BA87B6BD60 /* CreateWalletCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWalletCell.swift; sourceTree = "<group>"; };
+		47571937DD0B48E81B2CF93C /* CreateBudgetEntryAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBudgetEntryAction.swift; sourceTree = "<group>"; };
+		4757194B95E0885C31690CAE /* NumberValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberValidator.swift; sourceTree = "<group>"; };
 		47571A7860F1ED7AF3D97D89 /* Invoice+Predicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Invoice+Predicate.swift"; sourceTree = "<group>"; };
 		47571ADB15499231EF42EC00 /* CreateWalletAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWalletAction.swift; sourceTree = "<group>"; };
 		47571BB1632917F4B1CDDBF1 /* BudgetEntriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntriesViewController.swift; sourceTree = "<group>"; };
+		47571BC6BB98AD68DC3EA1ED /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 		47571C0EA1526E27F832C2AC /* SelectWalletAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWalletAction.swift; sourceTree = "<group>"; };
+		47571C80C8F24253F47B7898 /* SelectBudgetEntryAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectBudgetEntryAction.swift; sourceTree = "<group>"; };
 		47571DC8D7D15D1172357708 /* BudgetEntriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntriesModel.swift; sourceTree = "<group>"; };
 		47571E390612756C8C846C8E /* DataItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataItems.swift; sourceTree = "<group>"; };
 		47571ED7915245F3A7389FB4 /* WalletsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletsModel.swift; sourceTree = "<group>"; };
-		47571FD090ED03D4CFA25392 /* SelectBudgetEntryAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectBudgetEntryAction.swift; sourceTree = "<group>"; };
 		52B47F7E3CEC572915E7D231 /* Pods_expenseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expenseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7967983D225CFDB900C85009 /* KeyboardAccessory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardAccessory.xib; sourceTree = "<group>"; };
 		79679841225E2BB000C85009 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
@@ -173,6 +189,8 @@
 		79D1408F225CE8A300B11435 /* KeyboardAccessory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAccessory.swift; sourceTree = "<group>"; };
 		79D14091225CE8FC00B11435 /* UIView+Find.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Find.swift"; sourceTree = "<group>"; };
 		79D14093225CE9D700B11435 /* OrderActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderActions.swift; sourceTree = "<group>"; };
+		79D7F0DF226F1CF0005866F3 /* EmptyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmptyViewController.storyboard; sourceTree = "<group>"; };
+		79D7F0E1226F296C005866F3 /* BudgetEntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BudgetEntryCell.xib; sourceTree = "<group>"; };
 		79F98D712256053E0026C17B /* expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F98D742256053E0026C17B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F98D792256053E0026C17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -238,14 +256,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		475711CAD00C5415AC4BFCF6 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				47571519C39F9ADFD79E863D /* EditBudgetEntryViewController.swift */,
+				47571C80C8F24253F47B7898 /* SelectBudgetEntryAction.swift */,
+				47571937DD0B48E81B2CF93C /* CreateBudgetEntryAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
 		47571DD5A6D5CBE51C4CB2B2 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
 				47571BB1632917F4B1CDDBF1 /* BudgetEntriesViewController.swift */,
 				47571DC8D7D15D1172357708 /* BudgetEntriesModel.swift */,
 				475713425847F13BD9ECCE07 /* BudgetEntryItem.swift */,
-				47571FD090ED03D4CFA25392 /* SelectBudgetEntryAction.swift */,
 				4757104753111F3520F64D98 /* BudgetEntryCell.swift */,
+				79D7F0E1226F296C005866F3 /* BudgetEntryCell.xib */,
+				47571043E57423AE48872687 /* BudgetEntryModel.swift */,
+				475711CAD00C5415AC4BFCF6 /* Action */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -472,6 +502,11 @@
 				47571E390612756C8C846C8E /* DataItems.swift */,
 				47571A7860F1ED7AF3D97D89 /* Invoice+Predicate.swift */,
 				47571DD5A6D5CBE51C4CB2B2 /* Entry */,
+				79D7F0DF226F1CF0005866F3 /* EmptyViewController.storyboard */,
+				4757189E9DBB3ECC214886BC /* NumberEntry.swift */,
+				4757194B95E0885C31690CAE /* NumberValidator.swift */,
+				47571BC6BB98AD68DC3EA1ED /* NumberCell.swift */,
+				47571101FFF57D12713FC0EC /* NumberCell.xib */,
 			);
 			path = expense;
 			sourceTree = "<group>";
@@ -611,6 +646,7 @@
 			files = (
 				79F98D7F225605400026C17B /* LaunchScreen.storyboard in Resources */,
 				79679842225E2BB000C85009 /* WalletCell.xib in Resources */,
+				79D7F0E2226F296C005866F3 /* BudgetEntryCell.xib in Resources */,
 				79D14051225CA10300B11435 /* Wallet.storyboard in Resources */,
 				79D14088225CE7EF00B11435 /* TextFieldCell.xib in Resources */,
 				7967983E225CFDB900C85009 /* KeyboardAccessory.xib in Resources */,
@@ -624,8 +660,10 @@
 				79F98D7A2256053E0026C17B /* Main.storyboard in Resources */,
 				79D14059225CB6C500B11435 /* terms.html in Resources */,
 				79D13FF1225B32A600B11435 /* TableFooterView.xib in Resources */,
+				79D7F0E0226F1CF0005866F3 /* EmptyViewController.storyboard in Resources */,
 				79D1405B225CB6C500B11435 /* subscription.html in Resources */,
 				79F98DAA225643C00026C17B /* Settings.storyboard in Resources */,
+				475715E10821C695BCAF7E98 /* NumberCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,7 +742,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -898,8 +936,14 @@
 				475714EA5E0043DFAE79E11C /* BudgetEntriesViewController.swift in Sources */,
 				47571CE666531DC2877CD7FF /* BudgetEntriesModel.swift in Sources */,
 				475718F9FFDA7068FCA02D0A /* BudgetEntryItem.swift in Sources */,
-				47571BC47DE7FC2DBABF1C29 /* SelectBudgetEntryAction.swift in Sources */,
 				4757146B1620691C0999B4A4 /* BudgetEntryCell.swift in Sources */,
+				47571859D9D795B152EF8C81 /* BudgetEntryModel.swift in Sources */,
+				475717AA9836ECDDA7469466 /* NumberEntry.swift in Sources */,
+				47571BB22009DB5E0440BADE /* NumberValidator.swift in Sources */,
+				47571E9A1779590104E70E9E /* NumberCell.swift in Sources */,
+				475716DEE08F50131A85DC29 /* EditBudgetEntryViewController.swift in Sources */,
+				47571F89540DBBEF8EF83F2F /* SelectBudgetEntryAction.swift in Sources */,
+				4757136E7D2E2707E46131DD /* CreateBudgetEntryAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -52,7 +52,7 @@ class WalletsModel: SearchableModel<WalletItem, UICollectionView> {
     convenience init(searchObservable: Observable<String>, with context: NSManagedObjectContext) {
         // add the create wallet cell.
         let rows: [Row<UICollectionView>] = [
-            GridRow<CreateWalletCell, CreateWalletAction>(item: ActionItem(title: ""), action: CreateWalletAction()),
+            GridRow<CreateWalletCell, CreateWalletAction>(item: ActionItem(title: "+ Add Wallet"), action: CreateWalletAction()),
         ]
 
         self.init(searchObservable: searchObservable,

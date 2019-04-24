@@ -98,7 +98,7 @@
         <attribute name="remoteId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="updatedTimestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="entries" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BudgetEntry" inverseName="category" inverseEntity="BudgetEntry" syncable="YES"/>
+        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BudgetEntry" inverseName="category" inverseEntity="BudgetEntry" syncable="YES"/>
     </entity>
     <entity name="BudgetEntry" representedClassName="BudgetEntry" syncable="YES" codeGenerationType="class">
         <attribute name="createdTimestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -130,7 +130,7 @@
         <attribute name="updatedTimestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="walletDescription" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="entries" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BudgetEntry" inverseName="wallet" inverseEntity="BudgetEntry" syncable="YES"/>
+        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BudgetEntry" inverseName="wallet" inverseEntity="BudgetEntry" syncable="YES"/>
     </entity>
     <entity name="Client" representedClassName="Client" parentEntity="AccountBaseItem" syncable="YES" codeGenerationType="class">
         <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>

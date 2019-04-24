@@ -13,7 +13,7 @@ class BudgetEntryCell: ReusableCollectionViewCell, ConfigurableCell {
     @IBOutlet weak var typeLabel: UILabel!
 
     func configure(with item: BudgetEntryItem) {
-//        nameLabel.text = item.name
-//        typeLabel.text = item.type
+        nameLabel.text = item.name
+        typeLabel.text = item.type
     }
 }

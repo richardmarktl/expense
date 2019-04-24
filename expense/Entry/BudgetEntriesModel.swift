@@ -26,14 +26,19 @@ struct BudgetEntryItemHelper {
     ///
     /// - Parameter context: ctx we load from
     /// - Returns: ViewItems we generate
-    static func instancesObservable(in context: NSManagedObjectContext) -> Observable<[BudgetEntryItem]> {
+    static func instancesObservable(in context: NSManagedObjectContext, from: BudgetWallet?) -> Observable<[BudgetEntryItem]> {
 
         let background = ConcurrentDispatchQueueScheduler(qos: .background)
         return Observable.just(()).observeOn(background).flatMap { () -> Observable<[BudgetEntry]> in
-            let predicate = NSPredicate.undeletedItem()
+            var predicate = NSPredicate.undeletedItem()
+            if let wallet = from {
+                predicate = predicate.and(NSPredicate(format: "wallet == %@", wallet))
+            }
             return BudgetEntry.rxAllObjects(matchingPredicate: predicate, context: context)
         }.map { wallets in
-            return wallets.map { BudgetEntryItem(defaultData: $0) }
+            return wallets.map {
+                BudgetEntryItem(defaultData: $0)
+            }
         }.observeOn(MainScheduler.instance)
     }
 
@@ -48,14 +53,17 @@ struct BudgetEntryItemHelper {
 
 /// The wallets model is used to load and handle all the wallets objects.
 class BudgetEntriesModel: SearchableModel<BudgetEntryItem, UICollectionView> {
-    convenience init(searchObservable: Observable<String>, with context: NSManagedObjectContext) {
+    convenience init(searchObservable: Observable<String>, wallet: BudgetWallet?, with context: NSManagedObjectContext) {
         // add the create wallet cell.
         let rows: [Row<UICollectionView>] = [
-            GridRow<CreateWalletCell, CreateWalletAction>(item: ActionItem(title: ""), action: CreateWalletAction()),
+            GridRow<CreateWalletCell, CreateBudgetEntryAction>(
+                    item: ActionItem(title: "+ Add Expense"), 
+                    action: CreateBudgetEntryAction()
+            ),
         ]
 
         self.init(searchObservable: searchObservable,
-                loadObservable: BudgetEntryItemHelper.instancesObservable(in: context),
+                loadObservable: BudgetEntryItemHelper.instancesObservable(in: context, from: wallet),
                 itemMapper: BudgetEntryItemHelper.mapper, defaultSections: [Section(rows: rows)], with: context
         )
     }

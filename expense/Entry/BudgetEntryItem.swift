@@ -17,8 +17,8 @@ class BudgetEntryItem: BasicItem<BudgetEntry> {
     }
 
     func update(with entry: BudgetEntry) {
-//        name = entry.name ?? ""
-//        type = entry.localizedWalletType
+        name = entry.name ?? ""
+        type = String(describing: entry.entryType.rawValue)  // TODO: add a localization
         data.value = entry
     }
 }

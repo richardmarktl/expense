@@ -348,47 +348,152 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="6Z6-dM-0BX" kind="relationship" relationship="rootViewController" id="gkx-Ca-R2Y"/>
+                        <segue destination="G3L-ki-UlL" kind="relationship" relationship="rootViewController" id="VEX-gh-sKu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sj-a8-5qx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-826" y="429"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="cMq-eH-BdO">
+        <!--Wallet Name-->
+        <scene sceneID="48v-yt-2wZ">
             <objects>
-                <collectionViewController id="6Z6-dM-0BX" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qIf-6y-iVk">
+                <viewController id="G3L-ki-UlL" customClass="BudgetEntriesViewController" customModule="expense" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7t3-y5-AYE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v0C-Bj-EUb">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4wG-kV-cqE">
+                                    <size key="itemSize" width="280" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ule-ut-ABy">
+                                        <rect key="frame" x="67" y="0.0" width="280" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="G3L-ki-UlL" id="fVz-Rd-PNa"/>
+                                    <outlet property="delegate" destination="G3L-ki-UlL" id="cFc-cd-Iza"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jm9-eF-F7j">
-                            <size key="itemSize" width="280" height="100"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FZi-sA-hkQ">
-                                <rect key="frame" x="67" y="0.0" width="280" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="6Z6-dM-0BX" id="oqL-hL-ydp"/>
-                            <outlet property="delegate" destination="6Z6-dM-0BX" id="roV-sk-80T"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="SK9-OW-fks"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C2V-OL-f7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="v0C-Bj-EUb" firstAttribute="top" secondItem="RLk-iv-GO6" secondAttribute="top" id="fZy-Qw-6Z6"/>
+                            <constraint firstItem="v0C-Bj-EUb" firstAttribute="leading" secondItem="RLk-iv-GO6" secondAttribute="leading" id="m6G-lL-7tQ"/>
+                            <constraint firstItem="RLk-iv-GO6" firstAttribute="trailing" secondItem="v0C-Bj-EUb" secondAttribute="trailing" id="s5w-SL-aHp"/>
+                            <constraint firstItem="RLk-iv-GO6" firstAttribute="bottom" secondItem="v0C-Bj-EUb" secondAttribute="bottom" id="yVO-Ss-dZx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RLk-iv-GO6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wallet Name" id="fiB-g1-4v1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="eOD-2f-yd9">
+                            <connections>
+                                <action selector="done" destination="G3L-ki-UlL" id="0ji-X1-B2H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="v0C-Bj-EUb" id="hp8-Kc-Vrn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpB-xp-BDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="433"/>
+            <point key="canvasLocation" x="-104" y="429"/>
+        </scene>
+        <!--Edit Budget Entry View Controller-->
+        <scene sceneID="f7Q-yJ-xkr">
+            <objects>
+                <viewController storyboardIdentifier="EditBudgetEntryViewController" id="0xY-1N-swr" customClass="EditBudgetEntryViewController" customModule="expense" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GNu-er-IX8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="woU-tf-5DS">
+                                <rect key="frame" x="14" y="730" width="386" height="118"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcP-ji-lns" customClass="ActionButton" customModule="CommonUI">
+                                        <rect key="frame" x="0.0" y="0.0" width="386" height="55"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="B3d-ww-4Ab"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Delete"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.94509803920000002" green="0.2274509804" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.96470588239999999" green="0.61176470589999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AT8-7i-AJh" customClass="ActionButton" customModule="CommonUI">
+                                        <rect key="frame" x="0.0" y="63" width="386" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="qgn-w2-GVd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Save"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                <color key="value" red="0.74901960779999999" green="0.90980392160000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gqj-Mo-X7H">
+                                <rect key="frame" x="0.0" y="-44" width="414" height="760"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0xY-1N-swr" id="11E-QR-vQG"/>
+                                    <outlet property="delegate" destination="0xY-1N-swr" id="e0q-5c-g5r"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kON-Qg-yop" firstAttribute="trailing" secondItem="woU-tf-5DS" secondAttribute="trailing" constant="14" id="01h-rK-Rdt"/>
+                            <constraint firstItem="Gqj-Mo-X7H" firstAttribute="leading" secondItem="kON-Qg-yop" secondAttribute="leading" id="5Z4-I4-xKo"/>
+                            <constraint firstItem="woU-tf-5DS" firstAttribute="leading" secondItem="kON-Qg-yop" secondAttribute="leading" constant="14" id="UWe-G4-ogh"/>
+                            <constraint firstItem="kON-Qg-yop" firstAttribute="trailing" secondItem="Gqj-Mo-X7H" secondAttribute="trailing" id="gJg-TF-bdS"/>
+                            <constraint firstItem="woU-tf-5DS" firstAttribute="top" secondItem="Gqj-Mo-X7H" secondAttribute="bottom" constant="14" id="qhL-nI-pv5"/>
+                            <constraint firstItem="kON-Qg-yop" firstAttribute="bottom" secondItem="woU-tf-5DS" secondAttribute="bottom" constant="14" id="uvf-NX-jqD"/>
+                            <constraint firstItem="Gqj-Mo-X7H" firstAttribute="top" secondItem="kON-Qg-yop" secondAttribute="top" constant="-88" id="yTK-bT-nrD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kON-Qg-yop"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AJL-cA-olS"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="EcP-ji-lns" id="MLU-xX-ZUw"/>
+                        <outlet property="saveButton" destination="AT8-7i-AJh" id="dwm-zg-nGZ"/>
+                        <outlet property="tableView" destination="Gqj-Mo-X7H" id="v6u-sd-uIC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIo-vH-CVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="429"/>
         </scene>
     </scenes>
     <resources>

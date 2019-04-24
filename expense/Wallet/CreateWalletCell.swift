@@ -8,8 +8,9 @@ import CommonUI
 
 class CreateWalletCell: ReusableCollectionViewCell, ConfigurableCell {
     typealias ConfigType = ActionItem
+    @IBOutlet weak var titleLabel: UILabel!
 
     func configure(with item: ConfigType) {
-
+        titleLabel.text = item.title
     }
 }

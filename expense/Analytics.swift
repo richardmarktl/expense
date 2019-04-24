@@ -129,6 +129,8 @@ enum Analytics: String {
     case wallet
     case walletNew
     case walletSelect
+
+    // events call
     
     // events called from the report tab
     case report

@@ -69,12 +69,6 @@ class FirstResponderActionTextFieldCell: TapAction<TextEntry> {
     typealias RowActionType = TextEntry
     
     override func performTap(with rowItem: TextEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: Model<UITableView>) {
-        
-//        if (isProExpired) {
-//            super.performTap(with: rowItem, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
-//            return
-//        }
-        
         guard let cell = sender.cellForRow(at: indexPath) as? TextFieldCell else {
             return
         }
@@ -93,33 +87,27 @@ class FirstResponderActionTextFieldCell: TapAction<TextEntry> {
     }
 }
 
-//class FirstResponderActionNumberCell: ProTapAction<NumberEntry> {
-//    typealias RowActionType = NumberEntry
-//
-//    override func performTap(with rowItem: NumberEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
-//
-//        if (isProExpired) {
-//            super.performTap(with: rowItem, indexPath: indexPath, sender: sender, ctr: ctr, model: model)
-//            return
-//        }
-//
-//        guard let cell = sender.cellForRow(at: indexPath) as? NumberCell else {
-//            return
-//        }
-//
-//        cell.textField.isUserInteractionEnabled = true
-//        _ = cell.textField.becomeFirstResponder()
-//    }
-//
-//    override func rewindAction(with rowItem: NumberEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: TableModel<UITableView>) {
-//        guard let cell = sender.cellForRow(at: indexPath) as? NumberCell else {
-//            return
-//        }
-//
-//        _ = cell.textField.resignFirstResponder()
-//        cell.textField.isUserInteractionEnabled = false
-//    }
-//}
+class FirstResponderActionNumberCell: TapAction<NumberEntry> {
+    typealias RowActionType = NumberEntry
+
+    override func performTap(with rowItem: NumberEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: Model<UITableView>) {
+        guard let cell = sender.cellForRow(at: indexPath) as? NumberCell else {
+            return
+        }
+
+        cell.textField.isUserInteractionEnabled = true
+        _ = cell.textField.becomeFirstResponder()
+    }
+
+    override func rewindAction(with rowItem: NumberEntry, indexPath: IndexPath, sender: UITableView, ctr: UIViewController, model: Model<UITableView>) {
+        guard let cell = sender.cellForRow(at: indexPath) as? NumberCell else {
+            return
+        }
+
+        _ = cell.textField.resignFirstResponder()
+        cell.textField.isUserInteractionEnabled = false
+    }
+}
 //
 //class FirstResponderActionDiscountCell: ProTapAction<DiscountEntry> {
 //    typealias RowActionType = DiscountEntry

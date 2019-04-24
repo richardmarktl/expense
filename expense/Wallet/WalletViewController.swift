@@ -23,6 +23,12 @@ class WalletViewController: CollectionModelController<WalletsModel> {
         return searchSubject.asObservable().startWith("")
     }
 
+    override open func createModel() -> WalletsModel {
+        context = CoreDataContainer.instance!.mainContext
+        return WalletsModel(searchObservable: searchObservable, with: context)
+
+    }
+
     override func viewDidLoad() {
 //        emptyTitle = R.string.localizable.noWallets()
 //        emptyMessage = R.string.localizable.noClientMessage()
@@ -46,8 +52,7 @@ class WalletViewController: CollectionModelController<WalletsModel> {
 //            }
 //        }).disposed(by: bag)
 
-        context = CoreDataContainer.instance!.mainContext
-        model = WalletsModel(searchObservable: searchObservable, with: context)
+
 
         super.viewDidLoad()
 

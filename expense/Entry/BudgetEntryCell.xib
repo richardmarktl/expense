@@ -23,33 +23,33 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HuW-9j-e54" customClass="CornerView" customModule="expense" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="229" height="75"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYz-as-e7K">
-                                <rect key="frame" x="10" y="10" width="209" height="26"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="c30-Hr-THc">
+                                <rect key="frame" x="10" y="10" width="209" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Wallet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYz-as-e7K">
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="28.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0v-Bf-6EB">
+                                        <rect key="frame" x="0.0" y="34.5" width="209" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="qt8-T7-daM"/>
+                                    <constraint firstItem="n0v-Bf-6EB" firstAttribute="top" secondItem="WYz-as-e7K" secondAttribute="bottom" constant="6" id="XQs-qi-HjB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0v-Bf-6EB">
-                                <rect key="frame" x="10" y="42" width="209" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Ebp-qI-Y5q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="main"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="n0v-Bf-6EB" secondAttribute="trailing" constant="10" id="5SG-i9-757"/>
-                            <constraint firstItem="n0v-Bf-6EB" firstAttribute="top" secondItem="WYz-as-e7K" secondAttribute="bottom" constant="6" id="E0G-nC-AWO"/>
-                            <constraint firstItem="WYz-as-e7K" firstAttribute="top" secondItem="HuW-9j-e54" secondAttribute="top" constant="10" id="QnS-EO-zhC"/>
-                            <constraint firstItem="n0v-Bf-6EB" firstAttribute="leading" secondItem="HuW-9j-e54" secondAttribute="leading" constant="10" id="bgR-No-MR9"/>
-                            <constraint firstAttribute="trailing" secondItem="WYz-as-e7K" secondAttribute="trailing" constant="10" id="tya-tG-NmW"/>
-                            <constraint firstItem="WYz-as-e7K" firstAttribute="leading" secondItem="HuW-9j-e54" secondAttribute="leading" constant="10" id="ucm-dA-MX8"/>
+                            <constraint firstAttribute="bottom" secondItem="c30-Hr-THc" secondAttribute="bottom" constant="10" id="9yy-ZD-r8e"/>
+                            <constraint firstAttribute="trailing" secondItem="c30-Hr-THc" secondAttribute="trailing" constant="10" id="k6V-Da-5pS"/>
+                            <constraint firstItem="c30-Hr-THc" firstAttribute="top" secondItem="HuW-9j-e54" secondAttribute="top" constant="10" id="m5H-9A-itJ"/>
+                            <constraint firstItem="c30-Hr-THc" firstAttribute="leading" secondItem="HuW-9j-e54" secondAttribute="leading" constant="10" id="x0Q-yf-axB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zJQ-4d-Wnd"/>
                         <userDefinedRuntimeAttributes>

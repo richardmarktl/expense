@@ -10,7 +10,7 @@ PODS:
   - Charts (3.2.2):
     - Charts/Core (= 3.2.2)
   - Charts/Core (3.2.2)
-  - CommonUI (0.0.17):
+  - CommonUI (0.0.18):
     - CommonUtil (~> 0.0.3)
     - CoreDataExtensio (~> 2.0.4)
     - RxCocoa (~> 4.5.0)
@@ -158,7 +158,7 @@ PODS:
 DEPENDENCIES:
   - Amplitude-iOS (~> 4.6.0)
   - Charts (~> 3.2.2)
-  - CommonUI (~> 0.0.17)
+  - CommonUI (~> 0.0.18)
   - CoreDataExtensio (~> 2.0.4)
   - Crashlytics (~> 3.12.0)
   - EmailValidator (from `https://github.com/gekitz/EmailValidator.git`, commit `e39cb1f`)
@@ -249,7 +249,7 @@ SPEC CHECKSUMS:
   Amplitude-iOS: ac1715ae68104b7a51723209ad574f60ab22ae5f
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
-  CommonUI: 039335b8488583953e0aa658b54a74666cb7c61c
+  CommonUI: 8f44bf8c6a0aea8ddd3ee01685194dfd80a9418a
   CommonUtil: 989d3168fb75466d52203dccc868ba8cd9972245
   CoreDataExtensio: c2bf4e6fdb90606de71f61d71d6cd8b12055319a
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
@@ -291,6 +291,6 @@ SPEC CHECKSUMS:
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: bf5863f12f2b24635f92b69b9aab556166dbcdd0
+PODFILE CHECKSUM: eb923c46ce2cf003ae41ce1a7ed6cc33760a8f65
 
 COCOAPODS: 1.6.1

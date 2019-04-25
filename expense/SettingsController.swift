@@ -27,6 +27,9 @@ class SettingsController: TableModelController<SettingsModel> {
         super.viewDidLoad()
         context = CoreDataContainer.instance?.mainContext
 
+        tableView.register(R.nib.userCell)
+        tableView.register(R.nib.settingsCell)
+
 //        #if DEBUG
 //        tableView.register(R.nib.switchCell)
 //        tableView.register(R.nib.subtitleCell)

@@ -19,4 +19,11 @@ class WalletCell: ReusableCollectionViewCell, ConfigurableCell {
         nameLabel.text = item.name
         typeLabel.text = item.type
     }
+
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        layoutAttributes.bounds.size.height = systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        return layoutAttributes
+    }
 }

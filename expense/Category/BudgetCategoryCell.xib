@@ -23,33 +23,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-AC-wf3" customClass="CornerView" customModule="expense" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="341" height="97"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQh-jF-c3j">
-                                <rect key="frame" x="10" y="10" width="321" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="nIG-s4-6e9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYM-P0-M4c">
-                                <rect key="frame" x="10" y="42" width="321" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="FM4-Yw-9Ua"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LSX-Bc-KTE">
+                                <rect key="frame" x="10" y="10" width="321" height="77"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Wallet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQh-jF-c3j">
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="50.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYM-P0-M4c">
+                                        <rect key="frame" x="0.0" y="56.5" width="321" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="main"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="fYM-P0-M4c" secondAttribute="trailing" constant="10" id="K9e-G1-Q1a"/>
-                            <constraint firstItem="fYM-P0-M4c" firstAttribute="top" secondItem="PQh-jF-c3j" secondAttribute="bottom" constant="6" id="ZtT-jl-nuf"/>
-                            <constraint firstItem="PQh-jF-c3j" firstAttribute="leading" secondItem="BMh-AC-wf3" secondAttribute="leading" constant="10" id="evL-st-Idt"/>
-                            <constraint firstAttribute="trailing" secondItem="PQh-jF-c3j" secondAttribute="trailing" constant="10" id="qLG-mg-qeN"/>
-                            <constraint firstItem="fYM-P0-M4c" firstAttribute="leading" secondItem="BMh-AC-wf3" secondAttribute="leading" constant="10" id="rvY-SL-nOc"/>
-                            <constraint firstItem="PQh-jF-c3j" firstAttribute="top" secondItem="BMh-AC-wf3" secondAttribute="top" constant="10" id="teD-nc-ub8"/>
+                            <constraint firstItem="LSX-Bc-KTE" firstAttribute="leading" secondItem="BMh-AC-wf3" secondAttribute="leading" constant="10" id="3la-Ee-qO8"/>
+                            <constraint firstAttribute="bottom" secondItem="LSX-Bc-KTE" secondAttribute="bottom" constant="10" id="8B3-aO-VY8"/>
+                            <constraint firstItem="LSX-Bc-KTE" firstAttribute="top" secondItem="BMh-AC-wf3" secondAttribute="top" constant="10" id="Gks-a4-trg"/>
+                            <constraint firstAttribute="trailing" secondItem="LSX-Bc-KTE" secondAttribute="trailing" constant="10" id="w7W-9A-bHZ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

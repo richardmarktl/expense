@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ImageLoadingCell" id="Jfh-h9-Jg2" customClass="ImageLoadingCell" customModule="expense" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jfh-h9-Jg2" id="I2m-Z5-LH4" customClass="ImageLoadingCell" customModule="expense" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="337" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dij-cb-ye2">
+                        <rect key="frame" x="20" y="-1" width="48" height="45.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GWI-DZ-FJJ">
+                                <rect key="frame" x="0.0" y="11" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="UWt-hr-3RD"/>
+                                    <constraint firstAttribute="height" constant="24" id="agl-0z-0Oy"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RcZ-TS-Y8z">
+                                <rect key="frame" x="24" y="11" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Yl4-Ke-ZHm"/>
+                                    <constraint firstAttribute="width" constant="24" id="n7g-QQ-ANJ"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="XWC-6x-hI6"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJD-ky-TyO">
+                        <rect key="frame" x="82" y="12" width="241" height="20"/>
+                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                        <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dij-cb-ye2" firstAttribute="centerY" secondItem="I2m-Z5-LH4" secondAttribute="centerY" id="6HJ-9H-i0c"/>
+                    <constraint firstAttribute="trailing" secondItem="XJD-ky-TyO" secondAttribute="trailing" constant="14" id="HVY-tv-k2L"/>
+                    <constraint firstItem="XJD-ky-TyO" firstAttribute="leading" secondItem="dij-cb-ye2" secondAttribute="trailing" constant="14" id="W7i-Go-TV0"/>
+                    <constraint firstItem="XJD-ky-TyO" firstAttribute="centerY" secondItem="I2m-Z5-LH4" secondAttribute="centerY" id="fhv-Ne-59E"/>
+                    <constraint firstItem="dij-cb-ye2" firstAttribute="leading" secondItem="I2m-Z5-LH4" secondAttribute="leadingMargin" id="rDC-9b-whl"/>
+                </constraints>
+                <connections>
+                    <outlet property="indicatorView" destination="RcZ-TS-Y8z" id="XaU-qQ-T4l"/>
+                    <outlet property="thumbImageView" destination="GWI-DZ-FJJ" id="23r-ZQ-lSF"/>
+                    <outlet property="titleLabel" destination="XJD-ky-TyO" id="d9V-3r-BDb"/>
+                </connections>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="indicatorView" destination="RcZ-TS-Y8z" id="Fgk-4X-OQ6"/>
+                <outlet property="thumbImageView" destination="GWI-DZ-FJJ" id="lFH-7s-ddl"/>
+                <outlet property="titleLabel" destination="XJD-ky-TyO" id="WqV-J2-DGK"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

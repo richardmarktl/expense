@@ -257,6 +257,8 @@ enum Analytics: String {
     case category
     case categoryNew
     case categorySelect
+    case categoryAddImage
+    case categoryShowImage
 
     func logEvent(with activity: UIActivity.ActivityType?) {
         let parameters: [String: NSObject]?

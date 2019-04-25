@@ -10,20 +10,22 @@ import Foundation
 import CoreData
 import CoreDataExtensio
 import InvoiceBotSDK
+import ImageStorage
+
 
 extension BudgetCategory: Fetchable, Createable {
     public typealias CreatedType = BudgetCategory
     public typealias FetchableType = BudgetCategory
     public typealias I = String
-    
+
     public static func idName() -> String {
         return "uuid"
     }
-    
+
     public static func defaultSortDescriptor() -> [NSSortDescriptor] {
         return [NSSortDescriptor(key: "createdTimestamp", ascending: true)]
     }
-    
+
     public static func create(in context: NSManagedObjectContext) -> BudgetCategory {
         let instance = BudgetCategory(inContext: context)
         instance.uuid = UUID().uuidString.lowercased()
@@ -32,4 +34,21 @@ extension BudgetCategory: Fetchable, Createable {
         instance.localUpdateTimestamp = Date()
         return instance
     }
+
+    var hasImage: Bool {
+        get {
+            if image != nil {
+                return true
+            }
+            if let filename = uuid {
+                return ImageStorage.hasItemStoredOnFileSystem(
+                        in: FileSystemDirectory.imageAttachments,
+                        filename: filename
+                )
+            }
+            return false
+
+        }
+    }
+
 }

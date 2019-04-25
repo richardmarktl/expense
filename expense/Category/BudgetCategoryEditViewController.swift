@@ -13,6 +13,8 @@ class BudgetCategoryEditViewController: DetailTableModelController<BudgetCategor
         super.viewDidLoad()
         tableView.register(R.nib.textFieldCell)
         tableView.register(R.nib.numberCell)
+        tableView.register(R.nib.imageLoadingCell)
+        tableView.register(R.nib.addCell)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(done))
     }
 

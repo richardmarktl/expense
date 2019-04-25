@@ -48,7 +48,7 @@ target 'expense' do
   pod 'Amplitude-iOS', '~> 4.6.0', :inhibit_warnings => true
 
   # ImageViever
-  # pod 'ImageViewer', '~> 5.0.0'
+  pod 'ImageViewer', :git => "https://github.com/Nabeatsu/ImageViewer.git"
 
   # Facebook
   pod 'FacebookCore', '~> 0.6.0', :inhibit_warnings => true

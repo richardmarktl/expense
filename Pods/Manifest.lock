@@ -112,6 +112,7 @@ PODS:
   - ImageStorage (1.0.2):
     - RxCocoa (~> 4.5.0)
     - RxSwift (~> 4.5.0)
+  - ImageViewer (5.0.0)
   - InvoiceBotSDK (1.0.7):
     - CommonUtil (~> 0.0.3)
     - CoreDataExtensio (~> 2.0.4)
@@ -166,6 +167,7 @@ DEPENDENCIES:
   - FirebaseMessaging
   - FirebaseRemoteConfig
   - GoogleSignIn
+  - ImageViewer (from `https://github.com/Nabeatsu/ImageViewer.git`)
   - InvoiceBotSDK (~> 1.0.7)
   - JLRoutes (~> 2.1)
   - Kvitto (~> 1.0.2)
@@ -231,11 +233,16 @@ EXTERNAL SOURCES:
   EmailValidator:
     :commit: e39cb1f
     :git: https://github.com/gekitz/EmailValidator.git
+  ImageViewer:
+    :git: https://github.com/Nabeatsu/ImageViewer.git
 
 CHECKOUT OPTIONS:
   EmailValidator:
     :commit: e39cb1f
     :git: https://github.com/gekitz/EmailValidator.git
+  ImageViewer:
+    :commit: 16388ac42603b295d6270ef8d32bb8a42dd8ff43
+    :git: https://github.com/Nabeatsu/ImageViewer.git
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -264,6 +271,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   ImageStorage: 740dd713b1fa074762d9c4cfd742af452ef72ada
+  ImageViewer: 997018c2f4f7f9830602349bbcc3b2b776424942
   InvoiceBotSDK: fb9da32cf84267b8352883bc2a3c6d4dc63e0a3a
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   Kvitto: d451f893f84ad669850b7cb7d3f8781363e14232
@@ -283,6 +291,6 @@ SPEC CHECKSUMS:
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: 2653f0aa500b9b1d99405f5f46c28ed4bcdddab3
+PODFILE CHECKSUM: bf5863f12f2b24635f92b69b9aab556166dbcdd0
 
 COCOAPODS: 1.6.1

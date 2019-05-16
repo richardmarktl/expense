@@ -56,7 +56,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Expense Bot" id="XGe-LO-c2B"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="settings" id="7on-rJ-M8G">
                             <connections>
-                                <segue destination="pkg-35-ZcE" kind="presentation" id="A5U-q2-nmX"/>
+                                <action selector="showSettings" destination="O9i-NM-3tt" id="mzT-V2-vbp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -67,14 +67,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECb-iA-NDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="-210"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="hYy-6I-B2z">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="pkg-35-ZcE" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MO0-yI-BOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="824" y="-488"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="shW-ow-Yoj">

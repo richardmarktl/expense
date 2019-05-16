@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="92" id="lu8-FB-1ed" customClass="SettingsUserCell" customModule="SettingsUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lu8-FB-1ed" id="r1M-18-XzC">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="91.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_cell" translatesAutoresizingMaskIntoConstraints="NO" id="IWE-65-5by">
+                        <rect key="frame" x="14" y="14" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="dHO-MP-rXb"/>
+                            <constraint firstAttribute="height" constant="64" id="wxF-LB-6cn"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqH-dU-h0k">
+                        <rect key="frame" x="92" y="24" width="270" height="42"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Georg Kitz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hK-vK-bym">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="20"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                                <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account &amp; Subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-Zt-BRd">
+                                <rect key="frame" x="0.0" y="25" width="270" height="17"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
+                                <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6hK-vK-bym" firstAttribute="leading" secondItem="SqH-dU-h0k" secondAttribute="leading" id="0sN-ne-7J3"/>
+                            <constraint firstAttribute="trailing" secondItem="VgE-Zt-BRd" secondAttribute="trailing" id="1eI-He-p4R"/>
+                            <constraint firstAttribute="trailing" secondItem="6hK-vK-bym" secondAttribute="trailing" id="1t8-5R-pHs"/>
+                            <constraint firstItem="VgE-Zt-BRd" firstAttribute="leading" secondItem="SqH-dU-h0k" secondAttribute="leading" id="9i1-k1-Wdy"/>
+                            <constraint firstItem="VgE-Zt-BRd" firstAttribute="top" secondItem="6hK-vK-bym" secondAttribute="bottom" constant="5" id="K5I-XZ-pXe"/>
+                            <constraint firstAttribute="bottom" secondItem="VgE-Zt-BRd" secondAttribute="bottom" id="fNF-hU-UAs"/>
+                            <constraint firstItem="6hK-vK-bym" firstAttribute="top" secondItem="SqH-dU-h0k" secondAttribute="top" id="iJn-Eo-DKB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="IWE-65-5by" secondAttribute="bottom" constant="14" id="9Xm-dc-gGB"/>
+                    <constraint firstItem="IWE-65-5by" firstAttribute="leading" secondItem="r1M-18-XzC" secondAttribute="leading" constant="14" id="IT9-br-ef6"/>
+                    <constraint firstItem="SqH-dU-h0k" firstAttribute="top" secondItem="r1M-18-XzC" secondAttribute="top" constant="24" id="KQx-tE-Opz"/>
+                    <constraint firstItem="SqH-dU-h0k" firstAttribute="leading" secondItem="IWE-65-5by" secondAttribute="trailing" constant="14" id="cEZ-Uh-NZQ"/>
+                    <constraint firstItem="SqH-dU-h0k" firstAttribute="centerY" secondItem="r1M-18-XzC" secondAttribute="centerY" id="iUk-2W-XI8"/>
+                    <constraint firstItem="IWE-65-5by" firstAttribute="top" secondItem="r1M-18-XzC" secondAttribute="top" constant="14" id="vCd-7Z-kjo"/>
+                    <constraint firstAttribute="trailing" secondItem="SqH-dU-h0k" secondAttribute="trailing" constant="14" id="wY8-Az-cot"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="6hK-vK-bym" id="gL6-h7-J1y"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="avatar_cell" width="66" height="66"/>
+    </resources>
+</document>

@@ -19,8 +19,8 @@ public struct ErrorPresentable {
     public static func show(error: Error, handler: ((UIAlertAction) -> Swift.Void)? = nil) {
         if let controller = UIApplication.shared.topMostViewController() {
             
-            let ok = PodLocalizedString("ok", comment: "")
-            let information = PodLocalizedString("information", comment: "")
+            let ok = PodLocalizedString("ok")
+            let information = PodLocalizedString("information")
             
             let alert = UIAlertController(title: information, message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: ok, style: .cancel, handler: handler)

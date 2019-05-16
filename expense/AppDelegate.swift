@@ -8,25 +8,27 @@
 
 import UIKit
 import CoreDataExtensio
+import SettingsUI
+import CommonUtil
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
+        RxImagePickerDelegateProxy.register {
+            RxImagePickerDelegateProxy(imagePicker: $0)
+        }
 
         setupDatabase()
-        
+
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             RatingService.create(currentAppVersion: AppInfo.version)
             #if DEBUG
             RatingService.instance.isDebug = true
             #endif
         }
-        
+
         return true
     }
 
@@ -52,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    
+
     private func setupDatabase() {
         if UITestHelper.isUITesting {
             UserDefaults.appGroup.clearToken()

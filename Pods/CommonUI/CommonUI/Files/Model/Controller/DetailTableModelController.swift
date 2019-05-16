@@ -54,7 +54,7 @@ open class DetailTableModelController<ItemType, Model: DetailModel<ItemType, UIT
                            removeBlock: (() -> Void)? = nil,
                            cancelBlock: (() -> Void)? = nil) -> UIViewController {
         let controllers = self.controllers(type: self)
-
+        
         controllers.1.context = context
         controllers.1.completionBlock = completionBlock
         controllers.1.removeBlock = removeBlock
@@ -122,9 +122,9 @@ open class DetailTableModelController<ItemType, Model: DetailModel<ItemType, UIT
         deleteButton.isHidden = model.isDeleteButtonHidden
         deleteButton.tapObservable.subscribe(onNext: { [unowned self] (_) in
             if self.askBeforeDeletion {
-                let deletionDetected = PodLocalizedString("Are you sure you want to delete this?", comment: "")
-                let cancelString = PodLocalizedString("Cancel", comment: "")
-                let deleteString = PodLocalizedString("Delete", comment: "")
+                let deletionDetected = PodLocalizedString("Are you sure you want to delete this?")
+                let cancelString = PodLocalizedString("Cancel")
+                let deleteString = PodLocalizedString("Delete")
                 let alert = UIAlertController(title: nil, message: deletionDetected, preferredStyle: UIAlertController.Style.alert)
                 let cancel = UIAlertAction(title: cancelString, style: UIAlertAction.Style.cancel, handler: nil)
                 let save = UIAlertAction(title: deleteString, style: UIAlertAction.Style.default, handler: { [weak self](_) in
@@ -189,9 +189,9 @@ open class DetailTableModelController<ItemType, Model: DetailModel<ItemType, UIT
 
     private func cancelAlert(for model: Model) -> Observable<Bool> {
         return Observable.create({ [weak self] (observer) -> Disposable in
-            let changes = PodLocalizedString("You made some changes.\n\nShould the changes be saved?", comment: "")
-            let discard = PodLocalizedString("Discard", comment: "")
-            let store = PodLocalizedString("Save", comment: "")
+            let changes = PodLocalizedString("You made some changes.\n\nShould the changes be saved?")
+            let discard = PodLocalizedString("Discard")
+            let store = PodLocalizedString("Save")
 
             let alert = UIAlertController(title: nil, message: changes, preferredStyle: UIAlertController.Style.alert)
             let cancel = UIAlertAction(title: discard, style: UIAlertAction.Style.cancel, handler: { (_) in

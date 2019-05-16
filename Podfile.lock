@@ -10,13 +10,13 @@ PODS:
   - Charts (3.2.2):
     - Charts/Core (= 3.2.2)
   - Charts/Core (3.2.2)
-  - CommonUI (0.0.18):
+  - CommonUI (0.0.19):
     - CommonUtil (~> 0.0.3)
     - CoreDataExtensio (~> 2.0.4)
     - RxCocoa (~> 4.5.0)
     - RxOptional (~> 3.6.2)
     - RxSwift (~> 4.5.0)
-  - CommonUtil (0.0.3):
+  - CommonUtil (0.0.7):
     - RxCocoa (~> 4.5.0)
     - RxOptional (~> 3.6.2)
     - RxSwift (~> 4.5.0)
@@ -149,6 +149,9 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
+  - SettingsUI (0.0.8):
+    - CommonUI (~> 0.0.19)
+    - SupportEmail (~> 3.0.0)
   - SupportEmail (3.0.0)
   - SwiftLint (0.31.0)
   - SwiftRichString (3.0.0)
@@ -158,7 +161,7 @@ PODS:
 DEPENDENCIES:
   - Amplitude-iOS (~> 4.6.0)
   - Charts (~> 3.2.2)
-  - CommonUI (~> 0.0.18)
+  - CommonUI (~> 0.0.19)
   - CoreDataExtensio (~> 2.0.4)
   - Crashlytics (~> 3.12.0)
   - EmailValidator (from `https://github.com/gekitz/EmailValidator.git`, commit `e39cb1f`)
@@ -176,6 +179,7 @@ DEPENDENCIES:
   - Reachability (~> 3.2)
   - RxCocoa (~> 4.5.0)
   - RxSwift (~> 4.5.0)
+  - SettingsUI (~> 0.0.8)
   - SupportEmail (~> 3.0.0)
   - SwiftLint (~> 0.23)
   - SwiftRichString (~> 3.0.0)
@@ -188,6 +192,7 @@ SPEC REPOS:
     - CommonUtil
     - ImageStorage
     - InvoiceBotSDK
+    - SettingsUI
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Amplitude-iOS
@@ -249,8 +254,8 @@ SPEC CHECKSUMS:
   Amplitude-iOS: ac1715ae68104b7a51723209ad574f60ab22ae5f
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
-  CommonUI: 8f44bf8c6a0aea8ddd3ee01685194dfd80a9418a
-  CommonUtil: 989d3168fb75466d52203dccc868ba8cd9972245
+  CommonUI: 4ae3b1f7dc6e8d79a9832c3b0577bb9cec5685fa
+  CommonUtil: 4012d7bf6534d21c1761ea7a2dcbe3939a90adf9
   CoreDataExtensio: c2bf4e6fdb90606de71f61d71d6cd8b12055319a
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
@@ -285,12 +290,13 @@ SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SettingsUI: b57239d0c222fee82526f098fe632056e39e05b8
   SupportEmail: b324c80bf2e58007d8f7edffc9e003039f016829
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SwiftRichString: 5cb4860df3dc8e4d9087d7b948b210177342c3da
   SwiftSignatureView: f9ea7317c6c5520b21190e499fbb859ae85c4e55
   SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
 
-PODFILE CHECKSUM: eb923c46ce2cf003ae41ce1a7ed6cc33760a8f65
+PODFILE CHECKSUM: c18bc347c4a6e29eb8a8ce34cc4af9b8284de333
 
 COCOAPODS: 1.6.1

@@ -1,0 +1,30 @@
+/*
+  Localizable.strings
+  SettingsUI
+
+  Created by Richard Marktl on 2019-05-09.
+  Copyright (c) 2019 meisterwork. All rights reserved.
+*/
+
+"EmailSupport" = "Email Support";
+"ShareApp" = "Share app";
+"RateApp" = "Rate app";
+"TermsAPrivacy" = "Terms & Privacy";
+"SubscribeToNewsletter" = "Subscribe to newsletter";
+"Info" = "Info";
+"Email" = "Email";
+"Information" = "Information";
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Subscribe" = "Subscribe";
+"Subscription" = "Subscription";
+"Privacy" = "Privacy";
+"Terms" = "Terms";
+"RatingHelpDoYouLike" = "Do you like InvoiceBot";
+"RatingHelpUs" = "Please help us to improve InvoiceBot by answering this quick question.";
+"RatingHelpILoveIt" = "I Love It 😻";
+"RatingHelpCouldBeBetter" = "Send Feedback 😿";
+"noMailApp" = "The Apple Mail app is not installed or not properly configured.";
+"SubscribeToNewsletter" = "Subscribe to newsletter";
+"ShareAppMessage" = "Check out InvoiceBot for iOS. https://www.invoicebot.io";
+"PleaseEnterEmailAndHit" = "Please enter your email address and hit subscribe";

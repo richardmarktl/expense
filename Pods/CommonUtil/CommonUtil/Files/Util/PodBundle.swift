@@ -11,14 +11,11 @@ import Foundation
 public class PodBundle {}
 
 public extension Bundle {
-    class var podBundle: Bundle? {
+    class var podBundle: Bundle {
         return Bundle(for: PodBundle.self)
     }
 }
 
-public func PodLocalizedString(_ key: String, comment: String) -> String {
-    guard let bundle = Bundle.podBundle else {
-        fatalError("PodLocalizedString - bundle not found")
-    }
-    return NSLocalizedString(key, bundle: bundle, comment: "")
+public func PodLocalizedString(_ key: String, comment: String = "") -> String {
+    return NSLocalizedString(key, bundle: Bundle.podBundle, comment: comment)
 }

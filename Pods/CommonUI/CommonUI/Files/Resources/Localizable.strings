@@ -7,3 +7,9 @@
 */
 "Information" = "Information";
 "OK" = "OK";
+"You made some changes.\n\nShould the changes be saved?" = "You made some changes.\n\nShould the changes be saved?";
+"Discard" = "Discard";
+"Save" = "Save";
+"Are you sure you want to delete this?" = "Are you sure you want to delete this?";
+"Cancel" = "Cancel";
+"Delete" = "Delete";

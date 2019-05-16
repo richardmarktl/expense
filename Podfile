@@ -20,7 +20,8 @@ target 'expense' do
   
   # Invoice Bot Private Pods
   pod 'InvoiceBotSDK', '~> 1.0.7'
-  pod 'CommonUI', '~> 0.0.18'
+  pod 'CommonUI', '~> 0.0.19'
+  pod 'SettingsUI', '~> 0.0.8'
   
   # Generator
   pod 'R.swift', '~> 5.0'

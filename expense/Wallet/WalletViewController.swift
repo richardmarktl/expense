@@ -11,12 +11,19 @@ import RxSwift
 import CoreData
 import CoreDataExtensio
 import CommonUI
+import SettingsUI
 
 class WalletViewController: CollectionModelController<WalletsModel> {
     private let emptyViewAddSubject: PublishSubject<Void> = PublishSubject()
 
 //    @IBOutlet weak var addButton: HoverButton!
 //    @IBOutlet weak var addContactButton: HoverButton!
+    @IBAction public func showSettings() {
+        let podBundle = Bundle(for: SettingsController.self)
+        let storyboard = UIStoryboard(name: "Settings", bundle: podBundle)
+        let vc = storyboard.instantiateInitialViewController()!
+        self.present(vc, animated: true)
+    }
 
     fileprivate let searchSubject: PublishSubject<String> = PublishSubject()
     var searchObservable: Observable<String> {

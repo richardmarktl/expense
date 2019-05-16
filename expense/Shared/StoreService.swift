@@ -231,7 +231,7 @@ class StoreService: NSObject {
 //        }
     }
 
-    func overrideValiditidy(to isValid: Bool) {
+    func overrideValidity(to isValid: Bool) {
         Static.shouldOverrideSettings = isValid
         overrideSettingSubject.onNext(())
     }
